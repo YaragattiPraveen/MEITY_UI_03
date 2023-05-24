@@ -6,13 +6,12 @@ import HomeRoundedIcon from "@mui/icons-material/HomeRounded";
 import LocalGroceryStoreRoundedIcon from "@mui/icons-material/LocalGroceryStoreRounded";
 import MonetizationOnRoundedIcon from "@mui/icons-material/MonetizationOnRounded";
 import CreditScoreRoundedIcon from "@mui/icons-material/CreditScoreRounded";
-import AccountBalanceWalletRoundedIcon from "@mui/icons-material/AccountBalanceWalletRounded";
-import TerminalRoundedIcon from "@mui/icons-material/TerminalRounded";
 import DashboardCustomizeRoundedIcon from "@mui/icons-material/DashboardCustomizeRounded";
 import SupportAgentRoundedIcon from "@mui/icons-material/SupportAgentRounded";
 import SettingsSuggestRoundedIcon from "@mui/icons-material/SettingsSuggestRounded";
+import AgricultureIcon from '@mui/icons-material/Agriculture';
 
-const FarmerWrapper = () => {
+const FpoWrapper = () => {
   const list = [
     {
       title: "Dashboard",
@@ -20,54 +19,47 @@ const FarmerWrapper = () => {
       to: "dashboard",
     },
     {
-      title: "Store",
+        title: "Farmer",
+        icon: (
+          <AgricultureIcon
+            style={{ color: "white", fontSize: "28px" }}
+          />
+        ),
+        to: "farmer",
+      },
+    {
+      title: "FPO Store",
       icon: (
         <LocalGroceryStoreRoundedIcon
           style={{ color: "white", fontSize: "28px" }}
         />
       ),
-      to: "store",
+      to: "fpo-store",
     },
     {
-      title: "Selling Price",
+        title: "Lac Procurement",
+        icon: (
+          <DashboardCustomizeRoundedIcon
+            style={{ color: "white", fontSize: "28px" }}
+          />
+        ),
+        to: "lac-procurement",
+      },
+    {
+      title: "Farmer Loan",
       icon: (
         <MonetizationOnRoundedIcon
           style={{ color: "white", fontSize: "28px" }}
         />
       ),
-      to: "sellingprice",
+      to: "farmer-loan",
     },
     {
-      title: "Loan",
+      title: "FPO Loan",
       icon: (
         <CreditScoreRoundedIcon style={{ color: "white", fontSize: "28px" }} />
       ),
-      to: "loan",
-    },
-    {
-      title: "Transaction History",
-      icon: (
-        <AccountBalanceWalletRoundedIcon
-          style={{ color: "white", fontSize: "28px" }}
-        />
-      ),
-      to: "transaction-history",
-    },
-    {
-      title: "Training Programs",
-      icon: (
-        <TerminalRoundedIcon style={{ color: "white", fontSize: "28px" }} />
-      ),
-      to: "training",
-    },
-    {
-      title: "Crop Advisory",
-      icon: (
-        <DashboardCustomizeRoundedIcon
-          style={{ color: "white", fontSize: "28px" }}
-        />
-      ),
-      to: "crop-advisory",
+      to: "fpo-loan",
     },
     {
       title: "Support",
@@ -86,7 +78,6 @@ const FarmerWrapper = () => {
       to: "settings",
     },
   ];
-
   return (
     <>
       <div className="flex container relative">
@@ -101,4 +92,4 @@ const FarmerWrapper = () => {
   );
 };
 
-export default FarmerWrapper;
+export default FpoWrapper;
