@@ -29,7 +29,7 @@ const Loan = () => {
           onClick={() => {
             setOpenModel(true);
           }}
-          className="text-white font-Roboto mb-6 py-2 px-5 bg-hover__color"
+          className="text-white shadow-md rounded z-0 focus:outline-none font-Roboto mb-6 py-2 px-5 bg-hover__color"
         >
           Apply Loan
         </button>
@@ -42,7 +42,7 @@ const Loan = () => {
           style={{
             borderBottom: active === "tab1" && "2px solid green",
           }}
-          className="text-hover__color font-Roboto text-base font-bold cursor-pointer"
+          className="text-hover__color shadow-md rounded-lg z-0 focus:outline-none px-4 py-2 font-Roboto text-base font-bold cursor-pointer"
         >
           Granted Loans
         </button>
@@ -51,7 +51,7 @@ const Loan = () => {
           style={{
             borderBottom: active === "tab2" && "2px solid green",
           }}
-          className="text-hover__color font-Roboto text-base font-bold cursor-pointer"
+          className="text-hover__color shadow-md rounded-lg z-0 focus:outline-none px-4 py-2 font-Roboto text-base font-bold cursor-pointer"
         >
           Rejected Loans
         </button>
@@ -60,7 +60,7 @@ const Loan = () => {
           style={{
             borderBottom: active === "tab3" && "2px solid green",
           }}
-          className="text-hover__color font-Roboto text-base font-bold cursor-pointer"
+          className="text-hover__color shadow-md rounded-lg z-0 focus:outline-none px-4 py-2 font-Roboto text-base font-bold cursor-pointer"
         >
           Loan in process
         </button>

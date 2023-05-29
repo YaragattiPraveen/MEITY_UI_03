@@ -22,7 +22,7 @@ const Lac_Procurement = () => {
           Procurement Information
         </h2>
         <div className="flex items-end justify-end pb-4">
-          <button onClick={() => setOpenModel(true)} className="bg-bg__color  text-center text-white px-4 py-1 rounded">
+          <button onClick={() => setOpenModel(true)} className="bg-bg__color  text-center text-white shadow-md z-0 focus:outline-none px-4 py-1 rounded">
             Add Item
           </button>
         </div>
@@ -33,7 +33,7 @@ const Lac_Procurement = () => {
             style={{
               borderBottom: active === "tab1" && "2px solid green",
             }}
-            className="text-hover__color font-Roboto text-base font-bold cursor-pointer"
+            className="text-hover__color shadow-md rounded-lg z-0 focus:outline-none px-4 py-2 font-Roboto text-base font-bold cursor-pointer"
           >
             Procuring
           </button>
@@ -42,9 +42,18 @@ const Lac_Procurement = () => {
             style={{
               borderBottom: active === "tab2" && "2px solid green",
             }}
-            className="text-hover__color font-Roboto text-base font-bold cursor-pointer"
+            className="text-hover__color shadow-md rounded-lg z-0 focus:outline-none px-4 py-2 font-Roboto text-base font-bold cursor-pointer"
           >
             Not-Procuring
+          </button>
+          <button
+            onClick={() => setActive("tab3")}
+            style={{
+              borderBottom: active === "tab3" && "2px solid green",
+            }}
+            className="text-hover__color shadow-md rounded-lg z-0 focus:outline-none px-4 py-2 font-Roboto text-base font-bold cursor-pointer"
+          >
+            View Farmer Procurement
           </button>
         </div>
         {tab__UI}

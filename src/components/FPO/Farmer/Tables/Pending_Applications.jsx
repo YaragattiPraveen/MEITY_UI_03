@@ -1,6 +1,6 @@
 import React from "react";
 
-const Pending_Applications = () => {
+const Pending_Applications = ({closemodel}) => {
   return (
     <div className="flex flex-col px-3">
       <div className="overflow-x-auto sm:-mx-6 lg:-mx-8">
@@ -62,7 +62,7 @@ const Pending_Applications = () => {
                     12345XXXXX
                   </td>
                   <td className="whitespace-nowrap px-6 py-4 text-left font-medium font-Roboto text-silver__color">
-                    <button className="bg-bg__color text-center block text-white px-4 py-1 rounded">
+                    <button onClick={() => closemodel(true)} className="bg-bg__color text-center block text-white px-4 py-1 rounded">
                       View
                     </button>
                   </td>

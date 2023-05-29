@@ -22,7 +22,7 @@ const Fpo_Store = () => {
         FPO Store Information
       </h2>
       <div className="flex items-end justify-end pb-4">
-        <button onClick={() => setOpenModel(true)} className="bg-bg__color  text-center text-white px-4 py-1 rounded">
+        <button onClick={() => setOpenModel(true)} className="bg-bg__color shadow-md z-0 focus:outline-none  text-center text-white px-4 py-1 rounded">
           Add Item
         </button>
       </div>
@@ -33,7 +33,7 @@ const Fpo_Store = () => {
           style={{
             borderBottom: active === "tab1" && "2px solid green",
           }}
-          className="text-hover__color font-Roboto text-base font-bold cursor-pointer"
+          className="text-hover__color shadow-md rounded-lg z-0 focus:outline-none px-4 py-2 font-Roboto text-base font-bold cursor-pointer"
         >
           List of Available Items
         </button>
@@ -42,7 +42,7 @@ const Fpo_Store = () => {
           style={{
             borderBottom: active === "tab2" && "2px solid green",
           }}
-          className="text-hover__color font-Roboto text-base font-bold cursor-pointer"
+          className="text-hover__color shadow-md rounded-lg z-0 focus:outline-none px-4 py-2 font-Roboto text-base font-bold cursor-pointer"
         >
           List of Out of Stock Items
         </button>

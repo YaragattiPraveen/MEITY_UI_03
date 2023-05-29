@@ -1,6 +1,6 @@
 import React from "react";
 import Repayment_Structure_table from "../Tables/Repayment_Structure_Table";
-import Form1 from "../../Forms/Farmer/Form1";
+
 const Repayment_Structure = ({ closemodel }) => {
   return (
     <>

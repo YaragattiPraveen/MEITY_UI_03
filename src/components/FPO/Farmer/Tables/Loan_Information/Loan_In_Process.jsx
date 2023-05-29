@@ -1,6 +1,8 @@
-import React from "react";
+import React, { useState } from "react";
+import Loan_Application_modal from "../../Modals/Loan_Application_modal";
 
 const Loan_In_Process = () => {
+  const [openModel, setOpenModel] = useState(false);
   return (
     <>
       <div className="bg-box__bg__color shadow-lg rounded-lg border my-6 border-gray-200">
@@ -55,13 +57,16 @@ const Loan_In_Process = () => {
                         ₹ 98765
                       </td>
                       <td className="whitespace-nowrap px-6 py-4 text-left font-medium font-Roboto text-silver__color">
-                        <button className="bg-bg__color text-center block text-white px-4 py-1 rounded">
+                        <button
+                          onClick={() => setOpenModel(true)}
+                          className="bg-bg__color text-center block text-white px-4 py-1 rounded"
+                        >
                           View
                         </button>
                       </td>
                       <td className="whitespace-nowrap px-6 py-4 text-left font-medium font-Roboto text-silver__color">
                         <button className="bg-yellow-600 text-center block text-white px-4 py-1 rounded">
-                          View
+                          In-Progress
                         </button>
                       </td>
                     </tr>
@@ -76,7 +81,10 @@ const Loan_In_Process = () => {
                         ₹ 98765
                       </td>
                       <td className="whitespace-nowrap px-6 py-4 text-left font-medium font-Roboto text-silver__color">
-                        <button className="bg-bg__color text-center block text-white px-4 py-1 rounded">
+                        <button
+                          onClick={() => setOpenModel(true)}
+                          className="bg-bg__color text-center block text-white px-4 py-1 rounded"
+                        >
                           View
                         </button>
                       </td>
@@ -97,13 +105,16 @@ const Loan_In_Process = () => {
                         ₹ 98765
                       </td>
                       <td className="whitespace-nowrap px-6 py-4 text-left font-medium font-Roboto text-silver__color">
-                        <button className="bg-bg__color text-center block text-white px-4 py-1 rounded">
+                        <button
+                          onClick={() => setOpenModel(true)}
+                          className="bg-bg__color text-center block text-white px-4 py-1 rounded"
+                        >
                           View
                         </button>
                       </td>
                       <td className="whitespace-nowrap px-6 py-4 text-left font-medium font-Roboto text-silver__color">
                         <button className="bg-yellow-600 text-center block text-white px-4 py-1 rounded">
-                          View
+                          In-Progress
                         </button>
                       </td>
                     </tr>
@@ -118,7 +129,10 @@ const Loan_In_Process = () => {
                         ₹ 98765
                       </td>
                       <td className="whitespace-nowrap px-6 py-4 text-left font-medium font-Roboto text-silver__color">
-                        <button className="bg-bg__color text-center block text-white px-4 py-1 rounded">
+                        <button
+                          onClick={() => setOpenModel(true)}
+                          className="bg-bg__color text-center block text-white px-4 py-1 rounded"
+                        >
                           View
                         </button>
                       </td>
@@ -135,6 +149,7 @@ const Loan_In_Process = () => {
           </div>
         </div>
       </div>
+      {openModel && <Loan_Application_modal closemodel={setOpenModel} />}
     </>
   );
 };

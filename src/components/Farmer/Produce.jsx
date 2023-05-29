@@ -7,7 +7,7 @@ const Produce = () => {
     <>
       <div className="bg-box__bg__color shadow-lg rounded-lg border my-6 border-gray-200">
         <div className="flex justify-end">
-          <button onClick={() => setOpenModel(true)} className="text-white font-Roboto m-3 py-2 px-5 bg-hover__color">
+          <button onClick={() => setOpenModel(true)} className="text-white shadow-md rounded z-0 focus:outline-none px-4 py-2 font-Roboto m-3 bg-hover__color">
             Add New
           </button>
         </div>

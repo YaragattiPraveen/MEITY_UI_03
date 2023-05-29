@@ -30,19 +30,19 @@ const Settings = () => {
             className="bg-bg__color rounded-xl"
           />
         </div>
-        <div className="flex items-center justify-between my-5 max-w-[350px] mx-auto">
-          <h3 onClick={() => setActive("tab1")}
+        <div className="flex items-center justify-between my-5 max-w-[380px] mx-auto">
+          <button onClick={() => setActive("tab1")}
           style={{
             borderBottom: active === "tab1" && "2px solid green",
-          }} className="font-Roboto cursor-pointer font-bold text-lg text-hover__color">
+          }} className="font-Roboto shadow-md rounded-lg z-0 focus:outline-none px-2 py-2 cursor-pointer font-bold text-lg text-hover__color">
             Personal Information
-          </h3>
-          <h3 onClick={() => setActive("tab2")}
+          </button>
+          <button onClick={() => setActive("tab2")}
           style={{
             borderBottom: active === "tab2" && "2px solid green",
-          }} className="font-Roboto cursor-pointer font-bold text-lg text-hover__color">
+          }} className="font-Roboto shadow-md rounded-lg z-0 focus:outline-none px-4 py-2 cursor-pointer font-bold text-lg text-hover__color">
             Profile Update
-          </h3>
+          </button>
         </div>
 
         {active === "tab1" ? <Personal__information details={details} /> : <Profile__Update />}

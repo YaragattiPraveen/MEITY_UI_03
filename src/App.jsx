@@ -18,8 +18,11 @@ import FPO_Dashboard from "./components/FPO/Dashboard/Dashboard";
 import Farmer_Information from "./components/FPO/Farmer/Farmer_Information";
 import Fpo_Store from "./components/FPO/FPO_Store/Fpo_Store";
 import Lac_Procurement from "./components/FPO/Lac Procurement/Lac_Procurement";
-import Lac_Support from "./components/FPO/Support/Support"
-import Lac_Settings from './components/FPO/Settings/Settings'
+import Lac_Support from "./components/FPO/Support/Support";
+import Lac_Settings from './components/FPO/Settings/Settings';
+import Farmer_Loan from "./components/FPO/Farmer_Loan/Farmer_Loan";
+import FOP_Loan_Information from './components/FPO/FPO_Loan/FPO_Loan_Information';
+
 function App() {
   return (
     <>
@@ -44,12 +47,15 @@ function App() {
             <Route path="support" element={<Support />} />
             <Route path="settings" element={<Settings />} />
           </Route>
+          
           <Route path="fpo" element={<FpoWrapper />}>
             <Route index element={<FPO_Dashboard />} />
             <Route path="dashboard" element={<FPO_Dashboard />} />
             <Route path="farmer" element={<Farmer_Information />} />
             <Route path="fpo-store" element={<Fpo_Store />} />
             <Route path="lac-procurement" element={<Lac_Procurement />} />
+            <Route path="farmer-loan" element={<Farmer_Loan/>} />
+            <Route path="fpo-loan" element={<FOP_Loan_Information/>} />
             <Route path="support" element={<Lac_Support/>} />
             <Route path="settings" element={<Lac_Settings/>} />
           </Route>

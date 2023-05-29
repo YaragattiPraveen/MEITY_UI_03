@@ -8,7 +8,7 @@ const SalesHistory = () => {
           <div className="inline-block min-w-full py-2 sm:px-6 lg:px-8">
             <div className="overflow-hidden">
               <table className="min-w-full text-left text-sm font-light">
-                <thead className="text-xs text-medium bg-green-200 border-b uppercase text-silver__color">
+                <thead className="text-xs text-medium bg-green-200 border-b uppercase text-gray-600">
                   <tr>
                     <th
                       scope="col"

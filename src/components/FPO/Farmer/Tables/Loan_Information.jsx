@@ -22,7 +22,7 @@ const Loan_Information = () => {
           style={{
             borderBottom: active === "tab1" && "2px solid green",
           }}
-          className="text-hover__color font-Roboto text-base font-bold cursor-pointer"
+          className="text-hover__color shadow-md rounded-lg z-0 focus:outline-none px-4 py-2 font-Roboto text-base font-bold cursor-pointer"
         >
           Active Loans
         </button>
@@ -31,7 +31,7 @@ const Loan_Information = () => {
           style={{
             borderBottom: active === "tab2" && "2px solid green",
           }}
-          className="text-hover__color font-Roboto text-base font-bold cursor-pointer"
+          className="text-hover__color shadow-md rounded-lg z-0 focus:outline-none px-4 py-2 font-Roboto text-base font-bold cursor-pointer"
         >
           Loan History
         </button>
@@ -40,7 +40,7 @@ const Loan_Information = () => {
           style={{
             borderBottom: active === "tab3" && "2px solid green",
           }}
-          className="text-hover__color font-Roboto text-base font-bold cursor-pointer"
+          className="text-hover__color shadow-md rounded-lg z-0 focus:outline-none px-4 py-2 font-Roboto text-base font-bold cursor-pointer"
         >
           Loan in Process
         </button>

@@ -1,11 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
+import Item_Details from "../Modals/Item_Details_Modal";
+import Add_Details_Purchase_History from '../Modals/Add_Details_Purchase_History'
 
 const Purchase_History = () => {
+  const [openModel,setOpenModel] = useState(false)
+  const [addOpenModel,setAddOpenModel] = useState(false)
+
   return (
     <>
-      <button
-        onClick={() => setFarmerInfo(false)}
-        className="bg-bg__color text-center block text-white px-4 py-1 rounded"
+      <button onClick={() => setAddOpenModel(true)}
+        className="bg-bg__color shadow-md rounded-lg z-0 focus:outline-none text-center block text-white px-4 py-1"
       >
         Add Purchase
       </button>
@@ -55,7 +59,7 @@ const Purchase_History = () => {
                         ₹ 765
                       </td>
                       <td className="whitespace-nowrap px-6 py-4 text-left font-medium font-Roboto text-silver__color">
-                        <button className="bg-bg__color text-center block text-white px-4 py-1 rounded">
+                        <button onClick={() => setOpenModel(true)} className="bg-bg__color text-center block text-white px-4 py-1 rounded">
                           View
                         </button>
                       </td>
@@ -71,7 +75,7 @@ const Purchase_History = () => {
                         ₹ 765
                       </td>
                       <td className="whitespace-nowrap px-6 py-4 text-left font-medium font-Roboto text-silver__color">
-                        <button className="bg-bg__color text-center block text-white px-4 py-1 rounded">
+                        <button onClick={() => setOpenModel(true)} className="bg-bg__color text-center block text-white px-4 py-1 rounded">
                           View
                         </button>
                       </td>
@@ -87,7 +91,7 @@ const Purchase_History = () => {
                         ₹ 765
                       </td>
                       <td className="whitespace-nowrap px-6 py-4 text-left font-medium font-Roboto text-silver__color">
-                        <button className="bg-bg__color text-center block text-white px-4 py-1 rounded">
+                        <button onClick={() => setOpenModel(true)} className="bg-bg__color text-center block text-white px-4 py-1 rounded">
                           View
                         </button>
                       </td>
@@ -99,6 +103,8 @@ const Purchase_History = () => {
           </div>
         </div>
       </div>
+      {openModel && <Item_Details closemodel={setOpenModel}/>}
+      {addOpenModel && <Add_Details_Purchase_History closemodel={setAddOpenModel}/>}
     </>
   );
 };

@@ -12,7 +12,7 @@ const Modal = ({ closemodel }) => {
       if (page === 0) {
         return <Loan_form1 />;
       } else if (page === 1) {
-        return <Loan_form2 />;
+        return <Loan_form2 />;   
       } else if (page === 2) {
         return <Loan_form3 />;
       } else if (page === 3) {

@@ -47,13 +47,13 @@ const Settings = () => {
             className="bg-bg__color rounded-xl"
           />
         </div>
-        <div className="flex items-center justify-between my-5 max-w-[350px] mx-auto">
+        <div className="flex items-center justify-between my-5 max-w-[400px] mx-auto">
           <h3
             onClick={() => setActive("tab1")}
             style={{
               borderBottom: active === "tab1" && "2px solid green",
             }}
-            className="font-Roboto cursor-pointer font-bold text-lg text-hover__color"
+            className="font-Roboto shadow-md rounded-lg z-0 focus:outline-none px-4 py-2 cursor-pointer font-bold text-lg text-hover__color"
           >
             Personal Information
           </h3>
@@ -62,7 +62,7 @@ const Settings = () => {
             style={{
               borderBottom: active === "tab2" && "2px solid green",
             }}
-            className="font-Roboto cursor-pointer font-bold text-lg text-hover__color"
+            className="font-Roboto shadow-md rounded-lg z-0 focus:outline-none px-4 py-2 cursor-pointer font-bold text-lg text-hover__color"
           >
             Profile Update
           </h3>

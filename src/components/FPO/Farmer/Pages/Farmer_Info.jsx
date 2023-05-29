@@ -2,17 +2,19 @@ import React, { useState } from "react";
 import Accepted_Memberships from '../Tables/Accepted_Memberships'
 import Rejected_Memberships from '../Tables/Rejected_Memberships'
 import Pending_Applications from "../Tables/Pending_Applications";
+import View_Application from '../Modals/View_Application'
 
 const Farmer_Info = ({setFarmerInfo}) => {
   const [active, setActive] = useState("tab1");
+  const [openModel,setOpenModel] = useState(false)
 
   let tab__UI;
   if (active === "tab1") {
-    tab__UI = <Accepted_Memberships setFarmerInfo={setFarmerInfo} />;
+    tab__UI = <Accepted_Memberships closemodel={setOpenModel} setFarmerInfo={setFarmerInfo} />;
   } else if (active === "tab2") {
     tab__UI = <Rejected_Memberships />;
   } else if (active === "tab3") {
-    tab__UI = <Pending_Applications />;
+    tab__UI = <Pending_Applications closemodel={setOpenModel}/>;
   }
 
   return (
@@ -40,7 +42,7 @@ const Farmer_Info = ({setFarmerInfo}) => {
           style={{
             borderBottom: active === "tab1" && "2px solid green",
           }}
-          className="text-hover__color font-Roboto text-base font-bold cursor-pointer"
+          className="text-hover__color shadow-md rounded-lg z-0 focus:outline-none px-4 py-2 font-Roboto text-base font-bold cursor-pointer"
         >
           Accepted Memberships
         </button>
@@ -49,7 +51,7 @@ const Farmer_Info = ({setFarmerInfo}) => {
           style={{
             borderBottom: active === "tab2" && "2px solid green",
           }}
-          className="text-hover__color font-Roboto text-base font-bold cursor-pointer"
+          className="text-hover__color shadow-md rounded-lg z-0 focus:outline-none px-4 py-2 font-Roboto text-base font-bold cursor-pointer"
         >
           Rejected Memberships
         </button>
@@ -58,7 +60,7 @@ const Farmer_Info = ({setFarmerInfo}) => {
           style={{
             borderBottom: active === "tab3" && "2px solid green",
           }}
-          className="text-hover__color font-Roboto text-base font-bold cursor-pointer"
+          className="text-hover__color shadow-md rounded-lg z-0 focus:outline-none px-4 py-2 font-Roboto text-base font-bold cursor-pointer"
         >
           Pending Applications
         </button>
@@ -66,6 +68,7 @@ const Farmer_Info = ({setFarmerInfo}) => {
       <div className="bg-box__bg__color shadow-lg rounded-lg border my-6 border-gray-200">
         <div className="py-2">{tab__UI}</div>
       </div>
+      {openModel && <View_Application closemodel={setOpenModel} />}
     </>
   );
 };
