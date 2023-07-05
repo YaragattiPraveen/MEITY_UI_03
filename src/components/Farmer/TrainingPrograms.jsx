@@ -5,10 +5,10 @@ const TrainingPrograms = () => {
   return (
     <div className="container w-full mx-auto">
       <Navbar />
-      <h2 className="text-hover__color text-2xl font-Roboto font-extrabold py-6 ">
+      <h2 className="text-hover__color uppercase text-xl lg:text-2xl font-Roboto font-extrabold py-4 ">
         Training Programs
       </h2>
-      <div className="bg-box__bg__color shadow-lg rounded-lg border my-6 border-gray-200">
+      <div className="bg-box__bg__color shadow-lg rounded-lg border border-gray-200">
         <div className="flex flex-col p-3">
           <div className="overflow-x-auto sm:-mx-6 lg:-mx-8">
             <div className="inline-block min-w-full py-2 sm:px-6 lg:px-8">

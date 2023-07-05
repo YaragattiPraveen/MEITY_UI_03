@@ -3,7 +3,7 @@ import React from "react";
 const Loan_Updates = () => {
   return (
     <div className="bg-box__bg__color shadow-lg rounded-lg border border-gray-200">
-      <h2 className="text-hover__color text-xl font-Roboto font-extrabold py-3 ">
+      <h2 className="text-hover__color text-lg md:text-xl font-Roboto font-extrabold py-3 ">
       Loan Updates
       </h2>
       <div className="flex flex-col px-3">

@@ -1,6 +1,7 @@
-import React from "react";
-
+import React, { useState } from "react";
+import Working_Capital_Loan from '../Modals/Working_Capital_Loan'
 const Loan_Window = () => {
+  const [openModel,setOpenModel] = useState(false)
   return (
     <div className="relative h-auto mx-2 overflow-x-auto my-4 p-2 bg-box__bg__color shadow-md sm:rounded-lg">
       <table className="w-auto text-sm text-left font-Roboto">
@@ -57,6 +58,7 @@ const Loan_Window = () => {
           </tr>
         </tbody>
       </table>
+      {openModel && <Working_Capital_Loan closemodel={setOpenModel}/>}
     </div>
   );
 };

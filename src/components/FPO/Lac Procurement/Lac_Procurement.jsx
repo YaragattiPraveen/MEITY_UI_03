@@ -3,6 +3,7 @@ import Navbar from "../../Farmer/Navbar";
 import Procuring from "../Lac Procurement/Tabs/Procuring";
 import Not_Procuring from "./Tabs/Not_Procuring";
 import Add_Lac from "./Modals/Add_Lac";
+import View_Farmer_Produce from "./Tabs/View_Farmer_Produce";
 const Lac_Procurement = () => {
   const [active, setActive] = useState("tab1");
   const [openModel,setOpenModel] = useState(false);
@@ -12,6 +13,8 @@ const Lac_Procurement = () => {
     tab__UI = <Procuring />;
   } else if (active === "tab2") {
     tab__UI = <Not_Procuring />;
+  }else if (active === "tab3") {
+    tab__UI = <View_Farmer_Produce />;
   }
 
   return (
@@ -53,7 +56,7 @@ const Lac_Procurement = () => {
             }}
             className="text-hover__color shadow-md rounded-lg z-0 focus:outline-none px-4 py-2 font-Roboto text-base font-bold cursor-pointer"
           >
-            View Farmer Procurement
+            View Farmer Produce
           </button>
         </div>
         {tab__UI}

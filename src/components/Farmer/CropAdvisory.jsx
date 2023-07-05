@@ -5,14 +5,14 @@ const CropAdvisory = () => {
   return (
     <div className="container w-full mx-auto">
       <Navbar />
-      <h2 className="text-hover__color text-2xl font-Roboto font-extrabold py-6 ">
+      <h2 className="text-hover__color uppercase text-xl lg:text-2xl font-Roboto font-extrabold py-6 ">
         Crop Advisory
       </h2>
       <div className="w-full px-4 mb-2 text-center font-Roboto bg-bg__color border border-gray-200 rounded-lg shadow sm:p-8">
         <div className="flex justify-end">
           <p className="text-white">18/5/2023</p>
         </div>
-        <h5 className="mb-2 text-3xl font-bold text-white">
+        <h5 className="mb-2 text-lg md:text-xl font-bold text-white">
           Farmer-to-Farmer Extension
         </h5>
         <p className="mb-5 text-base text-white">
@@ -23,15 +23,13 @@ const CropAdvisory = () => {
           by farmers to farmers, often through the creation of a structure of
           farmer-trainers.
         </p>
-        <div className="items-center justify-center space-y-4 sm:flex sm:space-y-0 sm:space-x-4">
+        <div className="items-center justify-center space-y-4 mb-5 sm:flex sm:space-y-0 sm:space-x-4">
           <a
             href="#"
             className="w-full sm:w-auto hover:text-hover__color hover:bg-box__bg__color bg-hover__color focus:ring-4 focus:outline-none focus:ring-gray-300 text-white rounded-lg inline-flex items-center justify-center px-4 py-2.5"
           >
             <div className="text-center">
-              <div className="text-sm font-semibold font-Roboto">
-                Read More
-              </div>
+              <div className="text-sm font-semibold font-Roboto">Read More</div>
             </div>
           </a>
         </div>
@@ -40,7 +38,7 @@ const CropAdvisory = () => {
         <div className="flex justify-end">
           <p className="text-white">1/5/2023</p>
         </div>
-        <h5 className="mb-2 text-3xl font-bold text-white">
+        <h5 className="mb-2 text-lg md:text-xl font-bold text-white">
           Innovation Platforms
         </h5>
         <p className="mb-5 text-base text-white">
@@ -50,15 +48,13 @@ const CropAdvisory = () => {
           that are new to a certain location into practice, and in this way
           changing the situation of those living in this area for the better.
         </p>
-        <div className="items-center justify-center space-y-4 sm:flex sm:space-y-0 sm:space-x-4">
+        <div className="items-center justify-center space-y-4 sm:flex sm:space-y-0 mb-5 sm:space-x-4">
           <a
             href="#"
             className="w-full sm:w-auto hover:text-hover__color hover:bg-box__bg__color bg-hover__color focus:ring-4 focus:outline-none focus:ring-gray-300 text-white rounded-lg inline-flex items-center justify-center px-4 py-2.5"
           >
             <div className="text-center">
-              <div className="text-sm font-semibold font-Roboto">
-                Read More
-              </div>
+              <div className="text-sm font-semibold font-Roboto">Read More</div>
             </div>
           </a>
         </div>

@@ -7,7 +7,7 @@ import NightsStayIcon from "@mui/icons-material/NightsStay";
 const Current_Weather = () => {
   return (
     <div className="bg-box__bg__color shadow-lg rounded-lg border border-gray-200">
-      <h2 className="text-hover__color text-xl font-Roboto font-extrabold py-5 ">
+      <h2 className="text-hover__color text-lg md:text-xl font-Roboto font-extrabold py-5 ">
         Current Weather
       </h2>
       <div className="px-6 text-left">

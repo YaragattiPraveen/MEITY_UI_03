@@ -3,7 +3,6 @@ import Image_modal from "../../../Farmer/Modals/Image_modal";
 
 const Form2 = () => {
   const [openModel, setOpenModel] = useState(false);
-  const [heading, setHeading] = useState("");
 
   return (
     <>
@@ -103,7 +102,7 @@ const Form2 = () => {
           </button>
         </div>
       </div>
-      {openModel && <Image_modal title={heading} closemodel={setOpenModel} />}
+      {openModel && <Image_modal title={"Aadhar and PAN card "} closemodel={setOpenModel} />}
     </>
   );
 };

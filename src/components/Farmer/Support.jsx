@@ -6,10 +6,9 @@ const Support = () => {
     <div className="container w-full mx-auto">
       <Navbar />
       <div className="bg-box__bg__color py-10 px-10 my-10 rounded-lg max-w-[768px] mx-auto">
-        <h2 className="text-hover__color text-2xl text-center font-Roboto font-extrabold pb-5 ">
+        <h2 className="text-hover__color uppercase text-xl lg:text-2xl text-center font-Roboto font-extrabold pb-5 ">
           Support
         </h2>
-        {/*   tip; mx-auto -- jagab ilusti keskele  */}
         <form>
           <div className="mb-6">
             <label
@@ -41,7 +40,7 @@ const Support = () => {
           />
           <button
             type="submit"
-            className=" my-5 text-white bg-hover__color hover:bg-bg__color font-medium rounded-lg text-sm px-10 py-2.5 text-center"
+            className="text-white my-5 uppercase text-sm shadow-md rounded z-0 focus:outline-none font-Roboto mb-6 py-1.5 px-4 bg-hover__color"
           >
             Submit
           </button>

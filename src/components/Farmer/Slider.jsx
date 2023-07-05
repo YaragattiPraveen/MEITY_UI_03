@@ -25,7 +25,7 @@ const Slider = ({ title }) => {
   return (
     <div className="container w-full mx-auto">
       <div className="mb-2 px-2 bg-box__bg__color shadow-lg rounded-lg border border-gray-200">
-        <h2 className="text-hover__color text-xl font-Roboto font-extrabold py-4">
+        <h2 className="text-hover__color text-lg md:text-xl font-Roboto font-extrabold py-4">
           {title}
         </h2>
         <Carousel
@@ -35,7 +35,7 @@ const Slider = ({ title }) => {
           infinite={true}
           transitionDuration={800}
           customTransition="all .5s"
-          className="pb-7"
+          className="pb-7 z-10"
         >
           <div
             className="max-w-sm mx-2 bg-bg__color border border-gray-200 rounded-lg shadow
@@ -62,7 +62,7 @@ const Slider = ({ title }) => {
             </div>
           </div>
           <div
-            className="max-w-sm mx-2 bg-bg__color border border-gray-200 rounded-lg shadow
+            className="max-w-sm  mx-2 bg-bg__color border border-gray-200 rounded-lg shadow
         transform hover:scale-105 transition duration-500"
           >
             <img
@@ -86,7 +86,7 @@ const Slider = ({ title }) => {
             </div>
           </div>
           <div
-            className="max-w-sm mx-2 bg-bg__color border border-gray-200 rounded-lg shadow
+            className="max-w-sm  mx-2 bg-bg__color border border-gray-200 rounded-lg shadow
         transform hover:scale-105 transition duration-500"
           >
             <img
@@ -110,7 +110,7 @@ const Slider = ({ title }) => {
             </div>
           </div>
           <div
-            className="max-w-sm mx-2 bg-bg__color border border-gray-200 rounded-lg shadow
+            className="max-w-sm  mx-2 bg-bg__color border border-gray-200 rounded-lg shadow
         transform hover:scale-105 transition duration-500"
           >
             <img

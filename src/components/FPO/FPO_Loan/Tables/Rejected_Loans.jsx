@@ -1,6 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
+import Loan_Details from "../Modals/Loan_Details";
 
 const Rejected_Loans = () => {
+  const [openModel, setOpenModel] = useState(false)
+
   return (
     <div className="bg-box__bg__color shadow-lg rounded-lg border border-gray-200 my-5">
       <div className="flex flex-col px-3">
@@ -130,6 +133,7 @@ const Rejected_Loans = () => {
           </div>
         </div>
       </div>
+      {openModel && <Loan_Details closemodel={setOpenModel}/>}
     </div>
   );
 };

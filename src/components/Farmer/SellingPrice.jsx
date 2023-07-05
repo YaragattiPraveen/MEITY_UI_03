@@ -8,7 +8,7 @@ const SellingPrice = () => {
   return (
     <div className="container w-full mx-auto">
       <Navbar />
-      <h2 className="text-hover__color text-2xl font-Roboto font-extrabold py-6 ">
+      <h2 className="text-hover__color uppercase text-xl lg:text-2xl font-Roboto font-extrabold py-6 ">
         Selling Price
       </h2>
       <div className="flex gap-5 justify-end">
@@ -17,7 +17,7 @@ const SellingPrice = () => {
           style={{
             borderBottom: active === "tab1" && "2px solid green",
           }}
-          className="text-hover__color shadow-md rounded-lg z-0 focus:outline-none px-4 py-2 font-Roboto text-base font-bold cursor-pointer"
+          className="text-hover__color shadow-md rounded-lg z-0 focus:outline-none px-4 py-2 font-Roboto text-sm md:text-base font-bold cursor-pointer"
         >
           Sell to FPO
         </button>
@@ -26,7 +26,7 @@ const SellingPrice = () => {
           style={{
             borderBottom: active === "tab2" && "2px solid green",
           }}
-          className="text-hover__color shadow-md rounded-lg z-0 focus:outline-none px-4 py-2 font-Roboto text-base font-bold cursor-pointer"
+          className="text-hover__color shadow-md rounded-lg z-0 focus:outline-none px-4 py-2 font-Roboto text-sm md:text-base font-bold cursor-pointer"
         >
           Enter Your Produce
         </button>

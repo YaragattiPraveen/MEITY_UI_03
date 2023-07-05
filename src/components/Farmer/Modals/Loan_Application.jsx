@@ -24,7 +24,7 @@ const Loan_Application = ({ closemodel }) => {
   return (
     <>
       <div className="overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none">
-        <div className="relative w-auto my-4 mx-auto max-w-xs md:mx-w-sm lg:max-w-xl">
+        <div className="relative w-auto px-2 my-4 mx-auto max-w-xs md:mx-w-sm lg:max-w-xl">
           {/*content*/}
           <div className="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
             {/*header*/}
@@ -52,7 +52,7 @@ const Loan_Application = ({ closemodel }) => {
                 }}
                 onClick={() => setPage(page - 1)}
                 disabled={page === 0}
-                className="bg-bg__color text-white active:bg-emerald-600 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+                className="text-white uppercase text-sm lg:text-sm shadow-md rounded z-0 focus:outline-none font-Roboto mb-4 py-1.5 px-4 bg-hover__color"
                 type="button"
               >
                 Back
@@ -62,7 +62,7 @@ const Loan_Application = ({ closemodel }) => {
                   visibility: page === 4 ? "hidden" : "visible",
                 }}
                 onClick={(prevPage) => setPage(page + 1)}
-                className="bg-bg__color text-white active:bg-emerald-600 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+                className="text-white uppercase text-sm lg:text-sm shadow-md rounded z-0 focus:outline-none font-Roboto mb-4 py-1.5 px-4 bg-hover__color"
               >
                 Next
               </button>

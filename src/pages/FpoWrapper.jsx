@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import Sidebar from "../components/Farmer/Sidebar";
 import { Outlet } from "react-router-dom";
 
@@ -9,7 +9,13 @@ import CreditScoreRoundedIcon from "@mui/icons-material/CreditScoreRounded";
 import DashboardCustomizeRoundedIcon from "@mui/icons-material/DashboardCustomizeRounded";
 import SupportAgentRoundedIcon from "@mui/icons-material/SupportAgentRounded";
 import SettingsSuggestRoundedIcon from "@mui/icons-material/SettingsSuggestRounded";
-import AgricultureIcon from '@mui/icons-material/Agriculture';
+import AgricultureIcon from "@mui/icons-material/Agriculture";
+import PublishedWithChangesIcon from "@mui/icons-material/PublishedWithChanges";
+import PlaylistAddCheckCircleIcon from "@mui/icons-material/PlaylistAddCheckCircle";
+import CampaignIcon from "@mui/icons-material/Campaign";
+import FormatQuoteIcon from "@mui/icons-material/FormatQuote";
+import AccountCircleIcon from "@mui/icons-material/AccountCircle";
+import { AppContext } from "../Context/context";
 
 const FpoWrapper = () => {
   const list = [
@@ -19,14 +25,38 @@ const FpoWrapper = () => {
       to: "dashboard",
     },
     {
-        title: "Farmer",
-        icon: (
-          <AgricultureIcon
-            style={{ color: "white", fontSize: "28px" }}
-          />
-        ),
-        to: "farmer",
-      },
+      title: "Farmer",
+      icon: <AgricultureIcon style={{ color: "white", fontSize: "28px" }} />,
+      to: "farmer",
+    },
+    {
+      title: "Requirement Acceptance",
+      icon: (
+        <PublishedWithChangesIcon
+          style={{ color: "white", fontSize: "28px" }}
+        />
+      ),
+      to: "requirement-acceptance",
+    },
+    {
+      title: "Requirement Gathering",
+      icon: (
+        <PlaylistAddCheckCircleIcon
+          style={{ color: "white", fontSize: "28px" }}
+        />
+      ),
+      to: "requirement-gathering",
+    },
+    {
+      title: "Announcement for Farmer",
+      icon: <CampaignIcon style={{ color: "white", fontSize: "28px" }} />,
+      to: "announcement-for-farmer",
+    },
+    {
+      title: "Request Quote",
+      icon: <FormatQuoteIcon style={{ color: "white", fontSize: "28px" }} />,
+      to: "request-quote",
+    },
     {
       title: "FPO Store",
       icon: (
@@ -37,14 +67,14 @@ const FpoWrapper = () => {
       to: "fpo-store",
     },
     {
-        title: "Lac Procurement",
-        icon: (
-          <DashboardCustomizeRoundedIcon
-            style={{ color: "white", fontSize: "28px" }}
-          />
-        ),
-        to: "lac-procurement",
-      },
+      title: "Lac Procurement",
+      icon: (
+        <DashboardCustomizeRoundedIcon
+          style={{ color: "white", fontSize: "28px" }}
+        />
+      ),
+      to: "lac-procurement",
+    },
     {
       title: "Farmer Loan",
       icon: (
@@ -77,14 +107,26 @@ const FpoWrapper = () => {
       ),
       to: "settings",
     },
+    {
+      title: "Profile",
+      icon: <AccountCircleIcon style={{ color: "white", fontSize: "28px" }} />,
+      to: "profile",
+    },
   ];
+
+  const { toggleNav, setToggleNav } = useContext(AppContext);
+
   return (
     <>
-      <div className="flex container relative">
-        <div className="w-[20%] mx-auto h-full fixed">
+      <div className="flex container lg:px-0 px-3">
+        <div
+          className={`w-auto h-full fixed transition-all duration-700 ease-in-out lg:ml-0 lg:z-10 ${
+            toggleNav ? "z-30 -ml-3" : "-z-30 -ml-[300px]"
+          }`}
+        >
           <Sidebar list={list} />
         </div>
-        <div className="w-[85%] ml-[260px]">
+        <div className="w-full lg:w-full mx-auto ml-0 lg:ml-[260px]">
           <Outlet />
         </div>
       </div>

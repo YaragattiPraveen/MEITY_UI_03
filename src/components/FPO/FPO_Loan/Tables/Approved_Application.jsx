@@ -1,6 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
+import Aggregate_Repayment from "../Modals/Aggregate_Repayment";
+import Loan_Application from "../Modals/Loan_Application"
 
 const Approved_Application = () => {
+  const [openRepaymentModel,setRepaymentModel] = useState(false)
+  const [openLoanModel,setLoanModel] = useState(false)
   return (
     <div className="bg-box__bg__color shadow-lg rounded-lg border border-gray-200 my-5">
       <div className="flex flex-col px-3">
@@ -73,7 +77,7 @@ const Approved_Application = () => {
                     </td>
                     <td className="whitespace-nowrap px-4 py-4 text-left font-medium font-Roboto text-silver__color">
                       <button
-                        onClick={() => setOpenModel(true)}
+                        onClick={() => setRepaymentModel(true)}
                         className="bg-bg__color text-center block text-white px-4 py-1 rounded"
                       >
                         View
@@ -81,40 +85,7 @@ const Approved_Application = () => {
                     </td>
                     <td className="whitespace-nowrap px-4 py-4 text-left font-medium font-Roboto text-silver__color">
                       <button
-                        onClick={() => setOpenModel(true)}
-                        className="bg-bg__color text-center block text-white px-4 py-1 rounded"
-                      >
-                        View
-                      </button>
-                    </td>
-                  </tr>
-                  <tr className="border-b transition duration-300 ease-in-out hover:bg-green-2">
-                    <td className="whitespace-nowrap px-4 py-4 text-left font-medium font-Roboto text-silver__color">
-                      12-03-2022
-                    </td>
-                    <td className="whitespace-nowrap px-4 py-4 text-left font-medium font-Roboto text-silver__color">
-                      12-03-2022
-                    </td>
-                    <td className="whitespace-nowrap px-4 py-4 text-left font-medium font-Roboto text-silver__color">
-                      Subscription
-                    </td>
-                    <td className="whitespace-nowrap px-4 py-4 text-left font-medium font-Roboto text-silver__color">
-                      ₹ 5000
-                    </td>
-                    <td className="whitespace-nowrap px-4 py-4 text-left font-medium font-Roboto text-silver__color">
-                      14%
-                    </td>
-                    <td className="whitespace-nowrap px-4 py-4 text-left font-medium font-Roboto text-silver__color">
-                      <button
-                        onClick={() => setOpenModel(true)}
-                        className="bg-bg__color text-center block text-white px-4 py-1 rounded"
-                      >
-                        View
-                      </button>
-                    </td>
-                    <td className="whitespace-nowrap px-4 py-4 text-left font-medium font-Roboto text-silver__color">
-                      <button
-                        onClick={() => setOpenModel(true)}
+                        onClick={() => setLoanModel(true)}
                         className="bg-bg__color text-center block text-white px-4 py-1 rounded"
                       >
                         View
@@ -139,7 +110,7 @@ const Approved_Application = () => {
                     </td>
                     <td className="whitespace-nowrap px-4 py-4 text-left font-medium font-Roboto text-silver__color">
                       <button
-                        onClick={() => setOpenModel(true)}
+                        onClick={() => setRepaymentModel(true)}
                         className="bg-bg__color text-center block text-white px-4 py-1 rounded"
                       >
                         View
@@ -147,7 +118,40 @@ const Approved_Application = () => {
                     </td>
                     <td className="whitespace-nowrap px-4 py-4 text-left font-medium font-Roboto text-silver__color">
                       <button
-                        onClick={() => setOpenModel(true)}
+                        onClick={() => setLoanModel(true)}
+                        className="bg-bg__color text-center block text-white px-4 py-1 rounded"
+                      >
+                        View
+                      </button>
+                    </td>
+                  </tr>
+                  <tr className="border-b transition duration-300 ease-in-out hover:bg-green-2">
+                    <td className="whitespace-nowrap px-4 py-4 text-left font-medium font-Roboto text-silver__color">
+                      12-03-2022
+                    </td>
+                    <td className="whitespace-nowrap px-4 py-4 text-left font-medium font-Roboto text-silver__color">
+                      12-03-2022
+                    </td>
+                    <td className="whitespace-nowrap px-4 py-4 text-left font-medium font-Roboto text-silver__color">
+                      Subscription
+                    </td>
+                    <td className="whitespace-nowrap px-4 py-4 text-left font-medium font-Roboto text-silver__color">
+                      ₹ 5000
+                    </td>
+                    <td className="whitespace-nowrap px-4 py-4 text-left font-medium font-Roboto text-silver__color">
+                      14%
+                    </td>
+                    <td className="whitespace-nowrap px-4 py-4 text-left font-medium font-Roboto text-silver__color">
+                      <button
+                        onClick={() => setRepaymentModel(true)}
+                        className="bg-bg__color text-center block text-white px-4 py-1 rounded"
+                      >
+                        View
+                      </button>
+                    </td>
+                    <td className="whitespace-nowrap px-4 py-4 text-left font-medium font-Roboto text-silver__color">
+                      <button
+                        onClick={() => setLoanModel(true)}
                         className="bg-bg__color text-center block text-white px-4 py-1 rounded"
                       >
                         View
@@ -160,6 +164,8 @@ const Approved_Application = () => {
           </div>
         </div>
       </div>
+      {openLoanModel && <Loan_Application closemodel={setLoanModel}/>}
+      {openRepaymentModel && <Aggregate_Repayment closemodel={setRepaymentModel}/>}
     </div>
   );
 };

@@ -3,7 +3,7 @@ import Navbar from "../../Farmer/Navbar";
 import Loans_Approved_By_Samunnati from "./Tabs/Loans_Approved_By_Samunnati";
 import Loan_History from "./Tabs/Loan_History_Table";
 import Set_Interest_Rate_Modal from "./Modals/Set_Interest_Rate_Modal";
-
+import Toggle_Switch from "./Toggle_Switch";
 const Farmer_Loan = () => {
   const [active, setActive] = useState("tab1");
   const [openModel, setOpenModel] = useState(false);
@@ -20,7 +20,10 @@ const Farmer_Loan = () => {
       <h2 className="text-hover__color text-2xl font-Roboto font-extrabold py-4 ">
         Farmer Loan Information
       </h2>
-      <div className="flex items-end justify-end pb-4">
+      <div className="flex items-end justify-between pb-4">
+        <div>
+          <Toggle_Switch/>
+        </div>
         <button
           onClick={() => setOpenModel(true)}
           className="bg-bg__color shadow-md z-0 focus:outline-none  text-center text-white px-4 py-1 rounded"
@@ -50,7 +53,6 @@ const Farmer_Loan = () => {
         </button>
       </div>
       {tab__UI}
-      {/* {openModel && <Add_Lac closemodel={setOpenModel} />} */}
       {openModel && <Set_Interest_Rate_Modal closemodel={setOpenModel} />}
     </div>
   );
