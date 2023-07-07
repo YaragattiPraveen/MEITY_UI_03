@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import { useContext } from "react";
 import Sidebar from "../components/Farmer/Sidebar";
 import { Outlet } from "react-router-dom";
 import SpaIcon from "@mui/icons-material/Spa";
@@ -111,10 +111,10 @@ const FarmerWrapper = () => {
       to: "settings",
     },
   ];
-  const {toggleNav,setToggleNav} = useContext(AppContext);
+  const {toggleNav} = useContext(AppContext);
   return (
     <>
-      <div className="flex container lg:px-0 px-3">
+      <div className="flex lg:px-0 px-2">
         <div className={`w-auto h-full fixed transition-all duration-700 ease-in-out lg:ml-0 lg:z-10 ${toggleNav? "z-30 -ml-3" : "-z-30 -ml-[300px]"}`}>
           <Sidebar list={list} />
         </div>

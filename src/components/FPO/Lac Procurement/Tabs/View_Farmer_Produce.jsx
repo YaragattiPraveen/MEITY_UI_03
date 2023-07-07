@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from 'react';
 import Image_modal from '../../../Farmer/Modals/Image_modal'
 const View_Farmer_Produce = () => {
   const [openModel, setOpenModel] = useState(false);

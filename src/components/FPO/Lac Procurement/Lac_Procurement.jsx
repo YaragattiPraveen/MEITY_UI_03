@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import Navbar from "../../Farmer/Navbar";
 import Procuring from "../Lac Procurement/Tabs/Procuring";
 import Not_Procuring from "./Tabs/Not_Procuring";

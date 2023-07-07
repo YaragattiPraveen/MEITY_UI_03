@@ -1,12 +1,12 @@
-import React, { useContext } from "react";
+import { useContext } from "react";
 import NotificationsActiveRoundedIcon from "@mui/icons-material/NotificationsActiveRounded";
 import MenuIcon from "@mui/icons-material/Menu";
 import { AppContext } from "../../Context/context";
 
 const Navbar = () => {
-  const { toggleNav, setToggleNav } = useContext(AppContext);
+  const { setToggleNav } = useContext(AppContext);
   return (
-    <div className="container bg-nav__bg__color shadow-md py-4 mx-auto rounded-b-xl">
+    <div className="bg-nav__bg__color shadow-md py-4 rounded-b-xl lg:px-10 container w-full mx-auto">
       <div className="flex items-center justify-between px-2 md:px-8">
         <div>
           <div

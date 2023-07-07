@@ -1,4 +1,3 @@
-import React from "react";
 import Login1 from "./components/Login1";
 import Register from "./components/Register";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
@@ -39,6 +38,7 @@ import Announcement_For_Former from "./components/FPO/Announcement_For_Farmer/An
 import Requirement_Gathering from "./components/FPO/Requirement_Gathering/Requirement_Gathering";
 import Input_Requirement_Acceptance from "./components/FPO/Input_Requirements_Acceptance/Input_Requirement_Acceptance";
 import { NavbarContextProvider } from "./Context/context";
+import Corpoate_Customer from "./components/FPO/Corporate Customer/Corpoate_Customer";
 
 function App() {
   return (
@@ -46,9 +46,13 @@ function App() {
       <NavbarContextProvider>
         <BrowserRouter>
           <Routes>
+
+
             {/* Login route */}
             <Route path="/" element={<Login1 />} />
             <Route path="register" element={<Register />} />
+
+
             {/* farmer route */}
             <Route path="farmer" element={<FarmerWrapper />}>
               <Route index element={<Dashboard />} />
@@ -73,6 +77,7 @@ function App() {
               <Route path="fpo-announcements" element={<Fpo_Announcements />} />
             </Route>
 
+            {/* FPO routes */}
             <Route path="fpo" element={<FpoWrapper />}>
               <Route index element={<FPO_Dashboard />} />
               <Route path="dashboard" element={<FPO_Dashboard />} />
@@ -85,6 +90,7 @@ function App() {
               <Route path="settings" element={<Lac_Settings />} />
               <Route path="profile" element={<Profile />} />
               <Route path="request-quote" element={<Request_Quote />} />
+              <Route path="corporate-customer" element={<Corpoate_Customer />} />
               <Route
                 path="announcement-for-farmer"
                 element={<Announcement_For_Former />}
@@ -98,6 +104,8 @@ function App() {
                 element={<Input_Requirement_Acceptance />}
               />
             </Route>
+
+            {/* Samunnati Routes */}
 
             <Route path="samunnati" element={<SamunnatiWrapper />}>
               <Route index element={<FPO_Loan />} />

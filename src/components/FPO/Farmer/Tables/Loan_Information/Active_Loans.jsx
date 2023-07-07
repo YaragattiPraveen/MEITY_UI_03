@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import Repayment_Structure_Modal from "../../Modals/Repayment_Structure";
 
 const Active_Loans = () => {

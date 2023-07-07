@@ -1,4 +1,3 @@
-import React from "react";
 import Navbar from "./Navbar";
 import Card from "./Card";
 
@@ -11,7 +10,7 @@ const Store = () => {
           Shop from FPO
         </h2>
         <div className="flex justify-center items-center py-1 mb-5">
-          <div className="md:px-4 md:grid md:grid-cols-2 lg:grid-cols-3 gap-4 space-y-4 md:space-y-0">
+          <div className="md:px-4 md:grid md:grid-cols-2 lg:grid-cols-4 gap-4 space-y-4 md:space-y-0">
             <Card />
             <Card />
             <Card />

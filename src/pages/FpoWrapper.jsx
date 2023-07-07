@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import { useContext } from "react";
 import Sidebar from "../components/Farmer/Sidebar";
 import { Outlet } from "react-router-dom";
 
@@ -15,6 +15,7 @@ import PlaylistAddCheckCircleIcon from "@mui/icons-material/PlaylistAddCheckCirc
 import CampaignIcon from "@mui/icons-material/Campaign";
 import FormatQuoteIcon from "@mui/icons-material/FormatQuote";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
+import CorporateFareIcon from '@mui/icons-material/CorporateFare';
 import { AppContext } from "../Context/context";
 
 const FpoWrapper = () => {
@@ -92,6 +93,13 @@ const FpoWrapper = () => {
       to: "fpo-loan",
     },
     {
+      title: "Corporate Customer",
+      icon: (
+        <CorporateFareIcon style={{ color: 'white', fontSize: "28px" }} />
+      ),
+      to: "corporate-customer"
+    },
+    {
       title: "Support",
       icon: (
         <SupportAgentRoundedIcon style={{ color: "white", fontSize: "28px" }} />
@@ -114,16 +122,12 @@ const FpoWrapper = () => {
     },
   ];
 
-  const { toggleNav, setToggleNav } = useContext(AppContext);
+  const { toggleNav } = useContext(AppContext);
 
   return (
     <>
-      <div className="flex container lg:px-0 px-3">
-        <div
-          className={`w-auto h-full fixed transition-all duration-700 ease-in-out lg:ml-0 lg:z-10 ${
-            toggleNav ? "z-30 -ml-3" : "-z-30 -ml-[300px]"
-          }`}
-        >
+      <div className="flex lg:px-0 px-2">
+        <div className={`w-auto h-full fixed transition-all duration-700 ease-in-out lg:ml-0 lg:z-10 ${toggleNav ? "z-30 -ml-3" : "-z-30 -ml-[300px]"}`}>
           <Sidebar list={list} />
         </div>
         <div className="w-full lg:w-full mx-auto ml-0 lg:ml-[260px]">

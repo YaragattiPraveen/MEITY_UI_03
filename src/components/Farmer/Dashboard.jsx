@@ -1,4 +1,3 @@
-import React from "react";
 import Navbar from "./Navbar";
 import Slider from "./Slider";
 import Training_Programs from "./Tables/Training_Programs";
