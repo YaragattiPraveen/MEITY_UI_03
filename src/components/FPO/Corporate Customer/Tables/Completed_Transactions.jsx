@@ -1,4 +1,8 @@
+import useModal from "../../../hooks/useModal"
+import BidStatus from "../Modal/BidStatus/BidStatus"
+
 const Completed_Transactions = () => {
+    const {modal,closeModal,updateModal} = useModal()
     return (
         <>
             <div className="bg-box__bg__color shadow-lg rounded-lg border my-6 border-gray-200">
@@ -57,6 +61,7 @@ const Completed_Transactions = () => {
                                             </td>
                                             <td className="whitespace-nowrap px-6 py-4 text-left font-medium font-Roboto text-silver__color">
                                                 <button
+                                                    onClick={()=> updateModal("showCompletedBidStatus")}
                                                     className="bg-bg__color text-center block text-white px-4 py-1 rounded"
                                                 >
                                                     View
@@ -70,6 +75,9 @@ const Completed_Transactions = () => {
                     </div>
                 </div>
             </div>
+            {
+                modal.state === "showCompletedBidStatus" && <BidStatus handleClose={closeModal}/>
+            }
         </>
     )
 }

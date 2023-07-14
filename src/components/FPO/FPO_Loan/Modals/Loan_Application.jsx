@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import Form_1 from "../Forms/Loan_Details/Form_1";
 import Form_2 from "../Forms/Loan_Details/Form_2";
 import Form_3 from "../Forms/Loan_Details/Form_3";
@@ -24,7 +24,7 @@ const Loan_Application = ({ closemodel }) => {
   return (
     <>
       <div className="overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none">
-        <div className="relative w-auto my-4 mx-auto max-w-xs md:mx-w-sm lg:max-w-xl">
+        <div className="relative w-auto my-4 max-w-[300px] mx-auto md:max-w-lg lg:max-w-xl">
           {/*content*/}
           <div className="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
             {/*header*/}

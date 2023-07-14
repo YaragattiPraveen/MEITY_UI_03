@@ -39,6 +39,12 @@ import Requirement_Gathering from "./components/FPO/Requirement_Gathering/Requir
 import Input_Requirement_Acceptance from "./components/FPO/Input_Requirements_Acceptance/Input_Requirement_Acceptance";
 import { NavbarContextProvider } from "./Context/context";
 import Corpoate_Customer from "./components/FPO/Corporate Customer/Corpoate_Customer";
+import CorporateClientWrapper from "./pages/CorporateClientWrapper";
+
+
+import Lac_Bidding from "./components/CorporateClient/Lac_Bidding";
+import CorporateClient_Support from "./components/CorporateClient/Support";
+import CorporateClient_Settings from "./components/CorporateClient/Settings";
 
 function App() {
   return (
@@ -114,6 +120,15 @@ function App() {
               <Route path="farmer-loan" element={<Samunnati_Farmer_Loan />} />
               <Route path="support" element={<Samunnati_Support />} />
               <Route path="settings" element={<Samunnati_Settings />} />
+            </Route>
+
+            {/* Corporate Client */}
+
+            <Route path="coporate-client" element={<CorporateClientWrapper />}>
+              <Route index element={<Lac_Bidding />} />
+              <Route path="coporate-client" element={<Lac_Bidding />} />
+              <Route path="support" element={<CorporateClient_Support />} />
+              <Route path="settings" element={<CorporateClient_Settings />} />
             </Route>
           </Routes>
         </BrowserRouter>

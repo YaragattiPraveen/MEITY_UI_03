@@ -1,4 +1,3 @@
-import React from "react";
 import Navbar from "../../Farmer/Navbar";
 const Request_Quote = () => {
   return (
@@ -93,10 +92,10 @@ const Request_Quote = () => {
           <h3 className="text-hover__color text-xl font-semibold font-Roboto py-2">
             Previous Requests
           </h3>
-          <div className="overflow-x-auto sm:-mx-6 lg:-mx-8">
-            <div className="inline-block min-w-full py-2 sm:px-4 lg:px-8">
+          <div className="overflow-x-auto mx-2 md:mx-4 md:overflow-auto lg:overflow-auto">
+            <div className="relative inline-block min-w-full py-2 sm:px-2 lg:6">
               <div className="overflow-hidden">
-                <table className="min-w-full text-left text-sm font-light">
+                <table className="min-w-full text-left text-sm font-light table-auto">
                   <thead className="text-xs text-medium bg-green-200 border-b uppercase text-gray-600">
                     <tr>
                       <th

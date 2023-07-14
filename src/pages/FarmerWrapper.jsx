@@ -111,11 +111,13 @@ const FarmerWrapper = () => {
       to: "settings",
     },
   ];
-  const {toggleNav} = useContext(AppContext);
+
+  const { toggleNav } = useContext(AppContext);
+
   return (
     <>
       <div className="flex lg:px-0 px-2">
-        <div className={`w-auto h-full fixed transition-all duration-700 ease-in-out lg:ml-0 lg:z-10 ${toggleNav? "z-30 -ml-3" : "-z-30 -ml-[300px]"}`}>
+        <div className={`w-auto h-full fixed transition-all duration-700 ease-in-out lg:ml-0 lg:z-10 ${toggleNav ? "z-30 -ml-3" : "-z-30 -ml-[300px]"}`}>
           <Sidebar list={list} />
         </div>
         <div className="w-full lg:w-full mx-auto ml-0 lg:ml-[260px]">

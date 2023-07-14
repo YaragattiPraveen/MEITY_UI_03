@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import Approved_Loans from "../Tables/Approved_Loans";
 import Rejected_Loans from "../Tables/Rejected_Loans";
 import Pending_Loans from "../Tables/Pending_Loans";
@@ -19,13 +19,13 @@ const Working_Capital_Loan = () => {
 
   return (
     <>
-      <div className="flex gap-5 justify-end">
+      <div className="flex gap-3 md:gap-5 flex-wrap justify-between md:justify-end">
         <button
           onClick={() => setActive("tab1")}
           style={{
             borderBottom: active === "tab1" && "2px solid green",
           }}
-          className="text-hover__color shadow-md rounded-lg z-0 focus:outline-none px-4 py-2 font-Roboto text-base font-bold cursor-pointer"
+          className="text-hover__color shadow-md rounded-lg z-0 focus:outline-none px-4 py-2 font-Roboto text-sm md:text-base font-bold cursor-pointer"
         >
           Approved Loans
         </button>
@@ -34,7 +34,7 @@ const Working_Capital_Loan = () => {
           style={{
             borderBottom: active === "tab2" && "2px solid green",
           }}
-          className="text-hover__color shadow-md rounded-lg z-0 focus:outline-none px-4 py-2 font-Roboto text-base font-bold cursor-pointer"
+          className="text-hover__color shadow-md rounded-lg z-0 focus:outline-none px-4 py-2 font-Roboto text-sm md:text-base font-bold cursor-pointer"
         >
           Rejected Loans
         </button>
@@ -43,7 +43,7 @@ const Working_Capital_Loan = () => {
           style={{
             borderBottom: active === "tab3" && "2px solid green",
           }}
-          className="text-hover__color shadow-md rounded-lg z-0 focus:outline-none px-4 py-2 font-Roboto text-base font-bold cursor-pointer"
+          className="text-hover__color shadow-md rounded-lg z-0 focus:outline-none px-4 py-2 font-Roboto text-sm md:text-base font-bold cursor-pointer"
         >
           Pending Loans
         </button>
@@ -52,7 +52,7 @@ const Working_Capital_Loan = () => {
           style={{
             borderBottom: active === "tab4" && "2px solid green",
           }}
-          className="text-hover__color shadow-md rounded-lg z-0 focus:outline-none px-4 py-2 font-Roboto text-base font-bold cursor-pointer"
+          className="text-hover__color shadow-md rounded-lg z-0 focus:outline-none px-4 py-2 font-Roboto text-sm md:text-base font-bold cursor-pointer"
         >
           Loan Window
         </button>

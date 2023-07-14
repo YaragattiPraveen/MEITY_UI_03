@@ -1,5 +1,3 @@
-import React from "react";
-
 const Form_2 = () => {
   return (
     <div className="relative px-6 py-3 flex-auto">

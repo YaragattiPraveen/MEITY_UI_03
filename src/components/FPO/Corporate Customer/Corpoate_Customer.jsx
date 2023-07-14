@@ -21,7 +21,7 @@ const Corpoate_Customer = () => {
             <h2 className="text-hover__color text-2xl font-Roboto font-extrabold py-4 ">
                 Corporate Customer
             </h2>
-            <div className="flex md:gap-3 md:gap-5 justify-end ">
+            <div className="flex gap-3 md:gap-5 justify-end ">
                 <button
                     onClick={() => setActive("tab1")}
                     style={{

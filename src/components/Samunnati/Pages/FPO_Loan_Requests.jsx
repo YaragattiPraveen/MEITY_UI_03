@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import Profile from "../Tables/Profile";
 import Loan_History from "../Tables/Loan_History";
 import Ongoing_Loans from "../Tables/Ongoing_Loans";
@@ -22,12 +22,12 @@ const FPO_Loan_Requests = ({ setLoanInfo }) => {
     <>
       <button
         onClick={() => setLoanInfo(false)}
-        className="bg-bg__color text-center shadow-md rounded-lg z-0 focus:outline-none px-4 py-2 block text-white px-4 py-1 rounded"
+        className="bg-bg__color text-center shadow-md  z-0 focus:outline-none mb-5 block text-white px-4 py-1 rounded"
       >
         Back to FPO Loan Page
       </button>
 
-      <div className="flex gap-5 justify-end">
+      <div className="flex gap-3 justify-between flex-wrap md:gap-5 md:justify-end">
         <button
           onClick={() => setActive("tab1")}
           style={{
@@ -71,3 +71,4 @@ const FPO_Loan_Requests = ({ setLoanInfo }) => {
 };
 
 export default FPO_Loan_Requests;
+

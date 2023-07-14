@@ -3,14 +3,14 @@ import Image_modal from "../../../Farmer/Modals/Image_modal";
 import Approve_Loan_Application from "../Modal/Approve_Loan_Application";
 import Reject_Loan_Application from "../Modal/Reject_Loan_Application";
 
-const View_Loan_Application = ({closemodal}) => {
+const View_Loan_Application = ({ closemodal }) => {
   const [openModel, setOpenModel] = useState(false);
   const [selectedValue, setSelectedValue] = useState("Change Loan Status");
 
   return (
     <>
       <div className="overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none">
-        <div className="relative w-auto my-4 mx-auto max-w-xs md:mx-w-sm lg:max-w-md">
+        <div className="relative w-auto my-4 max-w-[300px] mx-auto md:max-w-lg lg:max-w-xl">
           {/*content*/}
           <div className="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
             {/*header*/}

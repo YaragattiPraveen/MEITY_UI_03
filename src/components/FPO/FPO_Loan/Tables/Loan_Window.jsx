@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import  { useState } from "react";
 import Working_Capital_Loan from '../Modals/Working_Capital_Loan'
 const Loan_Window = () => {
   const [openModel,setOpenModel] = useState(false)
@@ -8,7 +8,7 @@ const Loan_Window = () => {
         <thead className="text-xs bg-green-200 text-gray-600 uppercase font-Roboto"></thead>
         <tbody className="text-silver__color">
           <tr className="border-b transition duration-300 ease-in-out hover:bg-green-2">
-            <th className="px-4 uppercase py-4 text-medium font-Roboto text-left">
+            <th className="px-4 uppercase py-4 text-xs md:text-medium font-Roboto text-left">
               Loan window Id
             </th>
             <td className="whitespace-nowrap px-4 py-4 text-left font-medium font-Roboto text-silver__color">
@@ -19,7 +19,7 @@ const Loan_Window = () => {
             </td>
           </tr>
           <tr className="border-b transition duration-300 ease-in-out hover:bg-green-2">
-            <th className="px-4 uppercase py-4 text-medium font-Roboto text-left">
+            <th className="px-4 uppercase py-4 text-xs md:text-medium font-Roboto text-left">
               Loan window amount
             </th>
             <td className="whitespace-nowrap px-4 py-4 text-left font-medium font-Roboto text-silver__color">
@@ -30,7 +30,7 @@ const Loan_Window = () => {
             </td>
           </tr>
           <tr className="border-b transition duration-300 ease-in-out hover:bg-green-2">
-            <th className="px-4 uppercase py-4 text-medium font-Roboto text-left">
+            <th className="px-4 uppercase py-4 text-xs md:text-medium font-Roboto text-left">
               Loan window tenure
             </th>
             <td className="whitespace-nowrap px-4 py-4 text-left font-medium font-Roboto text-silver__color">
@@ -41,7 +41,7 @@ const Loan_Window = () => {
             </td>
           </tr>
           <tr className="border-b transition duration-300 ease-in-out hover:bg-green-2">
-            <th className="px-4 uppercase py-4 text-medium font-Roboto text-left">
+            <th className="px-4 uppercase py-4 text-xs md:text-medium font-Roboto text-left">
               Status
             </th>
             <td className="whitespace-nowrap px-4 py-4 text-left font-medium font-Roboto text-silver__color">

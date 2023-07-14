@@ -1,12 +1,12 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import Accepted_Memberships from '../Tables/Accepted_Memberships'
 import Rejected_Memberships from '../Tables/Rejected_Memberships'
 import Pending_Applications from "../Tables/Pending_Applications";
 import View_Application from '../Modals/View_Application'
 
-const Farmer_Info = ({setFarmerInfo}) => {
+const Farmer_Info = ({ setFarmerInfo }) => {
   const [active, setActive] = useState("tab1");
-  const [openModel,setOpenModel] = useState(false)
+  const [openModel, setOpenModel] = useState(false)
 
   let tab__UI;
   if (active === "tab1") {
@@ -14,19 +14,19 @@ const Farmer_Info = ({setFarmerInfo}) => {
   } else if (active === "tab2") {
     tab__UI = <Rejected_Memberships />;
   } else if (active === "tab3") {
-    tab__UI = <Pending_Applications closemodel={setOpenModel}/>;
+    tab__UI = <Pending_Applications closemodel={setOpenModel} />;
   }
 
   return (
     <>
-      <div className="container flex justify-start items-center mb-3">
+      <div className="container flex justify-center md:justify-start items-center mb-3">
         <div className="relative">
           <div className="absolute top-4 left-3">
             <i className="fa fa-search text-gray-400 z-20 hover:text-gray-500" />
           </div>
           <input
             type="text"
-            className="h-14 w-96 pl-10 pr-20 shadow-md rounded-lg z-0 focus:outline-none"
+            className="h-14 w-70 md:w-96 pl-10 pr-20 shadow-md rounded-lg z-0 focus:outline-none"
             placeholder="Search here..."
           />
           <div className="absolute top-2 right-2">
@@ -36,13 +36,13 @@ const Farmer_Info = ({setFarmerInfo}) => {
           </div>
         </div>
       </div>
-      <div className="flex gap-5 justify-end">
+      <div className="flex gap-2 md:gap-5 justify-center md:justify-end flex-wrap">
         <button
           onClick={() => setActive("tab1")}
           style={{
             borderBottom: active === "tab1" && "2px solid green",
           }}
-          className="text-hover__color shadow-md rounded-lg z-0 focus:outline-none px-4 py-2 font-Roboto text-base font-bold cursor-pointer"
+          className="text-hover__color shadow-md rounded-lg z-0 focus:outline-none px-2 md:px-4 py-2 font-Roboto text-sm md:text-base font-bold cursor-pointer"
         >
           Accepted Memberships
         </button>
@@ -51,7 +51,7 @@ const Farmer_Info = ({setFarmerInfo}) => {
           style={{
             borderBottom: active === "tab2" && "2px solid green",
           }}
-          className="text-hover__color shadow-md rounded-lg z-0 focus:outline-none px-4 py-2 font-Roboto text-base font-bold cursor-pointer"
+          className="text-hover__color shadow-md rounded-lg z-0 focus:outline-none px-2 md:px-4 py-2 font-Roboto text-sm md:text-base font-bold cursor-pointer"
         >
           Rejected Memberships
         </button>
@@ -60,7 +60,7 @@ const Farmer_Info = ({setFarmerInfo}) => {
           style={{
             borderBottom: active === "tab3" && "2px solid green",
           }}
-          className="text-hover__color shadow-md rounded-lg z-0 focus:outline-none px-4 py-2 font-Roboto text-base font-bold cursor-pointer"
+          className="text-hover__color shadow-md rounded-lg z-0 focus:outline-none px-2 md:px-4 py-2 font-Roboto text-sm md:text-base font-bold cursor-pointer"
         >
           Pending Applications
         </button>

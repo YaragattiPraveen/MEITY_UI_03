@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import Active_Loans from '../Tables/Loan_Information/Active_Loans';
 import Loan_History from '../Tables/Loan_Information/Loan_History'
 import Loan_In_Process from '../Tables/Loan_Information/Loan_In_Process'
@@ -16,13 +16,13 @@ const Loan_Information = () => {
 
   return (
     <div>
-      <div className="flex gap-5 justify-end my-6">
+      <div className="flex gap-3 md:gap-5 justify-end my-6">
         <button
           onClick={() => setActive("tab1")}
           style={{
             borderBottom: active === "tab1" && "2px solid green",
           }}
-          className="text-hover__color shadow-md rounded-lg z-0 focus:outline-none px-4 py-2 font-Roboto text-base font-bold cursor-pointer"
+          className="text-hover__color shadow-md rounded-lg z-0 focus:outline-none px-2 md:px-4 py-2 font-Roboto text-sm md:text-base font-bold cursor-pointer"
         >
           Active Loans
         </button>
@@ -31,7 +31,7 @@ const Loan_Information = () => {
           style={{
             borderBottom: active === "tab2" && "2px solid green",
           }}
-          className="text-hover__color shadow-md rounded-lg z-0 focus:outline-none px-4 py-2 font-Roboto text-base font-bold cursor-pointer"
+          className="text-hover__color shadow-md rounded-lg z-0 focus:outline-none px-2 md:px-4 py-2 font-Roboto text-sm md:text-base font-bold cursor-pointer"
         >
           Loan History
         </button>
@@ -40,7 +40,7 @@ const Loan_Information = () => {
           style={{
             borderBottom: active === "tab3" && "2px solid green",
           }}
-          className="text-hover__color shadow-md rounded-lg z-0 focus:outline-none px-4 py-2 font-Roboto text-base font-bold cursor-pointer"
+          className="text-hover__color shadow-md rounded-lg z-0 focus:outline-none px-4 py-2 font-Roboto text-sm md:text-base font-bold cursor-pointer"
         >
           Loan in Process
         </button>

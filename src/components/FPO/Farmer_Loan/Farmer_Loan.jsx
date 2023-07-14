@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import Navbar from "../../Farmer/Navbar";
 import Loans_Approved_By_Samunnati from "./Tabs/Loans_Approved_By_Samunnati";
 import Loan_History from "./Tabs/Loan_History_Table";
@@ -26,19 +26,19 @@ const Farmer_Loan = () => {
         </div>
         <button
           onClick={() => setOpenModel(true)}
-          className="bg-bg__color shadow-md z-0 focus:outline-none  text-center text-white px-4 py-1 rounded"
+          className="bg-bg__color shadow-md z-0 focus:outline-none text-xs md:text-base  text-center text-white px-2 md:px-4 py-1 rounded"
         >
           Set Interest Rate
         </button>
       </div>
 
-      <div className="flex gap-5 justify-end">
+      <div className="flex gap-3 md:gap-5 justify-end">
         <button
           onClick={() => setActive("tab1")}
           style={{
             borderBottom: active === "tab1" && "2px solid green",
           }}
-          className="text-hover__color shadow-md rounded-lg z-0 focus:outline-none px-4 py-2 font-Roboto text-base font-bold cursor-pointer"
+          className="text-hover__color shadow-md rounded-lg z-0 focus:outline-none px-4 py-2 font-Roboto text-sm md:text-base font-bold cursor-pointer"
         >
           Loans Approved by Samunnati
         </button>
@@ -47,7 +47,7 @@ const Farmer_Loan = () => {
           style={{
             borderBottom: active === "tab2" && "2px solid green",
           }}
-          className="text-hover__color shadow-md rounded-lg z-0 focus:outline-none px-4 py-2 font-Roboto text-base font-bold cursor-pointer"
+          className="text-hover__color shadow-md rounded-lg z-0 focus:outline-none px-4 py-2 font-Roboto text-sm md:text-base font-bold cursor-pointer"
         >
           Loan History
         </button>

@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+import  { useState } from "react";
 import Add__Produce from "./Modals/Add__Produce";
 
 const Produce = () => {
-  const [openModel,setOpenModel] = useState(false)
+  const [openModel, setOpenModel] = useState(false)
   return (
     <>
       <div className="bg-box__bg__color shadow-lg rounded-lg border my-6 border-gray-200">
@@ -12,10 +12,10 @@ const Produce = () => {
           </button>
         </div>
         <div className="flex flex-col p-3">
-          <div className="overflow-x-auto sm:-mx-6 lg:-mx-8">
-            <div className="inline-block min-w-full py-2 sm:px-6 lg:px-8">
+          <div className="overflow-x-auto md:mx-4 md:overflow-auto">
+            <div className="relative inline-block min-w-full py-2 sm:px-2 lg:6">
               <div className="overflow-hidden">
-                <table className="min-w-full text-left text-sm font-light">
+                <table className="min-w-full text-left text-sm font-light table-auto">
                   <thead className="text-xs text-medium bg-green-200 border-b uppercase text-gray-600">
                     <tr>
                       <th
@@ -143,9 +143,9 @@ const Produce = () => {
             </div>
           </div>
         </div>
-        {openModel && <Add__Produce closemodel={setOpenModel}/>}
+        {openModel && <Add__Produce closemodel={setOpenModel} />}
       </div>
-      
+
     </>
   );
 };

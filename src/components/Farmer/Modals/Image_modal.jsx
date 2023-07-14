@@ -1,11 +1,10 @@
-import React from 'react'
 import logo from '../../../assets/logo.png'
 
-const Image_modal = ({title,closemodel}) => {
+const Image_modal = ({ title, closemodel }) => {
   return (
     <>
-        <div className="overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none">
-        <div className="relative w-auto px-2 my-4 mx-auto max-w-xs md:mx-w-sm lg:max-w-xl">
+      <div className="overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none">
+        <div className="relative w-auto my-4 max-w-[300px] mx-auto md:max-w-lg lg:max-w-xl">
           {/*content*/}
           <div className="border-0 rounded-lg shadow-lg relative flex flex-col w-full bg-white outline-none focus:outline-none">
             {/*header*/}
@@ -25,10 +24,10 @@ const Image_modal = ({title,closemodel}) => {
             </div>
             {/*body*/}
             <div className="relative px-6 py-3 flex-auto">
-                <img height={100} width={100} className='mx-auto' src={logo} alt='dummy image'/>
+              <img height={100} width={100} className='mx-auto' src={logo} alt='dummy image' />
             </div>
             {/*footer*/}
-            
+
           </div>
         </div>
       </div>

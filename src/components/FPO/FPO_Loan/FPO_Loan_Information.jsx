@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import Navbar from "../../Farmer/Navbar";
 import Working_Capital_Loan_Modal from "./Modals/Working_Capital_Loan";
 import Farmer_Loan from "./Tabs/Farmer_Loan";
@@ -8,8 +8,8 @@ import Aggregate_Repayment from "./Modals/Aggregate_Repayment";
 const Loan_Information = () => {
   const [active, setActive] = useState("tab1");
   const [openWorkingModel, setWorkingOpenModel] = useState(false);
-  const [openLoanModel,setLoanModel] = useState(false)
-  const [openAggregateModel,setAggregateModel] = useState(false)
+  const [openLoanModel, setLoanModel] = useState(false)
+  const [openAggregateModel, setAggregateModel] = useState(false)
 
   let tab__UI;
   if (active === "tab1") {
@@ -29,27 +29,27 @@ const Loan_Information = () => {
           {active === "tab1" ? (
             <button
               onClick={() => setWorkingOpenModel(true)}
-              className="bg-bg__color  text-center text-white px-4 py-1 rounded shadow-md z-0 focus:outline-none"
+              className="bg-bg__color md:text-base text-sm  text-center text-white px-4 py-1 rounded shadow-md z-0 focus:outline-none"
             >
               Apply for Working Capital Loan Window
             </button>
           ) : (
             <button
               onClick={() => setWorkingOpenModel(true)}
-              className="bg-bg__color  text-center text-white px-4 py-1 rounded"
+              className="bg-bg__color md:text-base text-sm   text-center text-white px-4 py-1 rounded"
             >
               Apply for Farmer Loan
             </button>
           )}
         </div>
 
-        <div className="flex gap-5 justify-end">
+        <div className="flex gap-3 mb-5 md:gap-5 justify-between md:justify-end">
           <button
             onClick={() => setActive("tab1")}
             style={{
               borderBottom: active === "tab1" && "2px solid green",
             }}
-            className="text-hover__color shadow-md rounded-lg z-0 focus:outline-none px-4 py-2 font-Roboto text-base font-bold cursor-pointer"
+            className="text-hover__color text-sm shadow-md rounded-lg z-0 focus:outline-none px-2 py-1 md:px-4 md:py-2 font-Roboto md:text-base font-bold cursor-pointer"
           >
             Working Capital Loan
           </button>
@@ -58,7 +58,7 @@ const Loan_Information = () => {
             style={{
               borderBottom: active === "tab2" && "2px solid green",
             }}
-            className="text-hover__color shadow-md rounded-lg z-0 focus:outline-none px-4 py-2 font-Roboto text-base font-bold cursor-pointer"
+            className="text-hover__color text-sm shadow-md rounded-lg z-0 focus:outline-none px-2 py-1 md:px-4 md:py-2 font-Roboto md:text-base font-bold cursor-pointer"
           >
             Farmer Loan
           </button>
@@ -67,7 +67,7 @@ const Loan_Information = () => {
         <div className="flex items-end justify-Start pb-4">
           <button
             onClick={() => setLoanModel(true)}
-            className="bg-bg__color shadow-md z-0 focus:outline-none  text-center text-white px-4 py-1 rounded"
+            className="bg-bg__color shadow-md text-sm md:text-base z-0 focus:outline-none  text-center text-white px-4 py-1 rounded"
           >
             Apply for Loan
           </button>
@@ -87,8 +87,8 @@ const Loan_Information = () => {
         {openWorkingModel && (
           <Working_Capital_Loan_Modal closemodel={setWorkingOpenModel} />
         )}
-        {openLoanModel && <Apply_For_Loan closemodel={setLoanModel}/>}
-        {openAggregateModel && <Aggregate_Repayment closemodel={setAggregateModel}/>}
+        {openLoanModel && <Apply_For_Loan closemodel={setLoanModel} />}
+        {openAggregateModel && <Aggregate_Repayment closemodel={setAggregateModel} />}
       </div>
     </>
   );

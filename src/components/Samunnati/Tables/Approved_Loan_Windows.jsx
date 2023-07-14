@@ -1,14 +1,13 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import Repayment_Structure from '../FPO_Loan/Modal/Repayment_Structure'
-const Approved_Loan_Windows = ({setLoanInfo}) => {
-  const [openModal,setModal] = useState(false)
+const Approved_Loan_Windows = ({ setLoanInfo }) => {
+  const [openModal, setModal] = useState(false)
   return (
-   <>
-     <div className="flex flex-col px-3">
-      <div className="overflow-x-auto sm:-mx-6 lg:-mx-8">
-        <div className="inline-block min-w-full sm:px-6 lg:px-8">
+    <>
+      <div className="overflow-x-auto mx-2 md:mx-4 md:overflow-auto lg:overflow-auto">
+        <div className="relative inline-block min-w-full py-2 sm:px-2 lg:6">
           <div className="overflow-hidden">
-            <table className="min-w-full text-left text-sm font-light">
+            <table className="min-w-full text-left text-sm font-light table-auto">
               <thead className="text-xs text-medium bg-green-200 border-b uppercase text-gray-600">
                 <tr>
                   <th
@@ -103,9 +102,8 @@ const Approved_Loan_Windows = ({setLoanInfo}) => {
           </div>
         </div>
       </div>
-    </div>
-    {openModal && <Repayment_Structure closemodal={setModal} />}
-   </>
+      {openModal && <Repayment_Structure closemodal={setModal} />}
+    </>
   );
 };
 

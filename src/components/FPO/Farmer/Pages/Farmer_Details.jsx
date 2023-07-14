@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import Profile_Information from "../Tables/Profile_Information";
 import Loan_Information from "../Tables/Loan_Information";
 import Purchase_History from "../Tables/Purchase_History";
@@ -22,12 +22,12 @@ const Farmer_Details = ({ setFarmerInfo }) => {
     <>
       <button
         onClick={() => setFarmerInfo(false)}
-        className="bg-bg__color text-center shadow-md rounded-lg z-0 focus:outline-none px-4 py-2 block text-white px-4 py-1 rounded"
+        className="bg-bg__color text-center shadow-md z-0 focus:outline-none block text-white px-4 py-1 mb-5 rounded"
       >
         Back to Farmer Page
       </button>
 
-      <div className="flex gap-5 justify-end">
+      <div className="flex mb-5 gap-2 md:gap-5 flex-wrap md:justify-end">
         <button
           onClick={() => setActive("tab1")}
           style={{

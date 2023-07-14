@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import Navbar from "../../Farmer/Navbar";
 import Farmer_Info from "./Pages/Farmer_Info";
 import Farmer_Details from "./Pages/Farmer_Details";

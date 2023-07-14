@@ -1,4 +1,3 @@
-import React from "react";
 import Navbar from "../Navbar";
 const Purchase_Authentication = () => {
   return (

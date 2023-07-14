@@ -1,9 +1,9 @@
-import React, { useState } from "react";
 import Navbar from "./Navbar";
 import Granted_Loans from "./Tables/Granted_Loans";
 import Rejected_Loans from "./Tables/Rejected_Loans";
 import Loan_In_Process from "./Tables/Loan_In_Process";
 import Apply_Loan from "./Modals/Apply_Loan";
+import { useState } from "react";
 
 const Loan = () => {
   const [active, setActive] = useState("tab1");
