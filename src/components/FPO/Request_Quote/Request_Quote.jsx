@@ -9,12 +9,9 @@ const Request_Quote = () => {
       <div className="container w-full mx-auto">
         <Navbar />
         <h2 className="text-hover__color text-2xl font-Roboto font-extrabold py-6 ">
-          Previous Quotation Requests
+          Quotation Requests
         </h2>
-        <div className="relative shadow-sm w-auto border p-5 my-4 mx-auto max-w-xs md:max-w-xl lg:max-w-2xl">
-          <h1 className="m-2 text-hover__color font-Roboto font-medium text-lg">
-            New Request
-          </h1>
+        <div className="relative shadow-sm bg-nav__bg__color w-auto border p-5 my-4 mx-auto max-w-xs md:max-w-xl lg:max-w-2xl">
           <div className="md:flex lg:flex-row mb:4 flex-col m-2">
             <div className="lg:w-1/2 sm:w-full mr-1">
               <label className="block text-grey-darker font-Roboto text-silver__color mb-2">

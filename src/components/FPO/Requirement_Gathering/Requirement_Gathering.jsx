@@ -35,12 +35,6 @@ const Requirement_Gathering = () => {
                       scope="col"
                       className="px-4 py-4 text-medium font-Roboto text-left"
                     >
-                      CROP NAME
-                    </th>
-                    <th
-                      scope="col"
-                      className="px-4 py-4 text-medium font-Roboto text-left"
-                    >
                       VARIANT
                     </th>
                     <th
@@ -53,7 +47,7 @@ const Requirement_Gathering = () => {
                       scope="col"
                       className="px-4 py-4 text-medium font-Roboto text-left"
                     >
-                      QUANTITY (KG OR L)
+                      QUANTITY (KG/L)
                     </th>
                     <th
                       scope="col"
@@ -66,12 +60,6 @@ const Requirement_Gathering = () => {
                       className="px-4 py-4 text-medium font-Roboto text-left"
                     >
                       FINALIZATION DATE
-                    </th>
-                    <th
-                      scope="col"
-                      className="px-4 py-4 text-medium font-Roboto text-left"
-                    >
-                      BID
                     </th>
                   </tr>
                 </thead>
@@ -87,9 +75,6 @@ const Requirement_Gathering = () => {
                       Seeds
                     </td>
                     <td className="whitespace-nowrap px-4 py-4 text-left font-medium font-Roboto text-silver__color">
-                      Seed 1
-                    </td>
-                    <td className="whitespace-nowrap px-4 py-4 text-left font-medium font-Roboto text-silver__color">
                       Variant 1
                     </td>
                     <td className="whitespace-nowrap px-4 py-4 text-left font-medium font-Roboto text-silver__color">
@@ -103,11 +88,6 @@ const Requirement_Gathering = () => {
                     </td>
                     <td className="whitespace-nowrap px-4 py-4 text-left font-medium font-Roboto text-silver__color">
                       12/12/22
-                    </td>
-                    <td className="whitespace-nowrap px-4 py-4 text-left font-medium font-Roboto text-silver__color">
-                      <button className="bg-bg__color text-center block text-white px-4 py-1 rounded">
-                        Create Bid
-                      </button>
                     </td>
                   </tr>
                   <tr className="border-b transition duration-300 ease-in-out hover:bg-green-2">
@@ -121,9 +101,6 @@ const Requirement_Gathering = () => {
                       Seeds
                     </td>
                     <td className="whitespace-nowrap px-4 py-4 text-left font-medium font-Roboto text-silver__color">
-                      Seed 1
-                    </td>
-                    <td className="whitespace-nowrap px-4 py-4 text-left font-medium font-Roboto text-silver__color">
                       Variant 1
                     </td>
                     <td className="whitespace-nowrap px-4 py-4 text-left font-medium font-Roboto text-silver__color">
@@ -137,11 +114,6 @@ const Requirement_Gathering = () => {
                     </td>
                     <td className="whitespace-nowrap px-4 py-4 text-left font-medium font-Roboto text-silver__color">
                       12/12/22
-                    </td>
-                    <td className="whitespace-nowrap px-4 py-4 text-left font-medium font-Roboto text-silver__color">
-                      <button className="bg-bg__color text-center block text-white px-4 py-1 rounded">
-                        Create Bid
-                      </button>
                     </td>
                   </tr>
                   <tr className="border-b transition duration-300 ease-in-out hover:bg-green-2">
@@ -155,9 +127,6 @@ const Requirement_Gathering = () => {
                       Seeds
                     </td>
                     <td className="whitespace-nowrap px-4 py-4 text-left font-medium font-Roboto text-silver__color">
-                      Seed 1
-                    </td>
-                    <td className="whitespace-nowrap px-4 py-4 text-left font-medium font-Roboto text-silver__color">
                       Variant 1
                     </td>
                     <td className="whitespace-nowrap px-4 py-4 text-left font-medium font-Roboto text-silver__color">
@@ -171,11 +140,6 @@ const Requirement_Gathering = () => {
                     </td>
                     <td className="whitespace-nowrap px-4 py-4 text-left font-medium font-Roboto text-silver__color">
                       12/12/22
-                    </td>
-                    <td className="whitespace-nowrap px-4 py-4 text-left font-medium font-Roboto text-silver__color">
-                      <button className="bg-bg__color text-center block text-white px-4 py-1 rounded">
-                        Create Bid
-                      </button>
                     </td>
                   </tr>
                 </tbody>
