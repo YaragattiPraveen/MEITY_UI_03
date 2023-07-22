@@ -45,6 +45,13 @@ import CorporateClientWrapper from "./pages/CorporateClientWrapper";
 import Lac_Bidding from "./components/CorporateClient/Lac_Bidding";
 import CorporateClient_Support from "./components/CorporateClient/Support";
 import CorporateClient_Settings from "./components/CorporateClient/Settings";
+import InputSupplierWrapper from "./pages/InuptSupplierWrapper";
+import Invite_Bids from "./components/FPO/Inivete_Bids/Invite_Bids";
+
+import Invited_Bids from "./components/InputSupplier/Invited_Bids"
+import Input_Supplier_Settings from "../src/components/InputSupplier/Profile"
+import Input_Supplier_Support from "../src/components/InputSupplier/Support"
+import Requested_Quotes from "./components/InputSupplier/Requested_Bids/Requested_Quotes";
 
 function App() {
   return (
@@ -92,6 +99,7 @@ function App() {
               <Route path="lac-procurement" element={<Lac_Procurement />} />
               <Route path="farmer-loan" element={<Farmer_Loan />} />
               <Route path="fpo-loan" element={<FOP_Loan_Information />} />
+              <Route path="Invite-bids" element={<Invite_Bids />} />
               <Route path="support" element={<Lac_Support />} />
               <Route path="settings" element={<Lac_Settings />} />
               <Route path="profile" element={<Profile />} />
@@ -129,6 +137,15 @@ function App() {
               <Route path="coporate-client" element={<Lac_Bidding />} />
               <Route path="support" element={<CorporateClient_Support />} />
               <Route path="settings" element={<CorporateClient_Settings />} />
+            </Route>
+
+            {/* Input Supplier */}
+            <Route path="input-supplier" element={<InputSupplierWrapper />}>
+              <Route index element={<Invited_Bids />} />
+              <Route path="Invited-bids" element={<Invited_Bids />} />
+              <Route path="Requested-quote" element={<Requested_Quotes />} />
+              <Route path="support" element={<Input_Supplier_Support />} />
+              <Route path="settings" element={<Input_Supplier_Settings />} />
             </Route>
           </Routes>
         </BrowserRouter>

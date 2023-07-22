@@ -1,8 +1,8 @@
 import { useState } from "react";
 import PermContactCalendarIcon from "@mui/icons-material/PermContactCalendar";
-import Personal__information from "../../Farmer/Settings/Personal__information";
-import Profile__Update from "../../Farmer/Settings/Profile__Update";
-import Navbar from "../../Farmer/Navbar";
+import Navbar from "../Farmer/Navbar";
+import Personal__information from "../Farmer/Settings/Personal__information";
+import Profile__Update from "../Farmer/Settings/Profile__Update";
 
 const Settings = () => {
   const [active, setActive] = useState("tab1");

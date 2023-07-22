@@ -13,9 +13,10 @@ import AgricultureIcon from "@mui/icons-material/Agriculture";
 import PublishedWithChangesIcon from "@mui/icons-material/PublishedWithChanges";
 import PlaylistAddCheckCircleIcon from "@mui/icons-material/PlaylistAddCheckCircle";
 import CampaignIcon from "@mui/icons-material/Campaign";
-import FormatQuoteIcon from "@mui/icons-material/FormatQuote";
+import RequestQuoteIcon from '@mui/icons-material/RequestQuote';
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import CorporateFareIcon from '@mui/icons-material/CorporateFare';
+import CurrencyBitcoinIcon from '@mui/icons-material/CurrencyBitcoin';
 import { AppContext } from "../Context/context";
 
 const FpoWrapper = () => {
@@ -31,7 +32,7 @@ const FpoWrapper = () => {
       to: "farmer",
     },
     {
-      title: "Requirement Acceptance",
+      title: "Place a Requirement",
       icon: (
         <PublishedWithChangesIcon
           style={{ color: "white", fontSize: "28px" }}
@@ -55,7 +56,7 @@ const FpoWrapper = () => {
     },
     {
       title: "Request Quote",
-      icon: <FormatQuoteIcon style={{ color: "white", fontSize: "28px" }} />,
+      icon: <RequestQuoteIcon style={{ color: "white", fontSize: "28px" }} />,
       to: "request-quote",
     },
     {
@@ -84,6 +85,15 @@ const FpoWrapper = () => {
         />
       ),
       to: "farmer-loan",
+    },
+    {
+      title: "Invite Bid",
+      icon: (
+        <CurrencyBitcoinIcon
+          style={{ color: "white", fontSize: "28px" }}
+        />
+      ),
+      to: "Invite-bids"
     },
     {
       title: "FPO Loan",
