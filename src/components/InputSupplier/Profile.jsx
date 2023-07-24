@@ -31,7 +31,7 @@ const Settings = () => {
     { label: "Copy of Bylaws", value: "500XXX" },
     { label: "Certificate of Incorporation", value: "500XXX" },
     { label: "GST Certificate", value: "500XXX" },
-    { label: "Lincese Key", value: "500XXX" },
+    { label: "License Key", value: "500XXX" },
   ];
   return (
     <div className="container w-full mx-auto">

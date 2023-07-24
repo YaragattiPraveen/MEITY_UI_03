@@ -1,12 +1,11 @@
+import Show_Bids_Status from "../Modals/Show_Bids_Status"
 import useModal from "../../../hooks/useModal"
-import Place_Order from "../../Place_Order/Place_Order"
 
-const Step2 = () => {
-    const {modal,closeModal,updateModal} = useModal()
+const Purchase_History = () => {
+    const { modal, updateModal, closeModal } = useModal()
     return (
-        <div>
-            <h2 className="text-bg__color font-Roboto text-2xl font-bold mb-4">Bid Details</h2>
-            <div className="max-w-[250px] md:max-w-md overflow-auto bg-box__bg__color shadow-lg rounded-lg border border-gray-200 my-5">
+        <>
+            <div className="bg-box__bg__color shadow-lg rounded-lg border border-gray-200 my-5">
                 <div className="overflow-x-auto mx-2 md:mx-4 md:overflow-auto lg:overflow-auto">
                     <div className="relative inline-block min-w-full py-2 sm:px-2 lg:6">
                         <div className="overflow-hidden">
@@ -17,52 +16,53 @@ const Step2 = () => {
                                             scope="col"
                                             className="px-4 py-4 text-medium font-Roboto text-left"
                                         >
-                                            Input Supplier ID
+                                            Bid Id
                                         </th>
                                         <th
                                             scope="col"
                                             className="px-4 py-4 text-medium font-Roboto text-left"
                                         >
-                                            Supplier Name
+                                            Date of Invoice
                                         </th>
                                         <th
                                             scope="col"
                                             className="px-4 py-4 text-medium font-Roboto text-left"
                                         >
-                                            Mobile Number
+                                            Invoice Number
                                         </th>
                                         <th
                                             scope="col"
                                             className="px-4 py-4 text-medium font-Roboto text-left"
                                         >
-                                            Bid Amount
+                                            Total Amount
                                         </th>
                                         <th
                                             scope="col"
                                             className="px-4 py-4 text-medium font-Roboto text-left"
                                         >
-                                            Place Order
+                                            Status
                                         </th>
                                     </tr>
                                 </thead>
                                 <tbody className="text-silver__color">
                                     <tr className="border-b transition duration-300 ease-in-out hover:bg-green-2">
                                         <td className="whitespace-nowrap px-4 py-4 text-left font-medium font-Roboto text-silver__color">
-                                            64817a37c31ad03a451a9f4c
+                                            xhdoLftes6
                                         </td>
                                         <td className="whitespace-nowrap px-4 py-4 text-left font-medium font-Roboto text-silver__color">
-                                            Input Supplier 1
+                                            2023-06-08
                                         </td>
                                         <td className="whitespace-nowrap px-4 py-4 text-left font-medium font-Roboto text-silver__color">
-                                            8485257415
+                                            145224512
                                         </td>
                                         <td className="whitespace-nowrap px-4 py-4 text-left font-medium font-Roboto text-silver__color">
-                                            100
+                                            1000
                                         </td>
                                         <td className="whitespace-nowrap px-4 py-4 text-left font-medium font-Roboto text-silver__color">
-                                            <button onClick={() => updateModal("Place_Order")}
+                                            <button
+                                                onClick={() => updateModal("ShowPurchaseStatus")}
                                                 className="bg-bg__color text-center block text-white px-4 py-1 rounded">
-                                                Place Order
+                                                View
                                             </button>
                                         </td>
                                     </tr>
@@ -73,10 +73,10 @@ const Step2 = () => {
                 </div>
             </div>
             {
-                modal.state === "Place_Order" && <Place_Order closeModal={closeModal} />
+                modal.state === "ShowPurchaseStatus" && <Show_Bids_Status handleClose={closeModal} />
             }
-        </div>
+        </>
     )
 }
 
-export default Step2
+export default Purchase_History

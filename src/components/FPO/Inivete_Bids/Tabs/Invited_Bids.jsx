@@ -1,5 +1,6 @@
 import Show_Bids_Status from "../Modals/Show_Bids_Status"
 import useModal from "../../../hooks/useModal"
+import Information from "../Modals/Information"
 
 const Active_Bids = () => {
   const { modal, closeModal, updateModal } = useModal()
@@ -51,7 +52,7 @@ const Active_Bids = () => {
                     </td>
                     <td className="whitespace-nowrap px-4 py-4 text-left font-medium font-Roboto text-silver__color">
                       <button
-                        onClick={() => updateModal("ShowBidStatus")}
+                        onClick={() => updateModal("Information")}
                         className="bg-bg__color text-center block text-white px-4 py-1 rounded">
                         View
                       </button>
@@ -64,7 +65,7 @@ const Active_Bids = () => {
         </div>
       </div>
       {
-        modal.state === "ShowBidStatus" && <Show_Bids_Status handleClose={closeModal} />
+        modal.state === "Information" && <Information handleClose={closeModal} />
       }
     </>
   )

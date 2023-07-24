@@ -5,9 +5,6 @@ const Step1 = () => {
                 <h2 className="text-bg__color font-Roboto text-2xl font-bold mb-4">Bid Details</h2>
                 <div className="md:flex lg:flex-row mb:4 flex-col">
                     <div className="lg:w-1/2 sm:w-full mr-1">
-                        <label className="block text-grey-darker font-Roboto text-silver__color  mb-2 mt-3">
-                            Bid ID
-                        </label>
                     </div>
                     <div className="lg:w-1/2 sm:w-full mr-1">
                         <input
@@ -21,13 +18,13 @@ const Step1 = () => {
                 <div className="md:flex lg:flex-row mb:4 flex-col">
                     <div className="lg:w-1/2 sm:w-full mr-1">
                         <label className="block text-grey-darker font-Roboto text-silver__color  mb-2 mt-3">
-                            Crop Name
+                            Input Type
                         </label>
                     </div>
                     <div className="lg:w-1/2 sm:w-full mr-1">
                         <input
                             type="text"
-                            placeholder="Kusmi"
+                            placeholder="Seed"
                             disabled
                             className="appearance-none border rounded w-full py-2 px-3 text-grey-darker"
                         />
@@ -36,28 +33,13 @@ const Step1 = () => {
                 <div className="md:flex lg:flex-row mb:4 flex-col">
                     <div className="lg:w-1/2 sm:w-full mr-1">
                         <label className="block text-grey-darker font-Roboto text-silver__color  mb-2 mt-3">
-                            Variety Name
+                            Input Variant
                         </label>
                     </div>
                     <div className="lg:w-1/2 sm:w-full mr-1">
                         <input
                             type="text"
-                            placeholder="Kusum"
-                            disabled
-                            className="appearance-none border rounded w-full py-2 px-3 text-grey-darker"
-                        />
-                    </div>
-                </div>
-                <div className="md:flex lg:flex-row mb:4 flex-col">
-                    <div className="lg:w-1/2 sm:w-full mr-1">
-                        <label className="block text-grey-darker font-Roboto text-silver__color  mb-2 mt-3">
-                           Grade
-                        </label>
-                    </div>
-                    <div className="lg:w-1/2 sm:w-full mr-1">
-                        <input
-                            type="text"
-                            placeholder="Chattisgarh"
+                            placeholder="Variant 1"
                             disabled
                             className="appearance-none border rounded w-full py-2 px-3 text-grey-darker"
                         />

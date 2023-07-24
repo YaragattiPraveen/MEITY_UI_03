@@ -3,14 +3,13 @@ import NavigateNextIcon from '@mui/icons-material/NavigateNext';
 import NavigateBeforeIcon from '@mui/icons-material/NavigateBefore';
 import Step2 from "./Step2";
 import Step3 from "./Step3";
-import Step4 from "./Step4";
 import Step1 from "./Step1";
-import Step5 from "./Step5"
+import Step4 from "./Step4"
 import ProgressSteps from "../../../Utils/ProgressSteps";
 
 const Show_Bids_Status = ({ handleClose }) => {
     const [currentPage, setCurrentPage] = useState(0);
-    const formArray = [1, 2, 3, 4, 5];
+    const formArray = [1, 2, 3, 4];
     let currentUI;
     if (currentPage === 0) {
         currentUI = <Step1 />;
@@ -20,9 +19,7 @@ const Show_Bids_Status = ({ handleClose }) => {
         currentUI = <Step3 />;
     } else if (currentPage === 3) {
         currentUI = <Step4 />;
-    } else if (currentPage === 4) {
-        currentUI = <Step5 />
-    }
+    } 
 
     return (
         <>
@@ -60,7 +57,7 @@ const Show_Bids_Status = ({ handleClose }) => {
                             {currentUI}
 
                             <div
-                                style={{ visibility: currentPage < 4 ? "visible" : "hidden", cursor: "pointer" }}
+                                style={{ visibility: currentPage < 3 ? "visible" : "hidden", cursor: "pointer" }}
                                 onClick={() => setCurrentPage(currentPage + 1)}
                             >
                                 <NavigateNextIcon />

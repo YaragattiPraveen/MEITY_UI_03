@@ -1,18 +1,21 @@
 import { useState } from "react"
-import Active_Bids from "./Tabs/Active_Bids"
-import Purchase_History from "./Tabs/Purchase_History"
+import Invited_Bids from "./Tabs/Invited_Bids"
+import Ongoing_Bids from "./Tabs/Ongoing_Bids"
+import Completed_Transactions_Bids from "./Tabs/Completed_Transactions_Bids"
 import Navbar from "../../Farmer/Navbar"
 import useModal from "../../hooks/useModal"
 import StartBid from "./Modals/StartBid"
 
 const Invite_Bids = () => {
     const [active, setActive] = useState('tab1')
-    const {modal,updateModal,closeModal} = useModal()
+    const { modal, updateModal, closeModal } = useModal()
     let tab_UI
     if (active === "tab1") {
-        tab_UI = <Active_Bids />
+        tab_UI = <Invited_Bids />
     } else if (active === "tab2") {
-        tab_UI = <Purchase_History />
+        tab_UI = <Ongoing_Bids />
+    } else if (active === "tab3") {
+        tab_UI = <Completed_Transactions_Bids/>
     }
     return (
         <div className="container w-full mx-auto">
@@ -36,7 +39,7 @@ const Invite_Bids = () => {
                     }}
                     className="text-hover__color shadow-md rounded-lg z-0 focus:outline-none px-4 py-2 font-Roboto text-base font-bold cursor-pointer"
                 >
-                    Acitve Bids
+                    Invited Bids
                 </button>
                 <button
                     onClick={() => setActive("tab2")}
@@ -45,12 +48,21 @@ const Invite_Bids = () => {
                     }}
                     className="text-hover__color shadow-md rounded-lg z-0 focus:outline-none px-4 py-2 font-Roboto text-base font-bold cursor-pointer"
                 >
-                    Purchase History
+                    Ongoing Bids
+                </button>
+                <button
+                    onClick={() => setActive("tab3")}
+                    style={{
+                        borderBottom: active === "tab3" && "2px solid green",
+                    }}
+                    className="text-hover__color shadow-md rounded-lg z-0 focus:outline-none px-4 py-2 font-Roboto text-base font-bold cursor-pointer"
+                >
+                    Completed Transactions
                 </button>
             </div>
             {tab_UI}
             {
-                modal.state === "ShowStartBid" && <StartBid handleClose={closeModal}/>
+                modal.state === "ShowStartBid" && <StartBid handleClose={closeModal} />
             }
         </div>
     )

@@ -1,5 +1,4 @@
-import Information from "../../../FPO/Corporate Customer/Modal/Information"
-import PlaceBid from "../../../FPO/Corporate Customer/Modal/PlaceBid"
+import Information from "../Modals/Information"
 import useModal from "../../../hooks/useModal"
 
 const Invited_Bids = () => {
@@ -29,12 +28,6 @@ const Invited_Bids = () => {
                                             scope="col"
                                             className="px-4 py-4 text-medium font-Roboto text-left"
                                         >
-                                            Quantity
-                                        </th>
-                                        <th
-                                            scope="col"
-                                            className="px-4 py-4 text-medium font-Roboto text-left"
-                                        >
                                             Date of Supply
                                         </th>
                                         <th
@@ -49,12 +42,6 @@ const Invited_Bids = () => {
                                         >
                                             Information
                                         </th>
-                                        <th
-                                            scope="col"
-                                            className="px-4 py-4 text-medium font-Roboto text-left"
-                                        >
-                                            Status
-                                        </th>
                                     </tr>
                                 </thead>
                                 <tbody className="text-silver__color">
@@ -64,9 +51,6 @@ const Invited_Bids = () => {
                                         </td>
                                         <td className="whitespace-nowrap px-4 py-4 text-left font-medium font-Roboto text-silver__color">
                                             FPO - 1
-                                        </td>
-                                        <td className="whitespace-nowrap px-4 py-4 text-left font-medium font-Roboto text-silver__color">
-                                            3
                                         </td>
                                         <td className="whitespace-nowrap px-4 py-4 text-left font-medium font-Roboto text-silver__color">
                                             13-07-2023
@@ -81,13 +65,6 @@ const Invited_Bids = () => {
                                                 View
                                             </button>
                                         </td>
-                                        <td className="whitespace-nowrap px-4 py-4 text-left font-medium font-Roboto text-silver__color">
-                                            <button
-                                                onClick={() => updateModal("showPlaceBid")}
-                                                className="bg-bg__color text-center block text-white px-4 py-1 rounded">
-                                                Place a Bid
-                                            </button>
-                                        </td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -97,9 +74,6 @@ const Invited_Bids = () => {
             </div>
             {
                 modal.state === "showBidInformation" && <Information handleClose={closeModal} />
-            }
-            {
-                modal.state === "showPlaceBid" && <PlaceBid handleClose={closeModal} />
             }
         </>
     )

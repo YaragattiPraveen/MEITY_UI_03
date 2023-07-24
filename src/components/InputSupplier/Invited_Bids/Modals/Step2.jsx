@@ -1,11 +1,11 @@
-import Show_Bids_Status from "../Modals/Show_Bids_Status"
 import useModal from "../../../hooks/useModal"
-
-const Purchase_History = () => {
-    const {modal,updateModal,closeModal} = useModal()
+import Place_Bid from "../../../FPO/Corporate Customer/Modal/PlaceBid"
+const Step2 = () => {
+    const { modal, closeModal, updateModal } = useModal()
     return (
-        <>
-            <div className="bg-box__bg__color shadow-lg rounded-lg border border-gray-200 my-5">
+        <div>
+            <h2 className="text-bg__color font-Roboto text-2xl font-bold mb-4">Bid Details</h2>
+            <div className="max-w-[250px] md:max-w-md overflow-auto bg-box__bg__color shadow-lg rounded-lg border border-gray-200 my-5">
                 <div className="overflow-x-auto mx-2 md:mx-4 md:overflow-auto lg:overflow-auto">
                     <div className="relative inline-block min-w-full py-2 sm:px-2 lg:6">
                         <div className="overflow-hidden">
@@ -16,79 +16,52 @@ const Purchase_History = () => {
                                             scope="col"
                                             className="px-4 py-4 text-medium font-Roboto text-left"
                                         >
-                                            Bid Id
+                                            Input Supplier ID
                                         </th>
                                         <th
                                             scope="col"
                                             className="px-4 py-4 text-medium font-Roboto text-left"
                                         >
-                                            Lac Strain Type
+                                            Supplier Name
                                         </th>
                                         <th
                                             scope="col"
                                             className="px-4 py-4 text-medium font-Roboto text-left"
                                         >
-                                            Source of Tree
+                                            Mobile Number
                                         </th>
                                         <th
                                             scope="col"
                                             className="px-4 py-4 text-medium font-Roboto text-left"
                                         >
-                                            Origin
+                                            Bid Amount
                                         </th>
                                         <th
                                             scope="col"
                                             className="px-4 py-4 text-medium font-Roboto text-left"
                                         >
-                                            Seedlac Content
-                                        </th>
-                                        <th
-                                            scope="col"
-                                            className="px-4 py-4 text-medium font-Roboto text-left"
-                                        >
-                                            Fresh Resin Content
-                                        </th>
-                                        <th
-                                            scope="col"
-                                            className="px-4 py-4 text-medium font-Roboto text-left"
-                                        >
-                                            Quantity
-                                        </th>
-                                        <th
-                                            scope="col"
-                                            className="px-4 py-4 text-medium font-Roboto text-left"
-                                        >
-                                            Status
+                                            Bid Price per Kg/L
                                         </th>
                                     </tr>
                                 </thead>
                                 <tbody className="text-silver__color">
                                     <tr className="border-b transition duration-300 ease-in-out hover:bg-green-2">
                                         <td className="whitespace-nowrap px-4 py-4 text-left font-medium font-Roboto text-silver__color">
-                                            xhdoLftes5
+                                            64817a37c31ad03a451a9f4c
                                         </td>
                                         <td className="whitespace-nowrap px-4 py-4 text-left font-medium font-Roboto text-silver__color">
-                                            Kusmi
+                                            Input Supplier 1
                                         </td>
                                         <td className="whitespace-nowrap px-4 py-4 text-left font-medium font-Roboto text-silver__color">
-                                            2
+                                            8485257415
                                         </td>
                                         <td className="whitespace-nowrap px-4 py-4 text-left font-medium font-Roboto text-silver__color">
-                                            Chattisgarh
+                                            100
                                         </td>
                                         <td className="whitespace-nowrap px-4 py-4 text-left font-medium font-Roboto text-silver__color">
-                                            seedlac                                        </td>
-                                        <td className="whitespace-nowrap px-4 py-4 text-left font-medium font-Roboto text-silver__color">
-                                            resin
-                                        </td>
-                                        <td className="whitespace-nowrap px-4 py-4 text-left font-medium font-Roboto text-silver__color">
-                                            350
-                                        </td>
-                                        <td className="whitespace-nowrap px-4 py-4 text-left font-medium font-Roboto text-silver__color">
-                                            <button
-                                                onClick={() => updateModal("ShowPurchaseStatus")}
+                                            <button onClick={() => updateModal("showPlaceBid")}
                                                 className="bg-bg__color text-center block text-white px-4 py-1 rounded">
-                                                View
+                                                Add Bid Price
                                             </button>
                                         </td>
                                     </tr>
@@ -99,10 +72,10 @@ const Purchase_History = () => {
                 </div>
             </div>
             {
-                modal.state === "ShowPurchaseStatus" && <Show_Bids_Status handleClose={closeModal} />
+                modal.state === "showPlaceBid" && <Place_Bid handleClose={closeModal} />
             }
-        </>
+        </div>
     )
 }
 
-export default Purchase_History
+export default Step2

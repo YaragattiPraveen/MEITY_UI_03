@@ -1,23 +1,28 @@
-import { useState } from "react";
 import NavigateNextIcon from '@mui/icons-material/NavigateNext';
 import NavigateBeforeIcon from '@mui/icons-material/NavigateBefore';
+import {useState} from "react"
+import ProgressSteps from "../../../Utils/ProgressSteps"
 
 import Step1 from "./Step1";
 import Step2 from "./Step2";
 import Step3 from "./Step3";
-import ProgressSteps from "../../../../Utils/ProgressSteps";
+import Step4 from "./Step4";
 
-const BidStatus = ({ handleClose }) => {
-    const [currentPage, setCurrentPage] = useState(0);
-    const formArray = [1, 2, 3];
+
+const Show_Input_Supplier_Bids_Status = ({handleClose}) => {
+    const [currentPage, setCurrentPage] = useState(0)
+    const formArray = [1, 2, 3, 4];
     let currentUI;
     if (currentPage === 0) {
-        currentUI = <Step1 />;
+        currentUI = <Step1/>;
     } else if (currentPage === 1) {
-        currentUI = <Step2 />;
+        currentUI = <Step2/>;
     } else if (currentPage === 2) {
         currentUI = <Step3 />;
+    } else if (currentPage === 3) {
+        currentUI = <Step4 />;
     }
+
     return (
         <>
             <div className="overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none">
@@ -43,7 +48,7 @@ const BidStatus = ({ handleClose }) => {
 
                         <ProgressSteps currentPage={currentPage} formArray={formArray} />
 
-                        <div className="relative md:px-6 py-3 flex-auto flex items-center justify-between">
+                        <div className="relative py-3 flex-auto flex items-center justify-between">
                             <div
                                 style={{ visibility: currentPage === 0 ? "hidden" : "visible", cursor: "pointer" }}
                                 onClick={() => setCurrentPage(currentPage - 1)}
@@ -54,7 +59,7 @@ const BidStatus = ({ handleClose }) => {
                             {currentUI}
 
                             <div
-                                style={{ visibility: currentPage < 2 ? "visible" : "hidden", cursor: "pointer" }}
+                                style={{ visibility: currentPage < 3 ? "visible" : "hidden", cursor: "pointer" }}
                                 onClick={() => setCurrentPage(currentPage + 1)}
                             >
                                 <NavigateNextIcon />
@@ -65,7 +70,7 @@ const BidStatus = ({ handleClose }) => {
             </div>
             <div className="opacity-25 fixed inset-0 z-40 bg-black"></div>
         </>
-    );
-};
+    )
+}
 
-export default BidStatus;
+export default Show_Input_Supplier_Bids_Status

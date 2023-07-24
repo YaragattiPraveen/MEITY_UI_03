@@ -1,5 +1,5 @@
 import useModal from "../../../hooks/useModal"
-import Show_Bids_Status from "../../../FPO/Inivete_Bids/Modals/Show_Bids_Status"
+import Show_Input_Supplier_Bids_Status from "../Modals/Show_Input_Supplier_Bids_Status"
 
 const Ongoing_Bids = () => {
   const { modal, closeModal, updateModal } = useModal()
@@ -80,7 +80,7 @@ const Ongoing_Bids = () => {
         </div>
       </div>
       {
-        modal.state === "showBidInformation" && <Show_Bids_Status handleClose={closeModal} />
+        modal.state === "showBidInformation" && <Show_Input_Supplier_Bids_Status handleClose={closeModal} />
       }
     </div>
   )
