@@ -1,15 +1,16 @@
-import Image_modal from "../../../Farmer/Modals/Image_modal"
 import useModal from "../../../hooks/useModal"
-const Step3 = () => {
-    const { modal, updateModal, closeModal } = useModal()
+import Image_modal from "../../../Farmer/Modals/Image_modal"
+
+const Step4 = () => {
+    const { modal, closeModal, updateModal } = useModal()
     return (
         <>
             <div className="relative px-6 py-3 flex-auto">
-                <h2 className="text-bg__color font-Roboto text-2xl font-bold mb-4">Verify Test Certificate</h2>
+                <h2 className="text-bg__color font-Roboto text-xl font-semibold">Invoice Details</h2>
                 <div className="md:flex lg:flex-row mb:4 flex-col">
                     <div className="lg:w-1/2 sm:w-full mr-1">
                         <label className="block text-grey-darker font-Roboto text-silver__color mb-2 mt-3">
-                            FPO ID
+                            Input Supplier Id
                         </label>
                     </div>
                     <div className="lg:w-1/2 sm:w-full mr-1">
@@ -24,13 +25,13 @@ const Step3 = () => {
                 <div className="md:flex lg:flex-row mb:4 flex-col">
                     <div className="lg:w-1/2 sm:w-full mr-1">
                         <label className="block text-grey-darker font-Roboto text-silver__color mb-2 mt-3">
-                            FPO Name
+                            Input Supplier Name
                         </label>
                     </div>
                     <div className="lg:w-1/2 sm:w-full mr-1">
                         <input
                             type="text"
-                            placeholder="fpoa"
+                            placeholder="Input Supplier 1"
                             disabled
                             className="appearance-none border rounded w-full py-2 px-3 text-grey-darker"
                         />
@@ -39,7 +40,7 @@ const Step3 = () => {
                 <div className="md:flex lg:flex-row mb:4 flex-col">
                     <div className="lg:w-1/2 sm:w-full mr-1">
                         <label className="block text-grey-darker font-Roboto text-silver__color mb-2 mt-3">
-                            FPO Phone Number
+                            Phone Number
                         </label>
                     </div>
                     <div className="lg:w-1/2 sm:w-full mr-1">
@@ -69,7 +70,37 @@ const Step3 = () => {
                 <div className="md:flex lg:flex-row mb:4 flex-col">
                     <div className="lg:w-1/2 sm:w-full mr-1">
                         <label className="block text-grey-darker font-Roboto text-silver__color mb-2 mt-3">
-                            Report
+                            Invoice Number
+                        </label>
+                    </div>
+                    <div className="lg:w-1/2 sm:w-full mr-1">
+                        <input
+                            type="text"
+                            placeholder="145224512"
+                            disabled
+                            className="appearance-none border rounded w-full py-2 px-3 text-grey-darker"
+                        />
+                    </div>
+                </div>
+                <div className="md:flex lg:flex-row mb:4 flex-col">
+                    <div className="lg:w-1/2 sm:w-full mr-1">
+                        <label className="block text-grey-darker font-Roboto text-silver__color mb-2 mt-3">
+                            Invoice Date
+                        </label>
+                    </div>
+                    <div className="lg:w-1/2 sm:w-full mr-1">
+                        <input
+                            type="text"
+                            placeholder="08/06/2023"
+                            disabled
+                            className="appearance-none border rounded w-full py-2 px-3 text-grey-darker"
+                        />
+                    </div>
+                </div>
+                <div className="md:flex lg:flex-row mb:4 flex-col">
+                    <div className="lg:w-1/2 sm:w-full mr-1">
+                        <label className="block text-grey-darker font-Roboto text-silver__color mb-2 mt-3">
+                            Invoice
                         </label>
                     </div>
                     <div className="lg:w-1/2 sm:w-full mr-1">
@@ -80,12 +111,6 @@ const Step3 = () => {
                         </button>
                     </div>
                 </div>
-                <div className="lg:w-1/2 mt-4 sm:w-full mr-1">
-                    <button
-                        className="bg-bg__color text-center block text-white px-4 py-2 rounded">
-                        Reject Test Reports
-                    </button>
-                </div>
             </div>
             {
                 modal.state === "ViewTestReport" && <Image_modal closemodel={closeModal} />
@@ -94,4 +119,4 @@ const Step3 = () => {
     )
 }
 
-export default Step3
+export default Step4

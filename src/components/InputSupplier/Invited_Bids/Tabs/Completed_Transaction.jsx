@@ -1,5 +1,5 @@
-import Show_Bids_Status from "../../../FPO/Inivete_Bids/Modals/Show_Bids_Status"
 import useModal from "../../../hooks/useModal"
+import Show_Input_Supplier_Bids_Status from "../Modals/Show_Input_Supplier_Bids_Status"
 
 const Completed_Transaction = () => {
   const { modal, updateModal, closeModal } = useModal()
@@ -16,6 +16,12 @@ const Completed_Transaction = () => {
                     className="px-4 py-4 text-medium font-Roboto text-left"
                   >
                     Bid Id
+                  </th>
+                  <th
+                    scope="col"
+                    className="px-4 py-4 text-medium font-Roboto text-left"
+                  >
+                    Name of FPO
                   </th>
                   <th
                     scope="col"
@@ -49,6 +55,9 @@ const Completed_Transaction = () => {
                     xhdoLftes6
                   </td>
                   <td className="whitespace-nowrap px-4 py-4 text-left font-medium font-Roboto text-silver__color">
+                    FPO - 1
+                  </td>
+                  <td className="whitespace-nowrap px-4 py-4 text-left font-medium font-Roboto text-silver__color">
                     2023-06-08
                   </td>
                   <td className="whitespace-nowrap px-4 py-4 text-left font-medium font-Roboto text-silver__color">
@@ -71,7 +80,7 @@ const Completed_Transaction = () => {
         </div>
       </div>
       {
-        modal.state === "showBidInformation" && <Show_Bids_Status handleClose={closeModal} />
+        modal.state === "showBidInformation" && <Show_Input_Supplier_Bids_Status show={false} handleClose={closeModal} />
       }
     </div>
   )

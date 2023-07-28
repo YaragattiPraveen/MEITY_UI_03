@@ -1,8 +1,11 @@
+import Place_Order from "../../../FPO/Place_Order/Place_Order"
+import useModal from "../../../hooks/useModal"
 
 const Step2 = () => {
+    const {modal,closeModal,updateModal} = useModal()
     return (
         <div>
-            <h2 className="text-bg__color font-Roboto text-2xl font-bold mb-4">Bid Details</h2>
+            <h2 className="text-bg__color font-Roboto text-xl font-semibold mb-4">Place Order</h2>
             <div className="max-w-[250px] md:max-w-md overflow-auto bg-box__bg__color shadow-lg rounded-lg border border-gray-200 my-5">
                 <div className="overflow-x-auto mx-2 md:mx-4 md:overflow-auto lg:overflow-auto">
                     <div className="relative inline-block min-w-full py-2 sm:px-2 lg:6">
@@ -48,7 +51,7 @@ const Step2 = () => {
                                             64817a37c31ad03a451a9f4c
                                         </td>
                                         <td className="whitespace-nowrap px-4 py-4 text-left font-medium font-Roboto text-silver__color">
-                                            Fpoa
+                                            Fpo - 1
                                         </td>
                                         <td className="whitespace-nowrap px-4 py-4 text-left font-medium font-Roboto text-silver__color">
                                             8485257415
@@ -57,7 +60,7 @@ const Step2 = () => {
                                             100
                                         </td>
                                         <td className="whitespace-nowrap px-4 py-4 text-left font-medium font-Roboto text-silver__color">
-                                            <button
+                                            <button onClick={() => updateModal("Place_Order")}
                                                 className="bg-bg__color text-center block text-white px-4 py-1 rounded">
                                                 Place Order
                                             </button>
@@ -69,6 +72,9 @@ const Step2 = () => {
                     </div>
                 </div>
             </div>
+            {
+                modal.state === "Place_Order" && <Place_Order title={"Bidding Id"} closeModal={closeModal} />
+            }
         </div>
     )
 }

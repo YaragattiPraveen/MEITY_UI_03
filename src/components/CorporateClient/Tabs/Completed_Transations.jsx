@@ -1,8 +1,8 @@
 import useModal from "../../hooks/useModal"
 import Show_Bids_Status from "../Modals/ActiveBids/Show_Bids_Status"
 
-const Purchase_History = () => {
-    const { modal, updateModal, closeModal } = useModal()
+const Completed_Transations = () => {
+    const {modal,closeModal,updateModal} = useModal()
     return (
         <>
             <div className="bg-box__bg__color shadow-lg rounded-lg border border-gray-200 my-5">
@@ -22,37 +22,25 @@ const Purchase_History = () => {
                                             scope="col"
                                             className="px-4 py-4 text-medium font-Roboto text-left"
                                         >
-                                            Lac Strain Type
+                                            FPO Name
                                         </th>
                                         <th
                                             scope="col"
                                             className="px-4 py-4 text-medium font-Roboto text-left"
                                         >
-                                            Source of Tree
+                                            Date of Invoice
                                         </th>
                                         <th
                                             scope="col"
                                             className="px-4 py-4 text-medium font-Roboto text-left"
                                         >
-                                            Origin
+                                            Invoice Number
                                         </th>
                                         <th
                                             scope="col"
                                             className="px-4 py-4 text-medium font-Roboto text-left"
                                         >
-                                            Seedlac Content
-                                        </th>
-                                        <th
-                                            scope="col"
-                                            className="px-4 py-4 text-medium font-Roboto text-left"
-                                        >
-                                            Fresh Resin Content
-                                        </th>
-                                        <th
-                                            scope="col"
-                                            className="px-4 py-4 text-medium font-Roboto text-left"
-                                        >
-                                            Quantity
+                                            Total Amount
                                         </th>
                                         <th
                                             scope="col"
@@ -65,24 +53,19 @@ const Purchase_History = () => {
                                 <tbody className="text-silver__color">
                                     <tr className="border-b transition duration-300 ease-in-out hover:bg-green-2">
                                         <td className="whitespace-nowrap px-4 py-4 text-left font-medium font-Roboto text-silver__color">
-                                            xhdoLftes5
+                                            xhdoLftes6
                                         </td>
                                         <td className="whitespace-nowrap px-4 py-4 text-left font-medium font-Roboto text-silver__color">
-                                            Kusmi
+                                            FPO - 1
                                         </td>
                                         <td className="whitespace-nowrap px-4 py-4 text-left font-medium font-Roboto text-silver__color">
-                                            2
+                                            2023-06-08
                                         </td>
                                         <td className="whitespace-nowrap px-4 py-4 text-left font-medium font-Roboto text-silver__color">
-                                            Chattisgarh
+                                            145224512
                                         </td>
                                         <td className="whitespace-nowrap px-4 py-4 text-left font-medium font-Roboto text-silver__color">
-                                            seedlac                                        </td>
-                                        <td className="whitespace-nowrap px-4 py-4 text-left font-medium font-Roboto text-silver__color">
-                                            resin
-                                        </td>
-                                        <td className="whitespace-nowrap px-4 py-4 text-left font-medium font-Roboto text-silver__color">
-                                            350
+                                            1000
                                         </td>
                                         <td className="whitespace-nowrap px-4 py-4 text-left font-medium font-Roboto text-silver__color">
                                             <button
@@ -99,10 +82,10 @@ const Purchase_History = () => {
                 </div>
             </div>
             {
-                modal.state === "ShowPurchaseStatus" && <Show_Bids_Status handleClose={closeModal} />
+                modal.state === "ShowPurchaseStatus" && <Show_Bids_Status show={false} handleClose={closeModal} />
             }
         </>
     )
 }
 
-export default Purchase_History
+export default Completed_Transations

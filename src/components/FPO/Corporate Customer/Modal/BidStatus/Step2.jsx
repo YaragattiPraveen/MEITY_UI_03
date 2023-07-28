@@ -1,117 +1,63 @@
 const Step2 = () => {
-  return (
-    <>
-      <div className="relative lg:px-6 py-3 flex-auto">
-        <h3 className="text-xl font-semibold font-Roboto text-bg__color py-3">
-          Upload Invoice
-        </h3>
-        <div className="md:flex lg:flex-row mb:4 flex-col m-2">
-          <div className="lg:w-1/2 sm:w-full mr-1">
-            <label className="block text-grey-darker font-Roboto text-silver__color mb-2">
-              FPO ID
-            </label>
-          </div>
-          <div className="lg:w-1/2 sm:w-full mr-1">
-            <input
-              type="text"
-              placeholder="12342"
-              disabled
-              className="appearance-none border rounded w-full py-2 px-3 text-grey-darker"
-            />
-          </div>
+    return (
+        <div>
+            <h2 className="text-bg__color font-Roboto text-xl font-semibold mb-4">Output Supplier Details</h2>
+            <div className="max-w-[250px] md:max-w-md overflow-auto bg-box__bg__color shadow-lg rounded-lg border border-gray-200 my-5">
+                <div className="overflow-x-auto mx-2 md:mx-4 md:overflow-auto lg:overflow-auto">
+                    <div className="relative inline-block min-w-full py-2 sm:px-2 lg:6">
+                        <div className="overflow-hidden">
+                            <table className="min-w-full text-left text-sm font-light table-auto">
+                                <thead className="text-xs bg-green-200 text-gray-600 uppercase font-Roboto">
+                                    <tr>
+                                        <th
+                                            scope="col"
+                                            className="px-4 py-4 text-medium font-Roboto text-left"
+                                        >
+                                            Output Supplier ID
+                                        </th>
+                                        <th
+                                            scope="col"
+                                            className="px-4 py-4 text-medium font-Roboto text-left"
+                                        >
+                                            Output Supplier Name
+                                        </th>
+                                        <th
+                                            scope="col"
+                                            className="px-4 py-4 text-medium font-Roboto text-left"
+                                        >
+                                            Output Supplier Mobile Number
+                                        </th>
+                                        <th
+                                            scope="col"
+                                            className="px-4 py-4 text-medium font-Roboto text-left"
+                                        >
+                                            Bid Amount
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody className="text-silver__color">
+                                    <tr className="border-b transition duration-300 ease-in-out hover:bg-green-2">
+                                        <td className="whitespace-nowrap px-4 py-4 text-left font-medium font-Roboto text-silver__color">
+                                            64817a37c31ad03a451a9f4c
+                                        </td>
+                                        <td className="whitespace-nowrap px-4 py-4 text-left font-medium font-Roboto text-silver__color">
+                                            Fpo 1
+                                        </td>
+                                        <td className="whitespace-nowrap px-4 py-4 text-left font-medium font-Roboto text-silver__color">
+                                            8485257415
+                                        </td>
+                                        <td className="whitespace-nowrap px-4 py-4 text-left font-medium font-Roboto text-silver__color">
+                                            100
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div className="md:flex lg:flex-row mb:4 flex-col m-2">
-          <div className="lg:w-1/2 sm:w-full mr-1">
-            <label className="block text-grey-darker font-Roboto text-silver__color mb-2">
-              FPO Name
-            </label>
-          </div>
-          <div className="lg:w-1/2 sm:w-full mr-1">
-            <input
-              type="text"
-              placeholder="FPO"
-              className="appearance-none border rounded w-full py-2 px-3 text-grey-darker"
-            />
-          </div>
-        </div>
-        <div className="md:flex lg:flex-row mb:4 flex-col m-2">
-          <div className="lg:w-1/2 sm:w-full mr-1">
-            <label className="block text-grey-darker font-Roboto text-silver__color mb-2">
-              FPO Phone Number
-            </label>
-          </div>
-          <div className="lg:w-1/2 sm:w-full mr-1">
-            <input
-              type="Number"
-              placeholder="98213XXXXX"
-              className="appearance-none border rounded w-full py-2 px-3 text-grey-darker"
-            />
-          </div>
-        </div>
-        <div className="md:flex lg:flex-row mb:4 flex-col m-2">
-          <div className="lg:w-1/2 sm:w-full mr-1">
-            <label className="block text-grey-darker font-Roboto text-silver__color mb-2">
-              Bid Amount
-            </label>
-          </div>
-          <div className="lg:w-1/2 sm:w-full mr-1">
-            <input
-              type="text"
-              placeholder="3000"
-              className="appearance-none border rounded w-full py-2 px-3 text-grey-darker"
-            />
-          </div>
-        </div>
-        <div className="md:flex lg:flex-row mb:4 flex-col m-2">
-          <div className="lg:w-1/2 sm:w-full mr-1">
-            <label className="block text-grey-darker font-Roboto text-silver__color mb-2">
-              Invoice Number
-            </label>
-          </div>
-          <div className="lg:w-1/2 sm:w-full mr-1">
-            <input
-              type="text"
-              placeholder="132456"
-              className="appearance-none border rounded w-full py-2 px-3 text-grey-darker"
-            />
-          </div>
-        </div>
-        <div className="md:flex lg:flex-row mb:4 flex-col m-2">
-          <div className="lg:w-1/2 sm:w-full mr-1">
-            <label className="block text-grey-darker font-Roboto text-silver__color mb-2">
-              Invoice Date
-            </label>
-          </div>
-          <div className="lg:w-1/2 sm:w-full mr-1">
-            <input
-              type="text"
-              placeholder="12/12/2023"
-              className="appearance-none border rounded w-full py-2 px-3 text-grey-darker"
-            />
-          </div>
-        </div>
-        <div className="md:flex lg:flex-row mb:4 flex-col m-2">
-          <div className="lg:w-1/2 sm:w-full mr-1">
-            <label className="block text-grey-darker font-Roboto text-silver__color mb-2">
-              Upload Invoice
-            </label>
-          </div>
-          <div className="lg:w-1/2 sm:w-full mr-1">
-            <input
-              type="file"
-              className="appearance-none border rounded w-full py-2 px-3 text-grey-darker"
-            />
-          </div>
-        </div>
-        <button
-          className="bg-bg__color text-white active:bg-emerald-600 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear w-full transition-all duration-150"
-          type="submit"
-        >
-          Submit
-        </button>
-      </div>
-    </>
-  )
+    )
 }
 
 export default Step2

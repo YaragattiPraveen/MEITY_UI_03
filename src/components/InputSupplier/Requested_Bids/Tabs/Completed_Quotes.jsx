@@ -1,8 +1,7 @@
 import useModal from "../../../hooks/useModal";
-import Show_Bids_Status from "../../../FPO/Inivete_Bids/Modals/Show_Bids_Status";
-
+import Show_Input_Supplier_Quotes from "../Modals/Show_Input_Supplier_Quotes";
 const Completed_Quotes = () => {
-  const {modal,updateModal,closeModal} = useModal()
+  const { modal, updateModal, closeModal } = useModal()
   return (
     <div className="bg-box__bg__color shadow-lg rounded-lg border border-gray-200 my-5">
       <div className="overflow-x-auto mx-2 md:mx-4 md:overflow-auto lg:overflow-auto">
@@ -16,6 +15,12 @@ const Completed_Quotes = () => {
                     className="px-4 py-4 text-medium font-Roboto text-left"
                   >
                     Quotation Id
+                  </th>
+                  <th
+                    scope="col"
+                    className="px-4 py-4 text-medium font-Roboto text-left"
+                  >
+                    Name of FPO
                   </th>
                   <th
                     scope="col"
@@ -49,6 +54,9 @@ const Completed_Quotes = () => {
                     xhdoLftes6
                   </td>
                   <td className="whitespace-nowrap px-4 py-4 text-left font-medium font-Roboto text-silver__color">
+                    FPO - 1
+                  </td>
+                  <td className="whitespace-nowrap px-4 py-4 text-left font-medium font-Roboto text-silver__color">
                     2023-06-08
                   </td>
                   <td className="whitespace-nowrap px-4 py-4 text-left font-medium font-Roboto text-silver__color">
@@ -60,8 +68,7 @@ const Completed_Quotes = () => {
                   <td className="whitespace-nowrap px-4 py-4 text-left font-medium font-Roboto text-silver__color">
                     <button
                       onClick={() => updateModal("showBidInformation")}
-                      className="bg-bg__color text-center block text-white px-4 py-1 rounded"
-                    >
+                      className="bg-bg__color text-center block text-white px-4 py-1 rounded">
                       View
                     </button>
                   </td>
@@ -71,9 +78,9 @@ const Completed_Quotes = () => {
           </div>
         </div>
       </div>
-      {modal.state === "showBidInformation" && (
-        <Show_Bids_Status handleClose={closeModal} />
-      )}
+      {
+        modal.state === "showBidInformation" && <Show_Input_Supplier_Quotes show={false} handleClose={closeModal} />
+      }
     </div>
   );
 };

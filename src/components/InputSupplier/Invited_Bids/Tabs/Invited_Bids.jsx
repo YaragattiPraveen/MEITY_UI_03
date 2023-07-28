@@ -1,4 +1,4 @@
-import Information from "../Modals/Information"
+import Place_Bid from "../Modals/Place_Bid"
 import useModal from "../../../hooks/useModal"
 
 const Invited_Bids = () => {
@@ -62,7 +62,7 @@ const Invited_Bids = () => {
                                             <button
                                                 onClick={() => updateModal("showBidInformation")}
                                                 className="bg-bg__color text-center block text-white px-4 py-1 rounded">
-                                                View
+                                                Place Bid
                                             </button>
                                         </td>
                                     </tr>
@@ -73,7 +73,7 @@ const Invited_Bids = () => {
                 </div>
             </div>
             {
-                modal.state === "showBidInformation" && <Information handleClose={closeModal} />
+                modal.state === "showBidInformation" && <Place_Bid handleClose={closeModal} />
             }
         </>
     )

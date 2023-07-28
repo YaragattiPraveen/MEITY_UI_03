@@ -9,7 +9,8 @@ import Step3 from "./Step3";
 import Step4 from "./Step4";
 
 
-const Show_Input_Supplier_Bids_Status = ({handleClose}) => {
+// eslint-disable-next-line react/prop-types
+const Show_Input_Supplier_Bids_Status = ({handleClose,show}) => {
     const [currentPage, setCurrentPage] = useState(0)
     const formArray = [1, 2, 3, 4];
     let currentUI;
@@ -18,9 +19,9 @@ const Show_Input_Supplier_Bids_Status = ({handleClose}) => {
     } else if (currentPage === 1) {
         currentUI = <Step2/>;
     } else if (currentPage === 2) {
-        currentUI = <Step3 />;
+        currentUI = <Step3 show={show} />;
     } else if (currentPage === 3) {
-        currentUI = <Step4 />;
+        currentUI = <Step4 show={show} />;
     }
 
     return (

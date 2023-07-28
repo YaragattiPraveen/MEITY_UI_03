@@ -1,5 +1,5 @@
-import PlaceBid from "../../../FPO/Corporate Customer/Modal/PlaceBid"
 import useModal from "../../../hooks/useModal"
+import Place_Quotation_Price from "../Modals/Place_Quotation_Price"
 
 const Requested_Quotes = () => {
   const { modal, closeModal, updateModal } = useModal()
@@ -28,83 +28,41 @@ const Requested_Quotes = () => {
                       scope="col"
                       className="px-4 py-4 text-medium font-Roboto text-left"
                     >
-                      Brand
+                      Date of Supply
                     </th>
                     <th
                       scope="col"
                       className="px-4 py-4 text-medium font-Roboto text-left"
                     >
-                      Input Type
+                      End date of Quotation
                     </th>
                     <th
                       scope="col"
                       className="px-4 py-4 text-medium font-Roboto text-left"
                     >
-                      Input Variant
-                    </th>
-                    <th
-                      scope="col"
-                      className="px-4 py-4 text-medium font-Roboto text-left"
-                    >
-                      Quantity
-                    </th>
-                    <th
-                      scope="col"
-                      className="px-4 py-4 text-medium font-Roboto text-left"
-                    >
-                      Quoted Date
-                    </th>
-                    <th
-                      scope="col"
-                      className="px-4 py-4 text-medium font-Roboto text-left"
-                    >
-                      Quoted Price / Kg
-                    </th>
-                    <th
-                      scope="col"
-                      className="px-4 py-4 text-medium font-Roboto text-left"
-                    >
-                      Month
-                    </th>
-                    <th>
-                      Status
+                      Information
                     </th>
                   </tr>
                 </thead>
                 <tbody className="text-silver__color">
                   <tr className="border-b transition duration-300 ease-in-out hover:bg-green-2">
                     <td className="whitespace-nowrap px-4 py-4 text-left font-medium font-Roboto text-silver__color">
-                      xhdoLftes5
+                      xhdoLftes6
                     </td>
                     <td className="whitespace-nowrap px-4 py-4 text-left font-medium font-Roboto text-silver__color">
-                      FPO-1
+                      FPO - 1
                     </td>
                     <td className="whitespace-nowrap px-4 py-4 text-left font-medium font-Roboto text-silver__color">
-                      Akash - 789
+                      13-07-2023
                     </td>
                     <td className="whitespace-nowrap px-4 py-4 text-left font-medium font-Roboto text-silver__color">
-                      Wheat
-                    </td>
-                    <td className="whitespace-nowrap px-4 py-4 text-left font-medium font-Roboto text-silver__color">
-                      Seed
-                    </td>
-                    <td className="whitespace-nowrap px-4 py-4 text-left font-medium font-Roboto text-silver__color">
-                      35 Kg
-                    </td>
-                    <td className="whitespace-nowrap px-4 py-4 text-left font-medium font-Roboto text-silver__color">
-                      17/07/2023
-                    </td>
-                    <td className="whitespace-nowrap px-4 py-4 text-left font-medium font-Roboto text-silver__color">
-                      10 Rs
-                    </td>
-                    <td className="whitespace-nowrap px-4 py-4 text-left font-medium font-Roboto text-silver__color">
-                      August
+                      18-07-2023
                     </td>
                     <td className="whitespace-nowrap px-4 py-4 text-left font-medium font-Roboto text-silver__color">
                       <button
-                        onClick={() => updateModal("showPlaceBid")}
+                        onClick={() => updateModal("showBidInformation")}
                         className="bg-bg__color text-center block text-white px-4 py-1 rounded">
-                        Place a Bid
+                        Place Bid
                       </button>
                     </td>
                   </tr>
@@ -115,7 +73,7 @@ const Requested_Quotes = () => {
         </div>
       </div>
       {
-        modal.state === "showPlaceBid" && <PlaceBid handleClose={closeModal} />
+        modal.state === "showBidInformation" && <Place_Quotation_Price handleClose={closeModal} />
       }
     </>
   )

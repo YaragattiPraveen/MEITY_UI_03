@@ -1,4 +1,3 @@
-import React from "react";
 import { Link } from "react-router-dom";
 
 const Form1 = () => {
@@ -80,7 +79,7 @@ const Form1 = () => {
       </div>
       
       <p className="text-center my-4">
-        <a
+        <span
           href="#"
           className="text-silver__color no-underline text-[15px] font-Roboto hover:text-grey-darker"
         >
@@ -91,7 +90,7 @@ const Form1 = () => {
           >
             Sign In
           </Link>
-        </a>
+        </span>
       </p>
     </>
   );

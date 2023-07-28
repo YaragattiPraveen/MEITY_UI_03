@@ -1,11 +1,8 @@
-import useModal from "../../hooks/useModal"
-import Show_Bids_Status from "../Modals/ActiveBids/Show_Bids_Status"
-
-const Active_Bids = () => {
-    const {modal,closeModal,updateModal} = useModal()
+const Step2 = () => {
     return (
-        <>
-            <div className="bg-box__bg__color shadow-lg rounded-lg border border-gray-200 my-5">
+        <div>
+            <h2 className="text-bg__color font-Roboto text-xl font-semibold mb-4">Quotation Details</h2>
+            <div className="max-w-[250px] md:max-w-md overflow-auto bg-box__bg__color shadow-lg rounded-lg border border-gray-200 my-5">
                 <div className="overflow-x-auto mx-2 md:mx-4 md:overflow-auto lg:overflow-auto">
                     <div className="relative inline-block min-w-full py-2 sm:px-2 lg:6">
                         <div className="overflow-hidden">
@@ -16,45 +13,41 @@ const Active_Bids = () => {
                                             scope="col"
                                             className="px-4 py-4 text-medium font-Roboto text-left"
                                         >
-                                            Bid Id
+                                            FPO ID
                                         </th>
                                         <th
                                             scope="col"
                                             className="px-4 py-4 text-medium font-Roboto text-left"
                                         >
-                                            Start Date
+                                            FPO Name
                                         </th>
                                         <th
                                             scope="col"
                                             className="px-4 py-4 text-medium font-Roboto text-left"
                                         >
-                                            End Date
+                                            FPO Mobile Number
                                         </th>
                                         <th
                                             scope="col"
                                             className="px-4 py-4 text-medium font-Roboto text-left"
                                         >
-                                            Status
+                                            Quoted Amount
                                         </th>
                                     </tr>
                                 </thead>
                                 <tbody className="text-silver__color">
                                     <tr className="border-b transition duration-300 ease-in-out hover:bg-green-2">
                                         <td className="whitespace-nowrap px-4 py-4 text-left font-medium font-Roboto text-silver__color">
-                                            xhdoLftes5
+                                            64817a37c31ad03a451a9f4c
                                         </td>
                                         <td className="whitespace-nowrap px-4 py-4 text-left font-medium font-Roboto text-silver__color">
-                                            2023-07-23
+                                            Fpo 1
                                         </td>
                                         <td className="whitespace-nowrap px-4 py-4 text-left font-medium font-Roboto text-silver__color">
-                                            2023-07-25
+                                            8485257415
                                         </td>
                                         <td className="whitespace-nowrap px-4 py-4 text-left font-medium font-Roboto text-silver__color">
-                                            <button
-                                                onClick={() => updateModal("ShowBidStatus")}
-                                                className="bg-bg__color text-center block text-white px-4 py-1 rounded">
-                                                View
-                                            </button>
+                                            100
                                         </td>
                                     </tr>
                                 </tbody>
@@ -63,11 +56,8 @@ const Active_Bids = () => {
                     </div>
                 </div>
             </div>
-            {
-                modal.state === "ShowBidStatus" && <Show_Bids_Status handleClose={closeModal} />
-            }
-        </>
+        </div>
     )
 }
 
-export default Active_Bids
+export default Step2

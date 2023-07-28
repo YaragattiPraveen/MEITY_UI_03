@@ -1,18 +1,21 @@
 import { useState } from "react";
-import Active_Bids from "./Tables/Active_Bids";
-import Purchase_History from "./Tables/Purchase_History";
 import StartBid from "./Modals/StartBid"
 import Navbar from "../Farmer/Navbar"
 import useModal from "../hooks/useModal"
+import Invited_Bids from "./Tabs/Invited_Bids";
+import Ongoing_Transactions from "./Tabs/Ongoing_Transactions";
+import Completed_Transations from "./Tabs/Completed_Transations";
 const Lac_Bidding = () => {
   const [active, setActive] = useState("tab1");
   const { modal, closeModal, updateModal } = useModal()
 
   let tab__UI;
   if (active === "tab1") {
-    tab__UI = <Active_Bids />;
+    tab__UI = <Invited_Bids />;
   } else if (active === "tab2") {
-    tab__UI = <Purchase_History />;
+    tab__UI = <Ongoing_Transactions />;
+  }else if(active === "tab3") {
+    tab__UI = <Completed_Transations />
   }
 
   return (
@@ -39,7 +42,7 @@ const Lac_Bidding = () => {
           }}
           className="text-hover__color shadow-md rounded-lg z-0 focus:outline-none px-4 py-2 font-Roboto text-base font-bold cursor-pointer"
         >
-          Active Bids
+          Invited Bids
         </button>
         <button
           onClick={() => setActive("tab2")}
@@ -48,7 +51,16 @@ const Lac_Bidding = () => {
           }}
           className="text-hover__color shadow-md rounded-lg z-0 focus:outline-none px-4 py-2 font-Roboto text-base font-bold cursor-pointer"
         >
-          Purchase History
+          Ongoing Bids
+        </button>
+        <button
+          onClick={() => setActive("tab3")}
+          style={{
+            borderBottom: active === "tab3" && "2px solid green",
+          }}
+          className="text-hover__color shadow-md rounded-lg z-0 focus:outline-none px-4 py-2 font-Roboto text-base font-bold cursor-pointer"
+        >
+          Completed Transactions
         </button>
       </div>
       {tab__UI}

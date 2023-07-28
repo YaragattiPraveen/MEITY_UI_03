@@ -1,4 +1,8 @@
+import Custom_Confirmation_Box from "../../../Utils/Custom_Confirmation_Box"
+import useModal from "../../../hooks/useModal"
+// eslint-disable-next-line react/prop-types
 const PlaceBid = ({ handleClose }) => {
+    const {modal,closeModal,updateModal} = useModal()
     return (
         <>
             <div className="overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none">
@@ -19,30 +23,128 @@ const PlaceBid = ({ handleClose }) => {
                                 X
                             </button>
                         </div>
-                        {/*body*/}
+                        {/* Body */}
                         <div className="relative px-6 py-3 flex-auto">
-
-                            <div className="md:flex lg:flex-row mb:4 flex-col m-2">
+                            <div className="md:flex lg:flex-row mb:4 flex-col">
                                 <div className="lg:w-1/2 sm:w-full mr-1">
-                                    <label className="block text-grey-darker font-Roboto text-silver__color mb-2">
-                                        Enter the Price/Kg
-                                    </label>
+                                    <label className="block font-Roboto text-silver__color mb-2 mt-3">Bid ID</label>
                                 </div>
                                 <div className="lg:w-1/2 sm:w-full mr-1">
                                     <input
-                                        type="number"
-                                        placeholder="Enter the price"
+                                        type="text"
+                                        placeholder="tc_ydsK7GE"
+                                        disabled
                                         className="appearance-none border rounded w-full py-2 px-3 text-grey-darker"
                                     />
                                 </div>
                             </div>
-                        </div>
-                        {/*footer*/}
-                        <div className="flex items-center justify-end px-6 py-3 border-t border-solid border-slate-200 rounded-b">
+                            <div className="md:flex lg:flex-row mb:4 flex-col">
+                                <div className="lg:w-1/2 sm:w-full mr-1">
+                                    <label className="block text-grey-darker font-Roboto text-silver__color  mb-2 mt-3">
+                                        Input Type
+                                    </label>
+                                </div>
+                                <div className="lg:w-1/2 sm:w-full mr-1">
+                                    <input
+                                        type="text"
+                                        placeholder="Seed"
+                                        disabled
+                                        className="appearance-none border rounded w-full py-2 px-3 text-grey-darker"
+                                    />
+                                </div>
+                            </div>
+                            <div className="md:flex lg:flex-row mb:4 flex-col">
+                                <div className="lg:w-1/2 sm:w-full mr-1">
+                                    <label className="block text-grey-darker font-Roboto text-silver__color  mb-2 mt-3">
+                                        Input Variant
+                                    </label>
+                                </div>
+                                <div className="lg:w-1/2 sm:w-full mr-1">
+                                    <input
+                                        type="text"
+                                        placeholder="Variant 1"
+                                        disabled
+                                        className="appearance-none border rounded w-full py-2 px-3 text-grey-darker"
+                                    />
+                                </div>
+                            </div>
+                            <div className="md:flex lg:flex-row mb:4 flex-col">
+                                <div className="lg:w-1/2 sm:w-full mr-1">
+                                    <label className="block text-grey-darker font-Roboto text-silver__color  mb-2 mt-3">
+                                        Quantity
+                                    </label>
+                                </div>
+                                <div className="lg:w-1/2 sm:w-full mr-1">
+                                    <input
+                                        type="text"
+                                        placeholder="250"
+                                        disabled
+                                        className="appearance-none border rounded w-full py-2 px-3 text-grey-darker"
+                                    />
+                                </div>
+                            </div>
+                            <div className="md:flex lg:flex-row mb:4 flex-col">
+                                <div className="lg:w-1/2 sm:w-full mr-1">
+                                    <label className="block text-grey-darker font-Roboto text-silver__color  mb-2 mt-3">
+                                        Date of Supply
+                                    </label>
+                                </div>
+                                <div className="lg:w-1/2 sm:w-full mr-1">
+                                    <input
+                                        type="text"
+                                        placeholder="24/07/2023"
+                                        disabled
+                                        className="appearance-none border rounded w-full py-2 px-3 text-grey-darker"
+                                    />
+                                </div>
+                            </div>
+                            <div className="md:flex lg:flex-row mb:4 flex-col">
+                                <div className="lg:w-1/2 sm:w-full mr-1">
+                                    <label className="block text-grey-darker font-Roboto text-silver__color  mb-2 mt-3">
+                                        End Date for Bidding
+                                    </label>
+                                </div>
+                                <div className="lg:w-1/2 sm:w-full mr-1">
+                                    <input
+                                        type="text"
+                                        placeholder="28/07/2023"
+                                        disabled
+                                        className="appearance-none border rounded w-full py-2 px-3 text-grey-darker"
+                                    />
+                                </div>
+                            </div>
+                            <div className="md:flex lg:flex-row mb:4 flex-col">
+                                <div className="lg:w-1/2 sm:w-full mr-1">
+                                    <label className="block text-grey-darker font-Roboto text-silver__color  mb-2 mt-3">
+                                        Remarks
+                                    </label>
+                                </div>
+                                <div className="lg:w-1/2 sm:w-full mr-1">
+                                    <input
+                                        type="text"
+                                        disabled
+                                        placeholder="Some remark"
+                                        className="appearance-none border rounded w-full py-2 px-3 text-grey-darker"
+                                    />
+                                </div>
+                            </div>
+                            <div className="md:flex lg:flex-row mb:4 flex-col">
+                                <div className="lg:w-1/2 sm:w-full mr-1">
+                                    <label className="block text-grey-darker font-Roboto text-silver__color  mb-2 mt-3">
+                                        Enter the Bid Price Kg/L
+                                    </label>
+                                </div>
+                                <div className="lg:w-1/2 sm:w-full mr-1">
+                                    <input
+                                        type="text"
+                                        required={true}
+                                        className="appearance-none border rounded w-full py-2 px-3 text-grey-darker"
+                                    />
+                                </div>
+                            </div>
                             <button
-                                // onClick={() => closemodel(false)}
-                                className="bg-bg__color text-white active:bg-emerald-600 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
-                                type="button"
+                                onClick={() => updateModal("ShowConfirmationBox")}
+                                className="bg-bg__color text-white active:bg-emerald-600 font-bold uppercase text-sm px-6 py-3 mt-4 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear w-full transition-all duration-150"
                             >
                                 Submit
                             </button>
@@ -50,6 +152,9 @@ const PlaceBid = ({ handleClose }) => {
                     </div>
                 </div>
             </div>
+            {
+                modal.state === "ShowConfirmationBox" && <Custom_Confirmation_Box handleClose={closeModal} />
+            }
             <div className="opacity-25 fixed inset-0 z-40 bg-black"></div>
         </>
     )

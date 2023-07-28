@@ -1,4 +1,3 @@
-import React from "react";
 import { Link } from "react-router-dom";
 
 const Form1 = () => {
@@ -69,7 +68,6 @@ const Form1 = () => {
             className="appearance-none border rounded w-full py-2 px-3 text-grey-darker"
             id="date"
             type="date"
-            my-date-format="DD/MM/YYYY"
           />
         </div>
         <div className="lg:w-1/2 sm:w-full ml-1">
@@ -131,7 +129,7 @@ const Form1 = () => {
         </div>
       </div>
       <p className="text-center my-4">
-        <a
+        <span
           href="#"
           className="text-silver__color no-underline text-[15px] font-Roboto hover:text-grey-darker"
         >
@@ -142,7 +140,7 @@ const Form1 = () => {
           >
             Sign In
           </Link>
-        </a>
+        </span>
       </p>
     </>
   );

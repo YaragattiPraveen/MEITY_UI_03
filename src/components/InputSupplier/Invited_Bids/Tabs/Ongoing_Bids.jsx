@@ -21,6 +21,12 @@ const Ongoing_Bids = () => {
                     scope="col"
                     className="px-4 py-4 text-medium font-Roboto text-left"
                   >
+                    Name of FPO
+                  </th>
+                  <th
+                    scope="col"
+                    className="px-4 py-4 text-medium font-Roboto text-left"
+                  >
                     Bid Price
                   </th>
                   <th
@@ -58,7 +64,10 @@ const Ongoing_Bids = () => {
                     FPO - 1
                   </td>
                   <td className="whitespace-nowrap px-4 py-4 text-left font-medium font-Roboto text-silver__color">
-                    3
+                    10
+                  </td>
+                  <td className="whitespace-nowrap px-4 py-4 text-left font-medium font-Roboto text-silver__color">
+                    100
                   </td>
                   <td className="whitespace-nowrap px-4 py-4 text-left font-medium font-Roboto text-silver__color">
                     13-07-2023
@@ -80,7 +89,7 @@ const Ongoing_Bids = () => {
         </div>
       </div>
       {
-        modal.state === "showBidInformation" && <Show_Input_Supplier_Bids_Status handleClose={closeModal} />
+        modal.state === "showBidInformation" && <Show_Input_Supplier_Bids_Status show={true} handleClose={closeModal} />
       }
     </div>
   )

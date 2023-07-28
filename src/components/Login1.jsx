@@ -1,8 +1,42 @@
-import React from 'react'
+import { useState } from 'react'
 import logo from '../assets/logo.png'
 import bg from '../assets/bg1.jpg'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 const Login1 = () => {
+    const [userName, setUserName] = useState("")
+    const [password, setPassword] = useState("")
+    const Navigate = useNavigate()
+    const handleLoginSubmit = (e) => {
+        e.preventDefault()
+        if (userName === "" || password === "") {
+            alert("User Name and Password is required!!")
+        } else if(userName === "farmer" && password === "farmer") {
+            setUserName("")
+            setPassword("")
+            console.log(userName, password);
+            Navigate('/farmer')
+        }else if(userName === "fpo" && password === "fpo") {
+            setUserName("")
+            setPassword("")
+            console.log(userName, password);
+            Navigate('/fpo')
+        }else if(userName === "samunnati" && password === "samunnati") {
+            setUserName("")
+            setPassword("")
+            console.log(userName, password);
+            Navigate('/samunnati')
+        }else if(userName === "corporate-client" && password === "corporate-client") {
+            setUserName("")
+            setPassword("")
+            console.log(userName, password);
+            Navigate('/corporate-client')
+        }else if(userName === "input-supplier" && password === "input-supplier") {
+            setUserName("")
+            setPassword("")
+            console.log(userName, password);
+            Navigate('/input-supplier')
+        }
+    }
     return (
         <>
             <div className="h-screen w-full overflow-x-hidden flex flex-col items-center justify-center" style={{ backgroundImage: `url(${bg})`, backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat' }}>
@@ -38,8 +72,11 @@ const Login1 = () => {
                                         id="username"
                                         type="text"
                                         name="username"
+                                        value={userName}
+                                        onChange={(e) => setUserName(e.target.value)}
                                         className="text-sm sm:text-base placeholder-gray-500 pl-10 pr-4 rounded-lg border border-gray-400 w-full py-2 focus:outline-none focus:border-blue-400"
                                         placeholder="Username"
+                                        required
                                     />
                                 </div>
                             </div>
@@ -70,23 +107,26 @@ const Login1 = () => {
                                         id="password"
                                         type="password"
                                         name="password"
+                                        value={password}
+                                        onChange={(e) => setPassword(e.target.value)}
                                         className="text-sm sm:text-base placeholder-gray-500 pl-10 pr-4 rounded-lg border border-gray-400 w-full py-2 focus:outline-none focus:border-blue-400"
                                         placeholder="Password"
+                                        required
                                     />
                                 </div>
                             </div>
                             <div className="flex items-center mb-6 -mt-4">
                                 <div className="flex ml-auto">
-                                    <a
-                                        href="#"
+                                    <span
                                         className="inline-flex text-sm sm:text-sm text-blue-500 hover:text-blue-700"
                                     >
                                         Forgot Your Password?
-                                    </a>
+                                    </span>
                                 </div>
                             </div>
                             <div className="flex w-full">
                                 <button
+                                    onClick={handleLoginSubmit}
                                     type="submit"
                                     className="flex items-center justify-center focus:outline-none text-white text-sm sm:text-base bg-gradient-to-r to-green-400 from-blue-500 py-2 w-full
                                     hover:bg-gradient-to-l 
@@ -111,11 +151,7 @@ const Login1 = () => {
                         </form>
                     </div>
                     <div className="flex justify-center items-center mt-6">
-                        <a
-                            href="#"
-                            target="_blank"
-                            className="inline-flex items-center font-bold text-blue-500 hover:text-blue-700 text-xs text-center"
-                        >
+                        <div className="inline-flex items-center font-bold text-blue-500 hover:text-blue-700 text-xs text-center">
                             <span>
                                 <svg
                                     className="h-6 w-6"
@@ -130,9 +166,9 @@ const Login1 = () => {
                                 </svg>
                             </span>
                             <Link to='/register'>
-                            <span className="ml-2 text-sm">You don't have an account?</span>
+                                <span className="ml-2 text-sm">You don't have an account?</span>
                             </Link>
-                        </a>
+                        </div>
                     </div>
                 </div>
             </div>

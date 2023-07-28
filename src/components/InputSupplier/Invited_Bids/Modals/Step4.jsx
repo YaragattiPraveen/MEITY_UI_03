@@ -1,12 +1,13 @@
 import Image_modal from "../../../Farmer/Modals/Image_modal"
 import useModal from "../../../hooks/useModal"
 
-const Step4 = () => {
+// eslint-disable-next-line react/prop-types
+const Step4 = ({show}) => {
     const {modal,closeModal,updateModal} = useModal()
     return (
         <>
-            <div className="relative lg:px-6 py-3 flex-auto">
-                <h3 className="text-xl font-semibold font-Roboto text-bg__color py-3">
+            <div className="relative lg:px-6 flex-auto">
+                <h3 className="text-xl font-semibold font-Roboto text-bg__color py-2">
                     Acknowledge Payment
                 </h3>
                 <div className="md:flex lg:flex-row mb:4 flex-col m-2">
@@ -67,12 +68,14 @@ const Step4 = () => {
                         </button>
                     </div>
                 </div>
-                <button
+                {
+                    show ? <button
                     className="bg-bg__color text-white active:bg-emerald-600 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear w-full transition-all duration-150"
                     type="submit"
                 >
                     Submit
-                </button>
+                </button> : ""
+                }
             </div>
             {
                 modal.state === "ViewImg" && <Image_modal closemodel={closeModal} />

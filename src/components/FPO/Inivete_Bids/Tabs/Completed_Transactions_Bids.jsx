@@ -22,6 +22,12 @@ const Purchase_History = () => {
                                             scope="col"
                                             className="px-4 py-4 text-medium font-Roboto text-left"
                                         >
+                                            Supplier Name
+                                        </th>
+                                        <th
+                                            scope="col"
+                                            className="px-4 py-4 text-medium font-Roboto text-left"
+                                        >
                                             Date of Invoice
                                         </th>
                                         <th
@@ -48,6 +54,9 @@ const Purchase_History = () => {
                                     <tr className="border-b transition duration-300 ease-in-out hover:bg-green-2">
                                         <td className="whitespace-nowrap px-4 py-4 text-left font-medium font-Roboto text-silver__color">
                                             xhdoLftes6
+                                        </td>
+                                        <td className="whitespace-nowrap px-4 py-4 text-left font-medium font-Roboto text-silver__color">
+                                            Input Supplier - 1
                                         </td>
                                         <td className="whitespace-nowrap px-4 py-4 text-left font-medium font-Roboto text-silver__color">
                                             2023-06-08

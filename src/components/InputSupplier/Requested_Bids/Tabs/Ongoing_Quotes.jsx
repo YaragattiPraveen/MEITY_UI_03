@@ -1,7 +1,7 @@
 import useModal from "../../../hooks/useModal"
-import Show_Bids_Status from "../../../FPO/Inivete_Bids/Modals/Show_Bids_Status"
+import Show_Input_Supplier_Quotes from "../Modals/Show_Input_Supplier_Quotes";
 const Ongoing_Quotes = () => {
-  const {modal,updateModal,closeModal} = useModal()
+  const { modal, updateModal, closeModal } = useModal()
   return (
     <div className="bg-box__bg__color shadow-lg rounded-lg border border-gray-200 my-5">
       <div className="overflow-x-auto mx-2 md:mx-4 md:overflow-auto lg:overflow-auto">
@@ -15,6 +15,12 @@ const Ongoing_Quotes = () => {
                     className="px-4 py-4 text-medium font-Roboto text-left"
                   >
                     Quotation Id
+                  </th>
+                  <th
+                    scope="col"
+                    className="px-4 py-4 text-medium font-Roboto text-left"
+                  >
+                    Name of FPO
                   </th>
                   <th
                     scope="col"
@@ -38,6 +44,12 @@ const Ongoing_Quotes = () => {
                     scope="col"
                     className="px-4 py-4 text-medium font-Roboto text-left"
                   >
+                    End date of Bidding
+                  </th>
+                  <th
+                    scope="col"
+                    className="px-4 py-4 text-medium font-Roboto text-left"
+                  >
                     Status
                   </th>
                 </tr>
@@ -51,16 +63,21 @@ const Ongoing_Quotes = () => {
                     FPO - 1
                   </td>
                   <td className="whitespace-nowrap px-4 py-4 text-left font-medium font-Roboto text-silver__color">
-                    3
+                    10
+                  </td>
+                  <td className="whitespace-nowrap px-4 py-4 text-left font-medium font-Roboto text-silver__color">
+                    100
                   </td>
                   <td className="whitespace-nowrap px-4 py-4 text-left font-medium font-Roboto text-silver__color">
                     13-07-2023
                   </td>
                   <td className="whitespace-nowrap px-4 py-4 text-left font-medium font-Roboto text-silver__color">
+                    18-07-2023
+                  </td>
+                  <td className="whitespace-nowrap px-4 py-4 text-left font-medium font-Roboto text-silver__color">
                     <button
                       onClick={() => updateModal("showBidInformation")}
-                      className="bg-bg__color text-center block text-white px-4 py-1 rounded"
-                    >
+                      className="bg-bg__color text-center block text-white px-4 py-1 rounded">
                       View
                     </button>
                   </td>
@@ -70,9 +87,9 @@ const Ongoing_Quotes = () => {
           </div>
         </div>
       </div>
-      {modal.state === "showBidInformation" && (
-        <Show_Bids_Status handleClose={closeModal} />
-      )}
+      {
+        modal.state === "showBidInformation" && <Show_Input_Supplier_Quotes show={true} handleClose={closeModal} />
+      }
     </div>
   );
 };

@@ -30,7 +30,7 @@ const Requested_Quotes = () => {
                     }}
                     className="text-hover__color shadow-md rounded-lg z-0 focus:outline-none px-4 py-2 font-Roboto text-base font-bold cursor-pointer"
                 >
-                    Active Quotes
+                    Requested Quotes
                 </button>
                 <button
                     onClick={() => setActive("tab2")}

@@ -1,6 +1,5 @@
-import Show_Bids_Status from "../Modals/Show_Bids_Status"
 import useModal from "../../../hooks/useModal"
-import Information from "../Modals/Information"
+import Show_Bid_Details from "../Modals/Show_Bid_Details"
 
 const Active_Bids = () => {
   const { modal, closeModal, updateModal } = useModal()
@@ -18,6 +17,12 @@ const Active_Bids = () => {
                       className="px-4 py-4 text-medium font-Roboto text-left"
                     >
                       Bid Id
+                    </th>
+                    <th
+                      scope="col"
+                      className="px-4 py-4 text-medium font-Roboto text-left"
+                    >
+                      Supplier Name
                     </th>
                     <th
                       scope="col"
@@ -45,6 +50,9 @@ const Active_Bids = () => {
                       xhdoLftes5
                     </td>
                     <td className="whitespace-nowrap px-4 py-4 text-left font-medium font-Roboto text-silver__color">
+                      Input Supplier - 1
+                    </td>
+                    <td className="whitespace-nowrap px-4 py-4 text-left font-medium font-Roboto text-silver__color">
                       2023-07-23
                     </td>
                     <td className="whitespace-nowrap px-4 py-4 text-left font-medium font-Roboto text-silver__color">
@@ -65,7 +73,7 @@ const Active_Bids = () => {
         </div>
       </div>
       {
-        modal.state === "Information" && <Information handleClose={closeModal} />
+        modal.state === "Information" && <Show_Bid_Details handleClose={closeModal} />
       }
     </>
   )

@@ -21,6 +21,18 @@ const Ongoing_Bids = () => {
                                         scope="col"
                                         className="px-4 py-4 text-medium font-Roboto text-left"
                                     >
+                                        Supplier Name
+                                    </th>
+                                    <th
+                                        scope="col"
+                                        className="px-4 py-4 text-medium font-Roboto text-left"
+                                    >
+                                        Supplir Id
+                                    </th>
+                                    <th
+                                        scope="col"
+                                        className="px-4 py-4 text-medium font-Roboto text-left"
+                                    >
                                         Bid Price
                                     </th>
                                     <th
@@ -39,12 +51,6 @@ const Ongoing_Bids = () => {
                                         scope="col"
                                         className="px-4 py-4 text-medium font-Roboto text-left"
                                     >
-                                        End date of Bidding
-                                    </th>
-                                    <th
-                                        scope="col"
-                                        className="px-4 py-4 text-medium font-Roboto text-left"
-                                    >
                                         Status
                                     </th>
                                 </tr>
@@ -55,6 +61,12 @@ const Ongoing_Bids = () => {
                                         xhdoLftes6
                                     </td>
                                     <td className="whitespace-nowrap px-4 py-4 text-left font-medium font-Roboto text-silver__color">
+                                        Input Supplier - 1
+                                    </td>
+                                    <td className="whitespace-nowrap px-4 py-4 text-left font-medium font-Roboto text-silver__color">
+                                        45687
+                                    </td>
+                                    <td className="whitespace-nowrap px-4 py-4 text-left font-medium font-Roboto text-silver__color">
                                         FPO - 1
                                     </td>
                                     <td className="whitespace-nowrap px-4 py-4 text-left font-medium font-Roboto text-silver__color">
@@ -62,9 +74,6 @@ const Ongoing_Bids = () => {
                                     </td>
                                     <td className="whitespace-nowrap px-4 py-4 text-left font-medium font-Roboto text-silver__color">
                                         13-07-2023
-                                    </td>
-                                    <td className="whitespace-nowrap px-4 py-4 text-left font-medium font-Roboto text-silver__color">
-                                        18-07-2023
                                     </td>
                                     <td className="whitespace-nowrap px-4 py-4 text-left font-medium font-Roboto text-silver__color">
                                         <button

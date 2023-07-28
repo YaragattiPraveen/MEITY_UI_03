@@ -1,7 +1,6 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import Form1 from "./Form1";
 import Form2 from "./Form2";
-import { blue } from "@mui/material/colors";
 const Samunnati = () => {
   const [page, setPage] = useState(0);
 
@@ -39,7 +38,7 @@ const Samunnati = () => {
         ) : (
           <button
             disabled={page === 1}
-            onClick={(prevPage) => setPage(page + 1)}
+            onClick={() => setPage(page + 1)}
             className="bg-gradient-to-r to-green-400 from-blue-500 py-2 w-[100px]
                     hover:bg-gradient-to-l 
                     transition duration-150 ease-in text-white px-4"

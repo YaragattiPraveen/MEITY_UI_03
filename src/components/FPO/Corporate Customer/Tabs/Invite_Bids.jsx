@@ -1,5 +1,4 @@
 import useModal from "../../../hooks/useModal"
-import Information from "../Modal/Information"
 import PlaceBid from "../Modal/PlaceBid"
 
 const Invite_Bids = () => {
@@ -23,13 +22,7 @@ const Invite_Bids = () => {
                                             scope="col"
                                             className="px-4 py-4 text-medium font-Roboto text-left"
                                         >
-                                            Name of Corporate Customer
-                                        </th>
-                                        <th
-                                            scope="col"
-                                            className="px-4 py-4 text-medium font-Roboto text-left"
-                                        >
-                                            Quantity
+                                            Name of Output Customer
                                         </th>
                                         <th
                                             scope="col"
@@ -49,24 +42,15 @@ const Invite_Bids = () => {
                                         >
                                             Information
                                         </th>
-                                        <th
-                                            scope="col"
-                                            className="px-4 py-4 text-medium font-Roboto text-left"
-                                        >
-                                            Status
-                                        </th>
                                     </tr>
                                 </thead>
                                 <tbody className="text-silver__color">
                                     <tr className="border-b transition duration-300 ease-in-out hover:bg-green-2">
                                         <td className="whitespace-nowrap px-4 py-4 text-left font-medium font-Roboto text-silver__color">
-                                            1
+                                            xhdoLftes6
                                         </td>
                                         <td className="whitespace-nowrap px-4 py-4 text-left font-medium font-Roboto text-silver__color">
-                                            Corporate Customer - 1
-                                        </td>
-                                        <td className="whitespace-nowrap px-4 py-4 text-left font-medium font-Roboto text-silver__color">
-                                            3
+                                            FPO - 1
                                         </td>
                                         <td className="whitespace-nowrap px-4 py-4 text-left font-medium font-Roboto text-silver__color">
                                             13-07-2023
@@ -78,14 +62,7 @@ const Invite_Bids = () => {
                                             <button
                                                 onClick={() => updateModal("showBidInformation")}
                                                 className="bg-bg__color text-center block text-white px-4 py-1 rounded">
-                                                View
-                                            </button>
-                                        </td>
-                                        <td className="whitespace-nowrap px-4 py-4 text-left font-medium font-Roboto text-silver__color">
-                                            <button
-                                                onClick={() => updateModal("showPlaceBid")}
-                                                className="bg-bg__color text-center block text-white px-4 py-1 rounded">
-                                                Place a Bid
+                                                Place Bid
                                             </button>
                                         </td>
                                     </tr>
@@ -96,10 +73,7 @@ const Invite_Bids = () => {
                 </div>
             </div>
             {
-                modal.state === "showBidInformation" && <Information handleClose={closeModal} />
-            }
-            {
-                modal.state === "showPlaceBid" && <PlaceBid handleClose={closeModal} />
+                modal.state === "showBidInformation" && <PlaceBid handleClose={closeModal} />
             }
         </>
     )

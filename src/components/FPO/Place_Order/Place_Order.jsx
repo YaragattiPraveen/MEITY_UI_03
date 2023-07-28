@@ -1,4 +1,5 @@
-const Place_Order = ({closeModal}) => {
+// eslint-disable-next-line react/prop-types
+const Place_Order = ({ closeModal, title }) => {
     return (
         <>
             <div className="overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none">
@@ -23,7 +24,7 @@ const Place_Order = ({closeModal}) => {
                             <div className="md:flex lg:flex-row mb:4 flex-col m-2">
                                 <div className="lg:w-1/2 sm:w-full mr-1">
                                     <label className="block text-grey-darker font-Roboto text-silver__color mb-2">
-                                        Quotation ID
+                                        {title}
                                     </label>
                                 </div>
                                 <div className="lg:w-1/2 sm:w-full mr-1">
@@ -31,20 +32,6 @@ const Place_Order = ({closeModal}) => {
                                         type="text"
                                         placeholder="xhdoLftes6"
                                         disabled="true"
-                                        className="appearance-none border rounded w-full py-2 px-3 text-grey-darker"
-                                    />
-                                </div>
-                            </div>
-                            <div className="md:flex lg:flex-row mb:4 flex-col m-2">
-                                <div className="lg:w-1/2 sm:w-full mr-1">
-                                    <label className="block text-grey-darker font-Roboto text-silver__color mb-2">
-                                        Brand Name
-                                    </label>
-                                </div>
-                                <div className="lg:w-1/2 sm:w-full mr-1">
-                                    <input
-                                        type="text"
-                                        placeholder="Akash - 798"
                                         className="appearance-none border rounded w-full py-2 px-3 text-grey-darker"
                                     />
                                 </div>
@@ -80,7 +67,7 @@ const Place_Order = ({closeModal}) => {
                             <div className="md:flex lg:flex-row mb:4 flex-col m-2">
                                 <div className="lg:w-1/2 sm:w-full mr-1">
                                     <label className="block text-grey-darker font-Roboto text-silver__color mb-2">
-                                        Quantity
+                                        Quantity in Kg/L
                                     </label>
                                 </div>
                                 <div className="lg:w-1/2 sm:w-full mr-1">

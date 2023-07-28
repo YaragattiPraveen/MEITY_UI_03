@@ -1,10 +1,11 @@
+/* eslint-disable react/prop-types */
 import { useState } from "react";
 import NavigateNextIcon from '@mui/icons-material/NavigateNext';
 import NavigateBeforeIcon from '@mui/icons-material/NavigateBefore';
 import Step2 from "./Step2";
-import Step4 from "./Step4";
+import Step3 from "./Step3";
 import Step1 from "./Step1"
-import Step5 from "./Step5"
+import Step4 from "./Step4"
 import ProgressSteps from "../../../Utils/ProgressSteps";
 
 const Show_Bids_Status = ({handleClose}) => {
@@ -16,9 +17,9 @@ const Show_Bids_Status = ({handleClose}) => {
     } else if (currentPage === 1) {
         currentUI = <Step2 />;
     } else if (currentPage === 2) {
-        currentUI = <Step4 />;
+        currentUI = <Step3 />;
     } else if (currentPage === 3) {
-        currentUI = <Step5 />;
+        currentUI = <Step4 />;
     }
 
     return (

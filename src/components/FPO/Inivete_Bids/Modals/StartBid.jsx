@@ -1,3 +1,4 @@
+// eslint-disable-next-line react/prop-types
 const StartBid = ({ handleClose }) => {
     return (
         <>
@@ -64,15 +65,20 @@ const StartBid = ({ handleClose }) => {
                             <div className="md:flex lg:flex-row mb:4 flex-col m-2">
                                 <div className="lg:w-1/2 sm:w-full mr-1">
                                     <label className="block text-grey-darker font-Roboto text-silver__color mb-2">
-                                        Quantity
+                                        Quantity in Kg/L
                                     </label>
                                 </div>
-                                <div className="lg:w-1/2 sm:w-full mr-1">
+                                <div className="lg:w-1/2 sm:w-full flex mr-1 border rounded w-full text-grey-darker">
                                     <input
                                         type="text"
                                         placeholder="Enter the Quantity"
-                                        className="appearance-none border rounded w-full py-2 px-3 text-grey-darker"
+                                        className="appearance-none border-r w-full py-2 px-3 text-grey-darker"
                                     />
+                                    <select className="appearance-none w-full py-2 px-3 text-grey-darker">
+                                        <option>Select in Kg/L</option>
+                                        <option>Kg</option>
+                                        <option>L</option>
+                                    </select>
                                 </div>
                             </div>
                             <div className="md:flex lg:flex-row mb:4 flex-col m-2">
@@ -99,20 +105,6 @@ const StartBid = ({ handleClose }) => {
                                         type="date"
                                         className="appearance-none border rounded w-full py-2 px-3 text-grey-darker"
                                     />
-                                </div>
-                            </div>
-                            <div className="md:flex lg:flex-row mb:4 flex-col m-2">
-                                <div className="lg:w-1/2 sm:w-full mr-1">
-                                    <label className="block text-grey-darker font-Roboto text-silver__color mb-2">
-                                        Required Test Reports
-                                    </label>
-                                </div>
-                                <div className="lg:w-1/2 sm:w-full mr-1">
-                                    <select className="appearance-none border rounded w-full py-2 px-3 text-grey-darker">
-                                        <option>Select test Report</option>
-                                        <option>Chowri</option>
-                                        <option>Panna</option>
-                                    </select>
                                 </div>
                             </div>
                             <div className="md:flex lg:flex-row mb:4 flex-col m-2">

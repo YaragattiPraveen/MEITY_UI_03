@@ -38,7 +38,7 @@ import Announcement_For_Former from "./components/FPO/Announcement_For_Farmer/An
 import Requirement_Gathering from "./components/FPO/Requirement_Gathering/Requirement_Gathering";
 import Input_Requirement_Acceptance from "./components/FPO/Input_Requirements_Acceptance/Input_Requirement_Acceptance";
 import { NavbarContextProvider } from "./Context/context";
-import Corpoate_Customer from "./components/FPO/Corporate Customer/Corpoate_Customer";
+import Corporate_Customer from "./components/FPO/Corporate Customer/Corporate_Customer";
 import CorporateClientWrapper from "./pages/CorporateClientWrapper";
 
 
@@ -52,6 +52,7 @@ import Invited_Bids from "./components/InputSupplier/Invited_Bids"
 import Input_Supplier_Settings from "../src/components/InputSupplier/Profile"
 import Input_Supplier_Support from "../src/components/InputSupplier/Support"
 import Requested_Quotes from "./components/InputSupplier/Requested_Bids/Requested_Quotes";
+// import Request_Quotation from "./components/FPO/Request_Quote/Request_Quotation";
 
 function App() {
   return (
@@ -103,8 +104,8 @@ function App() {
               <Route path="support" element={<Lac_Support />} />
               <Route path="settings" element={<Lac_Settings />} />
               <Route path="profile" element={<Profile />} />
-              <Route path="request-quote" element={<Request_Quote />} />
-              <Route path="corporate-customer" element={<Corpoate_Customer />} />
+              <Route path="request-quote" element={<Request_Quote/>} />
+              <Route path="corporate-customer" element={<Corporate_Customer />} />
               <Route
                 path="announcement-for-farmer"
                 element={<Announcement_For_Former />}
@@ -132,9 +133,9 @@ function App() {
 
             {/* Corporate Client */}
 
-            <Route path="coporate-client" element={<CorporateClientWrapper />}>
+            <Route path="corporate-client" element={<CorporateClientWrapper />}>
               <Route index element={<Lac_Bidding />} />
-              <Route path="coporate-client" element={<Lac_Bidding />} />
+              <Route path="corporate-client" element={<Lac_Bidding />} />
               <Route path="support" element={<CorporateClient_Support />} />
               <Route path="settings" element={<CorporateClient_Settings />} />
             </Route>

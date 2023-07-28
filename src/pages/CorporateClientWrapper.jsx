@@ -12,7 +12,7 @@ const CorporateClientWrapper = () => {
     {
       title: "Lac Bidding",
       icon: <CorporateFareIcon style={{ color: "white", fontSize: "28px" }} />,
-      to: "coporate-client",
+      to: "corporate-client",
     },
     {
       title: "Support",

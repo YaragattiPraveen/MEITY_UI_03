@@ -1,9 +1,24 @@
+import { useState } from "react";
 import Navbar from "../../Farmer/Navbar";
 import useModal from "../../hooks/useModal";
-import Place_Order from "../Place_Order/Place_Order";
-import {months} from "../../Utils/Const"
+import Requested_Quotes from "./Tabs/Requested_Quotes";
+import Ongoing_Transactions from "./Tabs/Ongoing_Transactions";
+import Completed_Transcations from "./Tabs/Completed_Transcations";
+import Place_Quote from "./Modals/Place_Quote";
+// import Place_Order from "../Place_Order/Place_Order";
+// import {months} from "../../Utils/Const"
 const Request_Quote = () => {
   const { modal, closeModal, updateModal } = useModal()
+  const [active, setActive] = useState("tab1")
+
+  let tab_UI
+  if (active === "tab1") {
+    tab_UI = <Requested_Quotes />
+  } else if (active === "tab2") {
+    tab_UI = <Ongoing_Transactions />
+  } else if (active === "tab3") {
+    tab_UI = <Completed_Transcations />
+  }
   return (
     <>
       <div className="container w-full mx-auto">
@@ -11,7 +26,13 @@ const Request_Quote = () => {
         <h2 className="text-hover__color text-2xl font-Roboto font-extrabold py-6 ">
           Quotation Requests
         </h2>
-        <div className="relative shadow-sm bg-nav__bg__color w-auto border p-5 my-4 mx-auto max-w-xs md:max-w-xl lg:max-w-2xl">
+        <button
+          onClick={() => updateModal("ShowPlaceQuote")}
+          className="bg-bg__color mb-4 text-white__color border-none shadow-md rounded-lg z-0 px-4 py-2 font-Roboto text-sm md:text-base cursor-pointer"
+        >
+          Place a Quote
+        </button>
+        {/* <div className="relative shadow-sm bg-nav__bg__color w-auto border p-5 my-4 mx-auto max-w-xs md:max-w-xl lg:max-w-2xl">
           <div className="md:flex lg:flex-row mb:4 flex-col m-2">
             <div className="lg:w-1/2 sm:w-full mr-1">
               <label className="block text-grey-darker font-Roboto text-silver__color mb-2">
@@ -86,9 +107,6 @@ const Request_Quote = () => {
               </select>
             </div>
           </div>
-          {/*body*/}
-
-          {/*footer*/}
           <div className="flex items-center justify-end px-4 py-3 rounded-b">
             <button
               className="bg-bg__color text-white active:bg-emerald-600 font-bold uppercase text-sm px-4 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
@@ -97,8 +115,8 @@ const Request_Quote = () => {
               Request Quote Now
             </button>
           </div>
-        </div>
-        <div className="bg-box__bg__color shadow-lg rounded-lg border my-6 border-gray-200">
+        </div> */}
+        {/* <div className="bg-box__bg__color shadow-lg rounded-lg border my-6 border-gray-200">
           <div className="flex flex-col p-3">
             <h3 className="text-hover__color text-xl font-semibold font-Roboto py-2">
               Previous Requests
@@ -269,10 +287,44 @@ const Request_Quote = () => {
               </div>
             </div>
           </div>
+        </div> */}
+
+        {/* {
+        modal.state === "Place_Order" && <Place_Order title={"Quotation Id"} closeModal={closeModal}/>
+      } */}
+        <div className="flex gap-3 md:gap-5 justify-end ">
+          <button
+            onClick={() => setActive("tab1")}
+            style={{
+              borderBottom: active === "tab1" && "2px solid green",
+            }}
+            className="text-hover__color shadow-md rounded-lg z-0 focus:outline-none px-4 py-2 font-Roboto text-base font-bold cursor-pointer"
+          >
+            Requested Quotes
+          </button>
+          <button
+            onClick={() => setActive("tab2")}
+            style={{
+              borderBottom: active === "tab2" && "2px solid green",
+            }}
+            className="text-hover__color shadow-md rounded-lg z-0 focus:outline-none px-4 py-2 font-Roboto text-base font-bold cursor-pointer"
+          >
+            Ongoing Transactions
+          </button>
+          <button
+            onClick={() => setActive("tab3")}
+            style={{
+              borderBottom: active === "tab3" && "2px solid green",
+            }}
+            className="text-hover__color shadow-md rounded-lg z-0 focus:outline-none px-4 py-2 font-Roboto text-base font-bold cursor-pointer"
+          >
+            Completed Transactions
+          </button>
         </div>
+        {tab_UI}
       </div>
       {
-        modal.state === "Place_Order" && <Place_Order closeModal={closeModal}/>
+        modal.state === "ShowPlaceQuote" && <Place_Quote handleClose={closeModal}/>
       }
     </>
 
