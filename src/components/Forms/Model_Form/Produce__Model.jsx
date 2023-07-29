@@ -1,5 +1,3 @@
-import React from "react";
-
 const Produce__Model = () => {
   return (
     <>
@@ -19,13 +17,13 @@ const Produce__Model = () => {
       <div className="md:flex lg:flex-row mb:4 flex-col m-2">
         <div className="lg:w-1/2 sm:w-full mr-1">
           <label className="block text-grey-darker font-Roboto text-silver__color mb-2">
-            Lac Strain Type
+            Crop Name
           </label>
         </div>
         <div className="lg:w-1/2 sm:w-full mr-1">
           <input
             type="text"
-            placeholder="Lac Strain Type"
+            placeholder="Seed - 1"
             className="appearance-none border rounded w-full py-2 px-3 text-grey-darker"
           />
         </div>
@@ -33,13 +31,13 @@ const Produce__Model = () => {
       <div className="md:flex lg:flex-row mb:4 flex-col m-2">
         <div className="lg:w-1/2 sm:w-full mr-1">
           <label className="block text-grey-darker font-Roboto text-silver__color mb-2">
-            Source of Tree
+              Variety Name
           </label>
         </div>
         <div className="lg:w-1/2 sm:w-full mr-1">
           <input
             type="text"
-            placeholder="Source of Tree"
+            placeholder="Variety - 1"
             className="appearance-none border rounded w-full py-2 px-3 text-grey-darker"
           />
         </div>
@@ -47,13 +45,13 @@ const Produce__Model = () => {
       <div className="md:flex lg:flex-row mb:4 flex-col m-2">
         <div className="lg:w-1/2 sm:w-full mr-1">
           <label className="block text-grey-darker font-Roboto text-silver__color mb-2">
-            Origin
+            Grade
           </label>
         </div>
         <div className="lg:w-1/2 sm:w-full mr-1">
           <input
             type="text"
-            placeholder="Origin"
+            placeholder="C"
             className="appearance-none border rounded w-full py-2 px-3 text-grey-darker"
           />
         </div>
@@ -68,6 +66,19 @@ const Produce__Model = () => {
           <input
             type="text"
             placeholder="Quantity"
+            className="appearance-none border rounded w-full py-2 px-3 text-grey-darker"
+          />
+        </div>
+      </div>
+      <div className="md:flex lg:flex-row mb:4 flex-col m-2">
+        <div className="lg:w-1/2 sm:w-full mr-1">
+          <label className="block text-grey-darker font-Roboto text-silver__color mb-2">
+            Upload Image
+          </label>
+        </div>
+        <div className="lg:w-1/2 sm:w-full mr-1">
+          <input
+            type="file"
             className="appearance-none border rounded w-full py-2 px-3 text-grey-darker"
           />
         </div>

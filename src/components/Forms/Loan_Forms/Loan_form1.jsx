@@ -11,7 +11,7 @@ const Loan_form1 = () => {
         </div>
         <div className="lg:w-1/2 sm:w-full mr-1">
           <input
-            disabled="true"
+            disabled
             placeholder="FPO 1"
             type="text"
             className="appearance-none border rounded w-full py-2 px-3 text-grey-darker"
@@ -26,7 +26,7 @@ const Loan_form1 = () => {
         </div>
         <div className="lg:w-1/2 sm:w-full mr-1">
           <input
-            disabled="true"
+            disabled
             placeholder="B 1"
             type="text"
             className="appearance-none border rounded w-full py-2 px-3 text-grey-darker"
@@ -41,7 +41,7 @@ const Loan_form1 = () => {
         </div>
         <div className="lg:w-1/2 sm:w-full mr-1">
           <input
-            disabled="true"
+            disabled
             type="text"
             placeholder="1234567890"
             className="appearance-none border rounded w-full py-2 px-3 text-grey-darker"
@@ -58,7 +58,7 @@ const Loan_form1 = () => {
           <input
             placeholder="1234567890"
             type="text"
-            disabled="true"
+            disabled
             className="appearance-none border rounded w-full py-2 px-3 text-grey-darker"
           />
         </div>
@@ -73,7 +73,7 @@ const Loan_form1 = () => {
           <input
             type="text"
             placeholder="Br 1"
-            disabled="true"
+            disabled
             className="appearance-none border rounded w-full py-2 px-3 text-grey-darker"
           />
         </div>
@@ -88,7 +88,7 @@ const Loan_form1 = () => {
           <input
             type="text"
             placeholder="Farmer"
-            disabled="true"
+            disabled
             className="appearance-none border rounded w-full py-2 px-3 text-grey-darker"
           />
         </div>
@@ -103,7 +103,7 @@ const Loan_form1 = () => {
           <input
             type="text"
             placeholder="Male"
-            disabled="true"
+            disabled
             className="appearance-none border rounded w-full py-2 px-3 text-grey-darker"
           />
         </div>

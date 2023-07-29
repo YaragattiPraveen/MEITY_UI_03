@@ -55,7 +55,7 @@ const Loan_form5 = () => {
           <input
             placeholder="12-3-1999"
             type="text"
-            disabled="true"
+            disabled
             className="appearance-none border rounded w-full py-2 px-3 text-grey-darker"
           />
         </div>
@@ -182,7 +182,7 @@ const Loan_form5 = () => {
           <input
             type="text"
             placeholder="12"
-            disabled="true"
+            disabled
             className="appearance-none border rounded w-full py-2 px-3 text-grey-darker"
           />
         </div>
@@ -197,7 +197,7 @@ const Loan_form5 = () => {
           <input
             type="text"
             placeholder="2345678"
-            disabled='true'
+            disabled
             className="appearance-none border rounded w-full py-2 px-3 text-grey-darker"
           />
         </div>

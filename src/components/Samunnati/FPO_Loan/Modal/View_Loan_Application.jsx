@@ -39,7 +39,7 @@ const View_Loan_Application = ({ closemodal }) => {
                 <div className="lg:w-1/2 sm:w-full mr-1  ">
                   <input
                     type="text"
-                    disabled="true"
+                    disabled
                     placeholder="W123456"
                     className="appearance-none border rounded w-full py-1 px-3 text-grey-darker"
                   />
@@ -54,7 +54,7 @@ const View_Loan_Application = ({ closemodal }) => {
                 <div className="lg:w-1/2 sm:w-full mr-1  ">
                   <input
                     type="text"
-                    disabled="true"
+                    disabled
                     placeholder="L 1"
                     className="appearance-none border rounded w-full py-1 px-3 text-grey-darker"
                   />
@@ -69,7 +69,7 @@ const View_Loan_Application = ({ closemodal }) => {
                 <div className="lg:w-1/2 sm:w-full mr-1  ">
                   <input
                     type="text"
-                    disabled="true"
+                    disabled
                     placeholder="P 1"
                     className="appearance-none border rounded w-full py-1 px-3 text-grey-darker"
                   />
@@ -84,7 +84,7 @@ const View_Loan_Application = ({ closemodal }) => {
                 <div className="lg:w-1/2 sm:w-full mr-1  ">
                   <input
                     type="text"
-                    disabled="true"
+                    disabled
                     placeholder="1234567890"
                     className="appearance-none border rounded w-full py-1 px-3 text-grey-darker"
                   />
@@ -99,7 +99,7 @@ const View_Loan_Application = ({ closemodal }) => {
                 <div className="lg:w-1/2 sm:w-full mr-1  ">
                   <input
                     type="text"
-                    disabled="true"
+                    disabled
                     placeholder="1234567890"
                     className="appearance-none border rounded w-full py-1 px-3 text-grey-darker"
                   />
@@ -114,7 +114,7 @@ const View_Loan_Application = ({ closemodal }) => {
                 <div className="lg:w-1/2 sm:w-full mr-1  ">
                   <input
                     type="text"
-                    disabled="true"
+                    disabled
                     placeholder="B 1"
                     className="appearance-none border rounded w-full py-1 px-3 text-grey-darker"
                   />
@@ -129,7 +129,7 @@ const View_Loan_Application = ({ closemodal }) => {
                 <div className="lg:w-1/2 sm:w-full mr-1  ">
                   <input
                     type="text"
-                    disabled="true"
+                    disabled
                     placeholder="100000"
                     className="appearance-none border rounded w-full py-1 px-3 text-grey-darker"
                   />
@@ -144,7 +144,7 @@ const View_Loan_Application = ({ closemodal }) => {
                 <div className="lg:w-1/2 sm:w-full mr-1  ">
                   <input
                     type="text"
-                    disabled="true"
+                    disabled
                     placeholder="12"
                     className="appearance-none border rounded w-full py-1 px-3 text-grey-darker"
                   />
@@ -159,7 +159,7 @@ const View_Loan_Application = ({ closemodal }) => {
                 <div className="lg:w-1/2 sm:w-full mr-1  ">
                   <input
                     type="text"
-                    disabled="true"
+                    disabled
                     placeholder="12"
                     className="appearance-none border rounded w-full py-1 px-3 text-grey-darker"
                   />
@@ -192,7 +192,7 @@ const View_Loan_Application = ({ closemodal }) => {
                 <div className="lg:w-1/2 sm:w-full mr-1  ">
                   <input
                     type="text"
-                    disabled="true"
+                    disabled
                     placeholder="Purpose 1"
                     className="appearance-none border rounded w-full py-1 px-3 text-grey-darker"
                   />

@@ -15,7 +15,7 @@ const Form_2 = ({ closemodal }) => {
           <div className="lg:w-1/2 sm:w-full mr-1">
             <input
               type="text"
-              disabled="true"
+              disabled
               placeholder="R 1"
               className="appearance-none border rounded w-full py-1 px-3 text-grey-darker"
             />
@@ -30,7 +30,7 @@ const Form_2 = ({ closemodal }) => {
           <div className="lg:w-1/2 sm:w-full mr-1">
             <input
               type="text"
-              disabled="true"
+              disabled
               placeholder="B 1"
               className="appearance-none border rounded w-full py-1 px-3 text-grey-darker"
             />
@@ -45,7 +45,7 @@ const Form_2 = ({ closemodal }) => {
           <div className="lg:w-1/2 sm:w-full mr-1">
             <input
               type="text"
-              disabled="true"
+              disabled
               placeholder="1234567890"
               className="appearance-none border rounded w-full py-1 px-3 text-grey-darker"
             />
@@ -60,7 +60,7 @@ const Form_2 = ({ closemodal }) => {
           <div className="lg:w-1/2 sm:w-full mr-1">
             <input
               type="text"
-              disabled="true"
+              disabled
               placeholder="1234567890"
               className="appearance-none border rounded w-full py-1 px-3 text-grey-darker"
             />
@@ -75,7 +75,7 @@ const Form_2 = ({ closemodal }) => {
           <div className="lg:w-1/2 sm:w-full mr-1">
             <input
               type="date"
-              disabled="true"
+              disabled
               className="appearance-none border rounded w-full py-1 px-3 text-grey-darker"
             />
           </div>
@@ -89,7 +89,7 @@ const Form_2 = ({ closemodal }) => {
           <div className="lg:w-1/2 sm:w-full mr-1">
             <input
               type="text"
-              disabled="true"
+              disabled
               className="appearance-none border rounded w-full py-1 px-3 text-grey-darker"
             />
           </div>

@@ -1,5 +1,6 @@
 import React from "react";
 import Navbar from "../Navbar";
+import Card from "./Card";
 const Fpo_Announcements = () => {
   return (
     <div className="container w-full mx-auto">
@@ -7,7 +8,7 @@ const Fpo_Announcements = () => {
       <h2 className="text-hover__color uppercase text-xl lg:text-2xl font-Roboto font-extrabold py-6 ">
         Announcements from FPO
       </h2>
-      <div
+      {/* <div
         className="max-w-sm bg-bg__color border border-gray-200 rounded-lg shadow
        transform hover:scale-105 transition duration-500"
       >
@@ -20,6 +21,15 @@ const Fpo_Announcements = () => {
           <h2 className="text-lg text-center pt-3 font-Roboto font-bold text-white">
             Post 1 from FingerprintIcon
           </h2>
+        </div>
+      </div> */}
+      <div className="mx-auto">
+        <div className="flex flex-wrap font-Roboto text-black__color">
+         <Card/>
+         <Card/>
+         <Card/>
+         <Card/>
+         <Card/>
         </div>
       </div>
     </div>

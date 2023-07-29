@@ -1,4 +1,19 @@
-const Loan_Application_Modal = ({ closemodal }) => {
+const Place_Requirement = ({ closemodal }) => {
+  const months = [
+    "January",
+    "February",
+    "March",
+    "April",
+    "May",
+    "June",
+    "July",
+    "August",
+    "September",
+    "October",
+    "November",
+    "December",
+  ];
+
   return (
     <>
       <div className="overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none">
@@ -8,12 +23,10 @@ const Loan_Application_Modal = ({ closemodal }) => {
             {/*header*/}
             <div className="flex items-center text-bg__color justify-between px-5 py-2 border-b border-solid border-slate-200 rounded-t">
               <h3 className="text-xl font-semibold font-Roboto py-3">
-                Repayment
+                Farmer Loan
               </h3>
               <button
-                onClick={() => {
-                  closemodal(false);
-                }}
+                onClick={closemodal}
                 className="text-black background-transparent font-bold uppercase px-6 py-2 text-sm outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
                 type="button"
               >
@@ -21,84 +34,96 @@ const Loan_Application_Modal = ({ closemodal }) => {
               </button>
             </div>
             {/*body*/}
+
             <div className="relative px-6 py-3 flex-auto">
               <div className="md:flex lg:flex-row mb:4 flex-col m-2">
                 <div className="lg:w-1/2 sm:w-full mr-1">
                   <label className="block text-grey-darker font-Roboto text-silver__color mb-2">
-                    FPO Name
+                    Input Type
+                  </label>
+                </div>
+                <div className="lg:w-1/2 sm:w-full mr-1">
+                  <select className="select p-2 select-bordered border rounded-md w-full max-w-full">
+                    <option>Seed</option>
+                    <option>Pesticide</option>
+                    <option>Fertilizer</option>
+                  </select>
+                </div>
+              </div>
+              <div className="md:flex lg:flex-row mb:4 flex-col m-2">
+                <div className="lg:w-1/2 sm:w-full mr-1">
+                  <label className="block text-grey-darker font-Roboto text-silver__color mb-2">
+                    Input Variant
                   </label>
                 </div>
                 <div className="lg:w-1/2 sm:w-full mr-1">
                   <input
+                    placeholder="Enter the variant"
                     type="text"
-                    disabled
-                    placeholder="FPO 5"
-                    className="appearance-none border rounded w-full py-1 px-3 text-grey-darker"
+                    className="appearance-none border rounded w-full py-2 px-3 text-grey-darker"
                   />
                 </div>
               </div>
               <div className="md:flex lg:flex-row mb:4 flex-col m-2">
                 <div className="lg:w-1/2 sm:w-full mr-1">
                   <label className="block text-grey-darker font-Roboto text-silver__color mb-2">
-                    Contact No
+                    Brand
                   </label>
                 </div>
                 <div className="lg:w-1/2 sm:w-full mr-1">
                   <input
+                    placeholder="Enter the Brand Name"
                     type="text"
-                    disabled
-                    placeholder="1234567890"
-                    className="appearance-none border rounded w-full py-1 px-3 text-grey-darker"
+                    className="appearance-none border rounded w-full py-2 px-3 text-grey-darker"
                   />
                 </div>
               </div>
               <div className="md:flex lg:flex-row mb:4 flex-col m-2">
                 <div className="lg:w-1/2 sm:w-full mr-1">
                   <label className="block text-grey-darker font-Roboto text-silver__color mb-2">
-                    Date of Application
+                    Quantity
                   </label>
                 </div>
                 <div className="lg:w-1/2 sm:w-full mr-1">
-                  <input
-                    type="text"
-                    disabled
-                    placeholder="2021-10-10"
-                    className="appearance-none border rounded w-full py-1 px-3 text-grey-darker"
-                  />
+                  <div className="flex items-center justify-between border rounded-md">
+                    <input
+                      type="number"
+                      placeholder="Enter the quantity"
+                      className="select p-2 select-bordered w-full border-r max-w-full"
+                    />
+                    <select className="select p-2 select-bordered w-full max-w-full">
+                      <option>Select in KG/L</option>
+                      <option>Kg</option>
+                      <option>L</option>
+                    </select>
+                  </div>
                 </div>
               </div>
               <div className="md:flex lg:flex-row mb:4 flex-col m-2">
                 <div className="lg:w-1/2 sm:w-full mr-1">
                   <label className="block text-grey-darker font-Roboto text-silver__color mb-2">
-                    Requested Amount
+                    Month
                   </label>
                 </div>
                 <div className="lg:w-1/2 sm:w-full mr-1">
-                  <input
-                    type="text"
-                    disabled
-                    placeholder="100000"
-                    className="appearance-none border rounded w-full py-1 px-3 text-grey-darker"
-                  />
-                </div>
-              </div>
-              <div className="md:flex lg:flex-row mb:4 flex-col m-2">
-                <div className="lg:w-1/2 sm:w-full mr-1">
-                  <label className="block text-grey-darker font-Roboto text-silver__color mb-2">
-                    Reason for Rejection
-                  </label>
-                </div>
-                <div className="lg:w-1/2 sm:w-full mr-1">
-                  <input
-                    type="text"
-                    disabled
-                    placeholder="Not eligible"
-                    className="appearance-none border rounded w-full py-1 px-3 text-grey-darker"
-                  />
+                  <select className="select p-2 select-bordered rounded-md border w-full max-w-full">
+                    <option>Select Month</option>
+                    {months.map((month, ind) => (
+                      <option key={ind}>{month}</option>
+                    ))}
+                  </select>
                 </div>
               </div>
             </div>
             {/*footer*/}
+            <div className="flex items-center justify-end px-4 py-3 rounded-b">
+              <button
+                className="text-white uppercase text-sm shadow-md rounded z-0 focus:outline-none font-Roboto mb-6 py-1.5 px-4 bg-hover__color"
+                type="button"
+              >
+                Submit Requirement
+              </button>
+            </div>
           </div>
         </div>
       </div>
@@ -107,4 +132,4 @@ const Loan_Application_Modal = ({ closemodal }) => {
   );
 };
 
-export default Loan_Application_Modal;
+export default Place_Requirement;

@@ -11,7 +11,7 @@ const Form_1 = () => {
         </div>
         <div className="lg:w-1/2 sm:w-full mr-1">
           <input
-            disabled="true"
+            disabled
             placeholder="W412586"
             type="text"
             className="border-2 p-1 w-full rounded-md"
@@ -27,7 +27,7 @@ const Form_1 = () => {
         <div className="lg:w-1/2 sm:w-full mr-1">
           <input
             type="text"
-            disabled="true"
+            disabled
             placeholder="1000000"
             className="border-2 p-1 w-full rounded-md"
           />
@@ -42,7 +42,7 @@ const Form_1 = () => {
         <div className="lg:w-1/2 sm:w-full mr-1">
           <input
             type="text"
-            disabled="true"
+            disabled
             placeholder="1"
             className="border-2 p-1 w-full rounded-md"
           />

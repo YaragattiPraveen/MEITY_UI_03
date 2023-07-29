@@ -10,7 +10,8 @@ const Store = () => {
           Shop from FPO
         </h2>
         <div className="mx-auto">
-          <div className="flex flex-wrap font-Roboto text-black__color">            <Card />
+          <div className="flex flex-wrap font-Roboto text-black__color">
+            <Card />
             <Card />
             <Card />
             <Card />

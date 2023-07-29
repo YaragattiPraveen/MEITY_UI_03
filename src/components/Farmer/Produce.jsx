@@ -1,13 +1,16 @@
-import  { useState } from "react";
 import Add__Produce from "./Modals/Add__Produce";
-
+import useModal from "../hooks/useModal";
+import Image_Modal from "../Farmer/Modals/Image_modal"
 const Produce = () => {
-  const [openModel, setOpenModel] = useState(false)
+  const { modal, updateModal, closeModal } = useModal();
   return (
     <>
       <div className="bg-box__bg__color shadow-lg rounded-lg border my-6 border-gray-200">
         <div className="flex justify-end">
-          <button onClick={() => setOpenModel(true)} className="text-white text-sm uppercase shadow-md rounded z-0 focus:outline-none px-4 py-2 font-Roboto m-3 bg-hover__color">
+          <button
+            onClick={() => updateModal("ShowAddProduce")}
+            className="text-white text-sm uppercase shadow-md rounded z-0 focus:outline-none px-4 py-2 font-Roboto m-3 bg-hover__color"
+          >
             Add New
           </button>
         </div>
@@ -16,43 +19,46 @@ const Produce = () => {
             <div className="relative inline-block min-w-full py-2 sm:px-2 lg:6">
               <div className="overflow-hidden">
                 <table className="min-w-full text-left text-sm font-light table-auto">
-                  <thead className="text-xs text-medium bg-green-200 border-b uppercase text-gray-600">
+                  <thead className="text-xs bg-green-200 border-b uppercase text-gray-600">
                     <tr>
                       <th
                         scope="col"
-                        className="px-6 py-4 text-medium font-Roboto text-left"
+                        className="px-6 py-4 font-Roboto text-left"
                       >
                         Date
                       </th>
                       <th
                         scope="col"
-                        className="px-6 py-4 text-medium font-Roboto text-left"
+                        className="px-6 py-4 font-Roboto text-left"
                       >
-                        Lac Strain Type
+                        Crop Name
                       </th>
                       <th
                         scope="col"
-                        className="px-6 py-4 text-medium font-Roboto text-left"
+                        className="px-6 py-4 font-Roboto text-left"
                       >
-                        Source of Tree
+                        Variety Name
                       </th>
                       <th
                         scope="col"
-                        className="px-6 py-4 text-medium font-Roboto text-left"
+                        className="px-6 py-4 font-Roboto text-left"
                       >
-                        Origin
+                        Grade
                       </th>
                       <th
                         scope="col"
-                        className="px-6 py-4 text-medium font-Roboto text-left"
+                        className="px-6 py-4 font-Roboto text-left"
                       >
                         Quantity
                       </th>
                       <th
                         scope="col"
-                        className="px-6 py-4text-medium font-Roboto text-left"
+                        className="px-6 py-4 font-Roboto text-left"
                       >
                         Remarks
+                      </th>
+                      <th scope="" className="px-6 py-4 font-Roboto text-left">
+                        View Image
                       </th>
                     </tr>
                   </thead>
@@ -62,7 +68,7 @@ const Produce = () => {
                         12/12/2020
                       </td>
                       <td className="whitespace-nowrap px-6 py-4 text-left font-medium font-Roboto text-silver__color">
-                        Stick Lac
+                        Rice - 12
                       </td>
                       <td className="whitespace-nowrap px-6 py-4 text-left font-medium font-Roboto text-silver__color">
                         Wild
@@ -76,65 +82,8 @@ const Produce = () => {
                       <td className="whitespace-nowrap px-6 py-4 text-left font-medium font-Roboto text-silver__color">
                         Good
                       </td>
-                    </tr>
-                    <tr className="border-b transition duration-300 ease-in-out hover:bg-green-100">
-                      <td className="whitespace-nowrap px-6 py-4 text-left font-medium font-Roboto text-silver__color">
-                        12/12/2020
-                      </td>
-                      <td className="whitespace-nowrap px-6 py-4 text-left font-medium font-Roboto text-silver__color">
-                        Stick Lac
-                      </td>
-                      <td className="whitespace-nowrap px-6 py-4 text-left font-medium font-Roboto text-silver__color">
-                        Wild
-                      </td>
-                      <td className="whitespace-nowrap px-6 py-4 text-left font-medium font-Roboto text-silver__color">
-                        Assam
-                      </td>
-                      <td className="whitespace-nowrap px-6 py-4 text-left font-medium font-Roboto text-silver__color">
-                        100
-                      </td>
-                      <td className="whitespace-nowrap px-6 py-4 text-left font-medium font-Roboto text-silver__color">
-                        Good
-                      </td>
-                    </tr>
-                    <tr className="border-b transition duration-300 ease-in-out hover:bg-green-100">
-                      <td className="whitespace-nowrap px-6 py-4 text-left font-medium font-Roboto text-silver__color">
-                        12/12/2020
-                      </td>
-                      <td className="whitespace-nowrap px-6 py-4 text-left font-medium font-Roboto text-silver__color">
-                        Stick Lac
-                      </td>
-                      <td className="whitespace-nowrap px-6 py-4 text-left font-medium font-Roboto text-silver__color">
-                        Wild
-                      </td>
-                      <td className="whitespace-nowrap px-6 py-4 text-left font-medium font-Roboto text-silver__color">
-                        Assam
-                      </td>
-                      <td className="whitespace-nowrap px-6 py-4 text-left font-medium font-Roboto text-silver__color">
-                        100
-                      </td>
-                      <td className="whitespace-nowrap px-6 py-4 text-left font-medium font-Roboto text-silver__color">
-                        Good
-                      </td>
-                    </tr>
-                    <tr className="border-b transition duration-300 ease-in-out hover:bg-green-100">
-                      <td className="whitespace-nowrap px-6 py-4 text-left font-medium font-Roboto text-silver__color">
-                        12/12/2020
-                      </td>
-                      <td className="whitespace-nowrap px-6 py-4 text-left font-medium font-Roboto text-silver__color">
-                        Stick Lac
-                      </td>
-                      <td className="whitespace-nowrap px-6 py-4 text-left font-medium font-Roboto text-silver__color">
-                        Wild
-                      </td>
-                      <td className="whitespace-nowrap px-6 py-4 text-left font-medium font-Roboto text-silver__color">
-                        Assam
-                      </td>
-                      <td className="whitespace-nowrap px-6 py-4 text-left font-medium font-Roboto text-silver__color">
-                        100
-                      </td>
-                      <td className="whitespace-nowrap px-6 py-4 text-left font-medium font-Roboto text-silver__color">
-                        Good
+                      <td className="whitespace-nowrap px-6 py-4 text-center font-medium font-Roboto">
+                        <button onClick={() => updateModal("ShowImage")} className="px-3 text-white__color py-1 rounded-sm bg-bg__color">View</button>
                       </td>
                     </tr>
                   </tbody>
@@ -143,9 +92,13 @@ const Produce = () => {
             </div>
           </div>
         </div>
-        {openModel && <Add__Produce closemodel={setOpenModel} />}
+        {modal.state === "ShowAddProduce" && (
+          <Add__Produce closemodal={closeModal} />
+        )}
+        {
+          modal.state === "ShowImage" && (<Image_Modal title={"Wheat - 1"} closemodel={closeModal}/>)
+        }
       </div>
-
     </>
   );
 };

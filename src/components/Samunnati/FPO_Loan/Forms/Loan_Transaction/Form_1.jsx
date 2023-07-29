@@ -13,7 +13,7 @@ const Form_1 = ({closemodal}) => {
           <div className="lg:w-1/2 sm:w-full mr-1">
             <input
               type="text"
-              disabled="true"
+              disabled
               placeholder="FPO 5"
               className="appearance-none border rounded w-full py-1 px-3 text-grey-darker"
             />
@@ -28,7 +28,7 @@ const Form_1 = ({closemodal}) => {
           <div className="lg:w-1/2 sm:w-full mr-1">
             <input
               type="text"
-              disabled="true"
+              disabled
               placeholder="2021-10-10"
               className="appearance-none border rounded w-full py-1 px-3 text-grey-darker"
             />
@@ -43,7 +43,7 @@ const Form_1 = ({closemodal}) => {
           <div className="lg:w-1/2 sm:w-full mr-1">
             <input
               type="text"
-              disabled="true"
+              disabled
               placeholder="100000"
               className="appearance-none border rounded w-full py-1 px-3 text-grey-darker"
             />
@@ -58,7 +58,7 @@ const Form_1 = ({closemodal}) => {
           <div className="lg:w-1/2 sm:w-full mr-1">
             <input
               type="text"
-              disabled="true"
+              disabled
               placeholder="100000"
               className="appearance-none border rounded w-full py-1 px-3 text-grey-darker"
             />
@@ -73,7 +73,7 @@ const Form_1 = ({closemodal}) => {
           <div className="lg:w-1/2 sm:w-full mr-1">
             <input
               type="text"
-              disabled="true"
+              disabled
               placeholder="2022-10-10"
               className="appearance-none border rounded w-full py-1 px-3 text-grey-darker"
             />

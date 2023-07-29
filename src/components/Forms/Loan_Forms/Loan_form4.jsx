@@ -11,7 +11,7 @@ const Loan_form4 = () => {
         </div>
         <div className="lg:w-1/2 sm:w-full mr-1">
           <input
-            disabled="true"
+            disabled
             placeholder="S 1"
             type="text"
             className="appearance-none border rounded w-full py-2 px-3 text-grey-darker"
@@ -26,7 +26,7 @@ const Loan_form4 = () => {
         </div>
         <div className="lg:w-1/2 sm:w-full mr-1">
           <input
-            disabled="true"
+            disabled
             placeholder="123456"
             type="date"
             className="appearance-none border rounded w-full py-2 px-3 text-grey-darker"
@@ -41,7 +41,7 @@ const Loan_form4 = () => {
         </div>
         <div className="lg:w-1/2 sm:w-full mr-1">
           <input
-            disabled="true"
+            disabled
             type="text"
             placeholder="Farmer"
             className="appearance-none border rounded w-full py-2 px-3 text-grey-darker"
@@ -58,7 +58,7 @@ const Loan_form4 = () => {
           <input
             placeholder="E 1"
             type="text"
-            disabled="true"
+            disabled
             className="appearance-none border rounded w-full py-2 px-3 text-grey-darker"
           />
         </div>
@@ -73,7 +73,7 @@ const Loan_form4 = () => {
           <input
             type="text"
             placeholder="N 1"
-            disabled="true"
+            disabled
             className="appearance-none border rounded w-full py-2 px-3 text-grey-darker"
           />
         </div>
@@ -88,7 +88,7 @@ const Loan_form4 = () => {
           <input
             type="text"
             placeholder="R 1"
-            disabled="true"
+            disabled
             className="appearance-none border rounded w-full py-2 px-3 text-grey-darker"
           />
         </div>
@@ -103,7 +103,7 @@ const Loan_form4 = () => {
           <input
             type="text"
             placeholder="C 1"
-            disabled="true"
+            disabled
             className="appearance-none border rounded w-full py-2 px-3 text-grey-darker"
           />
         </div>
@@ -118,7 +118,7 @@ const Loan_form4 = () => {
           <input
             type="text"
             placeholder="Rg 1"
-            disabled="true"
+            disabled
             className="appearance-none border rounded w-full py-2 px-3 text-grey-darker"
           />
         </div>

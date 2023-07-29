@@ -2,7 +2,7 @@ import { useContext } from "react";
 import Sidebar from "../components/Farmer/Sidebar";
 import { Outlet } from "react-router-dom";
 import SpaIcon from "@mui/icons-material/Spa";
-import FingerprintIcon from "@mui/icons-material/Fingerprint";
+// import FingerprintIcon from "@mui/icons-material/Fingerprint";
 import InfoIcon from "@mui/icons-material/Info";
 import CampaignIcon from "@mui/icons-material/Campaign";
 
@@ -54,11 +54,11 @@ const FarmerWrapper = () => {
       icon: <SpaIcon style={{ color: "white", fontSize: "28px" }} />,
       to: "input-requirement",
     },
-    {
-      title: "Purchase Authentication",
-      icon: <FingerprintIcon style={{ color: "white", fontSize: "28px" }} />,
-      to: "purchase-authentication",
-    },
+    // {
+    //   title: "Purchase Authentication",
+    //   icon: <FingerprintIcon style={{ color: "white", fontSize: "28px" }} />,
+    //   to: "purchase-authentication",
+    // },
     {
       title: "Transaction History",
       icon: (
