@@ -54,6 +54,9 @@ import Input_Supplier_Support from "../src/components/InputSupplier/Support"
 import Requested_Quotes from "./components/InputSupplier/Requested_Bids/Requested_Quotes";
 // import Request_Quotation from "./components/FPO/Request_Quote/Request_Quotation";
 
+import AdminWrapper from "./pages/AdminWrapper";
+import Admin_Dashboard from "./components/Admin/Dashboard"
+import License_Key from "./components/Admin/License_Key";
 function App() {
   return (
     <>
@@ -138,6 +141,13 @@ function App() {
               <Route path="corporate-client" element={<Lac_Bidding />} />
               <Route path="support" element={<CorporateClient_Support />} />
               <Route path="settings" element={<CorporateClient_Settings />} />
+            </Route>
+
+            {/* Admin */}
+            <Route path="admin" element={<AdminWrapper/>}>
+              <Route index element={<Admin_Dashboard/>}/>
+              <Route path="admin" element={<Admin_Dashboard/>}/>
+              <Route path="license-key" element={<License_Key/>}/>
             </Route>
 
             {/* Input Supplier */}
