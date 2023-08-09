@@ -5,11 +5,10 @@ import Farmer_Loan from "./Tabs/Farmer_Loan";
 import Working_Capital_Loan from "../FPO_Loan/Tabs/Working_Capital_Loan"
 import Apply_For_Loan from '../FPO_Loan/Modals/Apply_For_Loan'
 import Aggregate_Repayment from "./Modals/Aggregate_Repayment";
+import useModal from "../../hooks/useModal";
 const Loan_Information = () => {
   const [active, setActive] = useState("tab1");
-  const [openWorkingModel, setWorkingOpenModel] = useState(false);
-  const [openLoanModel, setLoanModel] = useState(false)
-  const [openAggregateModel, setAggregateModel] = useState(false)
+  const {modal,closeModal,updateModal} = useModal()
 
   let tab__UI;
   if (active === "tab1") {
@@ -28,17 +27,17 @@ const Loan_Information = () => {
         <div className="flex items-end justify-Start pb-4">
           {active === "tab1" ? (
             <button
-              onClick={() => setWorkingOpenModel(true)}
+              onClick={() => updateModal("ShowWorkingCapitalLoanWindow")}
               className="bg-bg__color md:text-base text-sm  text-center text-white px-4 py-1 rounded shadow-md z-0 focus:outline-none"
             >
               Apply for Working Capital Loan Window
             </button>
           ) : (
             <button
-              onClick={() => setWorkingOpenModel(true)}
+              onClick={() => updateModal("ShowFarmerLoanWindow")}
               className="bg-bg__color md:text-base text-sm   text-center text-white px-4 py-1 rounded"
             >
-              Apply for Farmer Loan
+              Apply for Farmer Loan Window
             </button>
           )}
         </div>
@@ -66,7 +65,7 @@ const Loan_Information = () => {
 
         <div className="flex items-end justify-Start pb-4">
           <button
-            onClick={() => setLoanModel(true)}
+            onClick={() => updateModal("ShowLoanModal")}
             className="bg-bg__color shadow-md text-sm md:text-base z-0 focus:outline-none  text-center text-white px-4 py-1 rounded"
           >
             Apply for Loan
@@ -75,7 +74,7 @@ const Loan_Information = () => {
         {active === "tab2" ? (
           <div className="flex items-end justify-end pb-4">
             <button
-              onClick={() => setAggregateModel(true)}
+              onClick={() => updateModal("ShowAggregate_Repayment")}
               className="bg-bg__color shadow-md z-0 focus:outline-none  text-center text-white px-4 py-1 rounded"
             >
               Aggregate Repayment
@@ -84,11 +83,14 @@ const Loan_Information = () => {
         ) : null}
         {tab__UI}
         {tab__UI}
-        {openWorkingModel && (
-          <Working_Capital_Loan_Modal closemodel={setWorkingOpenModel} />
+        {modal.state === "ShowWorkingCapitalLoanWindow" && (
+          <Working_Capital_Loan_Modal title={"Working Capital Loan Window Application"} closemodel={closeModal} />
         )}
-        {openLoanModel && <Apply_For_Loan closemodel={setLoanModel} />}
-        {openAggregateModel && <Aggregate_Repayment closemodel={setAggregateModel} />}
+        {
+          modal.state === "ShowFarmerLoanWindow" && <Working_Capital_Loan_Modal title={"Farmer Loan Window Application"} closemodel={closeModal}/>
+        }
+        {modal.state === "ShowLoanModal" && <Apply_For_Loan closemodel={closeModal} />}
+        {modal.state === "ShowAggregate_Repayment" && <Aggregate_Repayment closemodel={closeModal} />}
       </div>
     </>
   );

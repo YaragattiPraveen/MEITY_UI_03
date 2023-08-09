@@ -1,5 +1,6 @@
 import Navbar from "./Navbar";
 import Card from "./Card";
+import { productItemsList } from "../Utils/Const";
 
 const Store = () => {
   return (
@@ -11,15 +12,9 @@ const Store = () => {
         </h2>
         <div className="mx-auto">
           <div className="flex flex-wrap font-Roboto text-black__color">
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
-            <Card />
+           {
+            productItemsList?.map((item,i) => <Card key={i} item={item} />)
+           }
           </div>
         </div>
       </div>

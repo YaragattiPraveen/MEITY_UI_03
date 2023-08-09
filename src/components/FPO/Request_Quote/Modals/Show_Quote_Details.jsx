@@ -30,7 +30,7 @@ const Show_Quote_Details = ({ handleClose, show }) => {
                         {/*header*/}
                         <div className="flex items-center text-bg__color justify-between px-5 py-2 border-b border-solid border-slate-200 rounded-t">
                             <h3 className="text-xl font-semibold font-Roboto py-3">
-                                Bid Status
+                                Quotation Status
                             </h3>
 
                             <button

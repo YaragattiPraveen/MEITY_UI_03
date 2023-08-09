@@ -62,7 +62,7 @@ const Invite_Bids = () => {
                                             <button
                                                 onClick={() => updateModal("showBidInformation")}
                                                 className="bg-bg__color text-center block text-white px-4 py-1 rounded">
-                                                Place Bid
+                                                Place Bid Price
                                             </button>
                                         </td>
                                     </tr>

@@ -40,9 +40,16 @@ const Step4 = ({ show }) => {
                             Upload Payment Proof
                         </label>
                     </div>
-                    <div className="lg:w-1/2 sm:w-full mr-1">
-                        <input type="file" className="appearance-none border rounded w-full py-2 px-3 text-grey-darker" />
-                    </div>
+                    {
+                        show ? <div className="lg:w-1/2 sm:w-full mr-1">
+                            <input type="file" className="appearance-none border rounded w-full py-2 px-3 text-grey-darker" />
+                        </div> : <div className="lg:w-1/2 sm:w-full mr-1">
+                            <button
+                                className="bg-bg__color w-full text-center block text-white px-4 py-1 rounded">
+                                View
+                            </button>
+                        </div>
+                    }
                 </div>
                 {
                     show ? (<div className="md:flex lg:flex-row mt-4 mb:4 flex-col">

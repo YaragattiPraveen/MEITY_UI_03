@@ -25,7 +25,7 @@ const Add_Lac = ({ closemodel }) => {
               <div className="md:flex lg:flex-row mb:4 flex-col m-2">
                 <div className="lg:w-1/2 sm:w-full mr-1">
                   <label className="block text-grey-darker font-Roboto text-silver__color mb-2">
-                    Lac Name
+                    Crop Name
                   </label>
                 </div>
                 <div className="lg:w-1/2 sm:w-full mr-1">

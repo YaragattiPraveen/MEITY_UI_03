@@ -6,7 +6,7 @@ import Form_4 from "../Forms/Form_4";
 import Form_5 from "../Forms/Form_5";
 import Form_6 from "../Forms/Form_6";
 
-const Working_Capital_Loan = ({ closemodel }) => {
+const Working_Capital_Loan = ({ closemodel,title }) => {
   const [page, setPage] = useState(0);
 
   function DisplayForm() {
@@ -34,7 +34,7 @@ const Working_Capital_Loan = ({ closemodel }) => {
             {/*header*/}
             <div className="flex items-center text-bg__color justify-between px-5 py-2 border-b border-solid border-slate-200 rounded-t">
               <h3 className="text-xl font-semibold font-Roboto py-3">
-                Loan Application
+                {title}
               </h3>
               <button
                 onClick={() => {

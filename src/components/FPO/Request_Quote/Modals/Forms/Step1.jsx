@@ -2,7 +2,7 @@ const Step1 = () => {
     return (
         <>
             <div className="relative px-6 py-3 flex-auto">
-                <h2 className="text-bg__color font-Roboto text-xl font-semibold mb-4">Bid Details</h2>
+                <h2 className="text-bg__color font-Roboto text-xl font-semibold mb-4">Quotation Details</h2>
                 <div className="md:flex lg:flex-row mb:4 flex-col">
                     <div className="lg:w-1/2 sm:w-full mr-1">
                         <label className="block text-grey-darker font-Roboto text-silver__color  mb-2 mt-3">

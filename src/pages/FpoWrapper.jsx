@@ -27,7 +27,7 @@ const FpoWrapper = () => {
       to: "dashboard",
     },
     {
-      title: "Farmer",
+      title: "Farmer Applications",
       icon: <AgricultureIcon style={{ color: "white", fontSize: "28px" }} />,
       to: "farmer",
     },
@@ -69,7 +69,7 @@ const FpoWrapper = () => {
       to: "fpo-store",
     },
     {
-      title: "Lac Procurement",
+      title: "Crop Procurement",
       icon: (
         <DashboardCustomizeRoundedIcon
           style={{ color: "white", fontSize: "28px" }}
@@ -103,7 +103,7 @@ const FpoWrapper = () => {
       to: "fpo-loan",
     },
     {
-      title: "Corporate Customer",
+      title: "Output Customer",
       icon: (
         <CorporateFareIcon style={{ color: 'white', fontSize: "28px" }} />
       ),

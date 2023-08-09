@@ -1,7 +1,7 @@
-import  { useState } from "react";
+import useModal from '../../../hooks/useModal';
 import Working_Capital_Loan from '../Modals/Working_Capital_Loan'
 const Loan_Window = () => {
-  const [openModel,setOpenModel] = useState(false)
+  const {modal,closeModal,updateModal} = useModal()
   return (
     <div className="relative h-auto mx-2 overflow-x-auto my-4 p-2 bg-box__bg__color shadow-md sm:rounded-lg">
       <table className="w-auto text-sm text-left font-Roboto">
@@ -49,7 +49,7 @@ const Loan_Window = () => {
             </td>
             <td className="whitespace-nowrap px-4 py-4 text-left font-medium font-Roboto text-silver__color">
               <button
-                onClick={() => setOpenModel(true)}
+                onClick={() => updateModal("ShowCapitalLoanWindow")}
                 className="bg-bg__color text-center block text-white px-4 py-1 rounded"
               >
                 View
@@ -58,7 +58,7 @@ const Loan_Window = () => {
           </tr>
         </tbody>
       </table>
-      {openModel && <Working_Capital_Loan closemodel={setOpenModel}/>}
+      {modal.state === "ShowCapitalLoanWindow" && <Working_Capital_Loan title={"Loan Window Application"} closemodel={closeModal}/>}
     </div>
   );
 };
