@@ -71,10 +71,10 @@ const Produce = () => {
                         Rice - 12
                       </td>
                       <td className="whitespace-nowrap px-6 py-4 text-left font-medium font-Roboto text-silver__color">
-                        Wild
+                        Seed
                       </td>
                       <td className="whitespace-nowrap px-6 py-4 text-left font-medium font-Roboto text-silver__color">
-                        Assam
+                        B12
                       </td>
                       <td className="whitespace-nowrap px-6 py-4 text-left font-medium font-Roboto text-silver__color">
                         100

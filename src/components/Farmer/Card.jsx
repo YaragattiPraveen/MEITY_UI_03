@@ -17,8 +17,8 @@ const Card = ({ item }) => {
             <p className="text-base text-bg__color font-bold">FPO Price</p>
           </footer>
           <footer className="flex items-center justify-between leading-none pb-5 px-2 md:px-4">
-            <p className="text-base">520</p>
-            <p className="text-base">459</p>
+            <p className="text-base">₹ 520</p>
+            <p className="text-base">₹ 459</p>
           </footer>
         </div>
       </div>

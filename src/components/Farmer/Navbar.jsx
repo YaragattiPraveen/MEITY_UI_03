@@ -22,10 +22,10 @@ const Navbar = () => {
           </div>
         </div>
         <div className="flex items-center">
-          <h1 className="bg-bg__color font-Roboto py-1.5 px-3 rounded-full text-white__color">
+          <h1 className="bg-bg__color font-Roboto py-1 px-3 rounded-full text-white__color">
             S
           </h1>
-          <div className="justify-center px-4 flex-col hidden md:flex">
+          <div className="justify-center px-4 flex-col md:block">
             <p className="font-semibold text-silver__color font-Roboto">
               Shreyansh Nema
             </p>

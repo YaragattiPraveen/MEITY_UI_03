@@ -12,7 +12,7 @@ const FPO_Loan = ({heading="FPO"}) => {
         {loanInfo ? `${heading} Loan Requests` :`${heading} Loan Window`}
       </h2>
       {loanInfo ? (
-        <FPO_Loan_Requests setLoanInfo={setLoanInfo} />
+        <FPO_Loan_Requests heading={heading} setLoanInfo={setLoanInfo} />
       ) : (
         <FPO_Loan_Window setLoanInfo={setLoanInfo} />
       )}

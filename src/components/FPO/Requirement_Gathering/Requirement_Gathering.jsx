@@ -17,6 +17,12 @@ const Requirement_Gathering = () => {
                       scope="col"
                       className="px-4 py-4 text-medium font-Roboto text-left"
                     >
+                      Application DATE
+                    </th>
+                    <th
+                      scope="col"
+                      className="px-4 py-4 text-medium font-Roboto text-left"
+                    >
                       Farmer ID
                     </th>
                     <th
@@ -55,18 +61,15 @@ const Requirement_Gathering = () => {
                     >
                       MONTH
                     </th>
-                    <th
-                      scope="col"
-                      className="px-4 py-4 text-medium font-Roboto text-left"
-                    >
-                      FINALIZATION DATE
-                    </th>
                   </tr>
                 </thead>
                 <tbody className="text-sm divide-y divide-gray-300">
                   <tr className="border-b transition duration-300 ease-in-out hover:bg-green-2">
                     <td className="whitespace-nowrap px-4 py-4 text-left font-medium font-Roboto text-silver__color">
-                      2021-10-10
+                      12/12/2020
+                    </td>
+                    <td className="whitespace-nowrap px-4 py-4 text-left font-medium font-Roboto text-silver__color">
+                      101
                     </td>
                     <td className="whitespace-nowrap px-4 py-4 text-left font-medium font-Roboto text-silver__color">
                       Ravi
@@ -85,14 +88,14 @@ const Requirement_Gathering = () => {
                     </td>
                     <td className="whitespace-nowrap px-4 py-4 text-left font-medium font-Roboto text-silver__color">
                       January
-                    </td>
-                    <td className="whitespace-nowrap px-4 py-4 text-left font-medium font-Roboto text-silver__color">
-                      12/12/22
                     </td>
                   </tr>
                   <tr className="border-b transition duration-300 ease-in-out hover:bg-green-2">
                     <td className="whitespace-nowrap px-4 py-4 text-left font-medium font-Roboto text-silver__color">
-                      2021-10-10
+                      05/08/23
+                    </td>
+                    <td className="whitespace-nowrap px-4 py-4 text-left font-medium font-Roboto text-silver__color">
+                      23465312
                     </td>
                     <td className="whitespace-nowrap px-4 py-4 text-left font-medium font-Roboto text-silver__color">
                       Ravi
@@ -104,21 +107,21 @@ const Requirement_Gathering = () => {
                       Variant 1
                     </td>
                     <td className="whitespace-nowrap px-4 py-4 text-left font-medium font-Roboto text-silver__color">
-                      Akash - Pooja Gold 310
+                      Akash - Gold 310
                     </td>
                     <td className="whitespace-nowrap px-4 py-4 text-left font-medium font-Roboto text-silver__color">
                       5
                     </td>
                     <td className="whitespace-nowrap px-4 py-4 text-left font-medium font-Roboto text-silver__color">
                       January
-                    </td>
-                    <td className="whitespace-nowrap px-4 py-4 text-left font-medium font-Roboto text-silver__color">
-                      12/12/22
                     </td>
                   </tr>
                   <tr className="border-b transition duration-300 ease-in-out hover:bg-green-2">
                     <td className="whitespace-nowrap px-4 py-4 text-left font-medium font-Roboto text-silver__color">
-                      2021-10-10
+                      07/08/23
+                    </td>
+                    <td className="whitespace-nowrap px-4 py-4 text-left font-medium font-Roboto text-silver__color">
+                      33435641
                     </td>
                     <td className="whitespace-nowrap px-4 py-4 text-left font-medium font-Roboto text-silver__color">
                       Ravi
@@ -130,16 +133,13 @@ const Requirement_Gathering = () => {
                       Variant 1
                     </td>
                     <td className="whitespace-nowrap px-4 py-4 text-left font-medium font-Roboto text-silver__color">
-                      Akash - Pooja Gold 310
+                      Gold 310
                     </td>
                     <td className="whitespace-nowrap px-4 py-4 text-left font-medium font-Roboto text-silver__color">
                       5
                     </td>
                     <td className="whitespace-nowrap px-4 py-4 text-left font-medium font-Roboto text-silver__color">
                       January
-                    </td>
-                    <td className="whitespace-nowrap px-4 py-4 text-left font-medium font-Roboto text-silver__color">
-                      12/12/22
                     </td>
                   </tr>
                 </tbody>

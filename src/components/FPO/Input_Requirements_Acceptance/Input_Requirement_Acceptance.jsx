@@ -1,7 +1,10 @@
 import { useState } from "react";
 import Navbar from "../../Farmer/Navbar";
 import { months } from "../../Utils/Const";
+import useModal from "../../hooks/useModal";
+import PlaceRequirement from "./Modals/PlaceRequirement";
 const Input_Requirement_Acceptance = () => {
+  const { modal, updateModal, closeModal } = useModal()
   const [selectedType, setSelectedType] = useState("Seed");
   const RequirementDropDown = [
     {
@@ -20,11 +23,13 @@ const Input_Requirement_Acceptance = () => {
   return (
     <div className="container w-full mx-auto">
       <Navbar />
-      <h2 className="text-hover__color text-2xl font-Roboto font-extrabold py-6 ">
-        Place a Requirement
-      </h2>
+      <div className="flex justify-end">
+        <button onClick={() => updateModal("showPlaceRequirementModal")} className="bg-bg__color my-10 text-white active:bg-emerald-600 font-semi-bold uppercase text-sm px-4 py-2 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150">
+          Place Requirement
+        </button>
+      </div>
 
-      <div className="relative bg-nav__bg__color shadow-sm w-auto border p-5 my-8 mx-auto max-w-xs md:max-w-xl lg:max-w-2xl">
+      {/* <div className="relative bg-nav__bg__color shadow-sm w-auto border p-5 my-8 mx-auto max-w-xs md:max-w-xl lg:max-w-2xl">
         <div className="md:flex lg:flex-row mb:4 flex-col m-2">
           <div className="lg:w-1/2 sm:w-full mr-1">
             <label className="block text-grey-darker font-Roboto text-silver__color mb-2">
@@ -106,7 +111,7 @@ const Input_Requirement_Acceptance = () => {
             Submit
           </button>
         </div>
-      </div>
+      </div> */}
 
       <h2 className="text-hover__color uppercase text-xl lg:text-2xl font-Roboto font-extrabold py-4 ">
         Previous Requirement Records
@@ -118,6 +123,12 @@ const Input_Requirement_Acceptance = () => {
               <table className="min-w-full text-left text-sm font-light table-auto">
                 <thead className="text-xs text-medium bg-green-200 border-b uppercase text-gray-600">
                   <tr>
+                    <th
+                      scope="col"
+                      className="px-6 py-4 text-medium font-Roboto text-left"
+                    >
+                      Application Date
+                    </th>
                     <th
                       scope="col"
                       className="px-6 py-4 text-medium font-Roboto text-left"
@@ -148,16 +159,14 @@ const Input_Requirement_Acceptance = () => {
                     >
                       Month
                     </th>
-                    <th
-                      scope="col"
-                      className="px-6 py-4 text-medium font-Roboto text-left"
-                    >
-                      Application Date
-                    </th>
+
                   </tr>
                 </thead>
                 <tbody className="text-sm divide-y divide-gray-300">
                   <tr className="border-b transition duration-300 ease-in-out hover:bg-green-2">
+                    <td className="whitespace-nowrap px-6 py-4 text-left font-medium font-Roboto text-silver__color">
+                      01/06/23
+                    </td>
                     <td className="whitespace-nowrap px-6 py-4 text-left font-medium font-Roboto text-silver__color">
                       Seed
                     </td>
@@ -173,11 +182,11 @@ const Input_Requirement_Acceptance = () => {
                     <td className="whitespace-nowrap px-6 py-4 text-left font-medium font-Roboto text-silver__color">
                       June
                     </td>
-                    <td className="whitespace-nowrap px-6 py-4 text-left font-medium font-Roboto text-silver__color">
-                      01/06/23
-                    </td>
                   </tr>
                   <tr className="border-b transition duration-300 ease-in-out hover:bg-green-2">
+                    <td className="whitespace-nowrap px-6 py-4 text-left font-medium font-Roboto text-silver__color">
+                      01/03/23
+                    </td>
                     <td className="whitespace-nowrap px-6 py-4 text-left font-medium font-Roboto text-silver__color">
                       Pesticide
                     </td>
@@ -193,11 +202,12 @@ const Input_Requirement_Acceptance = () => {
                     <td className="whitespace-nowrap px-6 py-4 text-left font-medium font-Roboto text-silver__color">
                       March
                     </td>
-                    <td className="whitespace-nowrap px-6 py-4 text-left font-medium font-Roboto text-silver__color">
-                      01/03/23
-                    </td>
+
                   </tr>
                   <tr className="border-b transition duration-300 ease-in-out hover:bg-green-2">
+                    <td className="whitespace-nowrap px-6 py-4 text-left font-medium font-Roboto text-silver__color">
+                      01/05/23
+                    </td>
                     <td className="whitespace-nowrap px-6 py-4 text-left font-medium font-Roboto text-silver__color">
                       Fertilizer
                     </td>
@@ -213,9 +223,6 @@ const Input_Requirement_Acceptance = () => {
                     <td className="whitespace-nowrap px-6 py-4 text-left font-medium font-Roboto text-silver__color">
                       May
                     </td>
-                    <td className="whitespace-nowrap px-6 py-4 text-left font-medium font-Roboto text-silver__color">
-                      01/05/23
-                    </td>
                   </tr>
                 </tbody>
               </table>
@@ -223,6 +230,9 @@ const Input_Requirement_Acceptance = () => {
           </div>
         </div>
       </div>
+      {
+        modal.state === "showPlaceRequirementModal" && <PlaceRequirement closeModal={closeModal} />
+      }
     </div>
   );
 };

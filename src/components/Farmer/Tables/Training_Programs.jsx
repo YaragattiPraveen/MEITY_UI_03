@@ -31,34 +31,34 @@ const Training_Programs = () => {
                   <tbody className="text-sm divide-y divide-gray-300">
                     <tr className="border-b transition duration-300 ease-in-out hover:bg-green-2">
                       <td className="whitespace-nowrap px-6 py-4 text-left font-medium font-Roboto text-silver__color">
-                        17-02-22
+                        17-02-23
                       </td>
                       <td className="whitespace-nowrap px-6 py-4 text-left font-medium font-Roboto text-silver__color">
-                        --
-                      </td>
-                    </tr>
-                    <tr className="border-b transition duration-300 ease-in-out hover:bg-green-2">
-                      <td className="whitespace-nowrap px-6 py-4 text-left font-medium font-Roboto text-silver__color">
-                        17-02-22
-                      </td>
-                      <td className="whitespace-nowrap px-6 py-4 text-left font-medium font-Roboto text-silver__color">
-                        --
+                        Induction or orientation training
                       </td>
                     </tr>
                     <tr className="border-b transition duration-300 ease-in-out hover:bg-green-2">
                       <td className="whitespace-nowrap px-6 py-4 text-left font-medium font-Roboto text-silver__color">
-                        17-02-22
+                        17-02-23
                       </td>
                       <td className="whitespace-nowrap px-6 py-4 text-left font-medium font-Roboto text-silver__color">
-                        --
+                        Foundation training
                       </td>
                     </tr>
                     <tr className="border-b transition duration-300 ease-in-out hover:bg-green-2">
                       <td className="whitespace-nowrap px-6 py-4 text-left font-medium font-Roboto text-silver__color">
-                        17-02-22
+                        17-02-23
                       </td>
                       <td className="whitespace-nowrap px-6 py-4 text-left font-medium font-Roboto text-silver__color">
-                        --
+                        Maintenance or refresher training
+                      </td>
+                    </tr>
+                    <tr className="border-b transition duration-300 ease-in-out hover:bg-green-2">
+                      <td className="whitespace-nowrap px-6 py-4 text-left font-medium font-Roboto text-silver__color">
+                        17-02-23
+                      </td>
+                      <td className="whitespace-nowrap px-6 py-4 text-left font-medium font-Roboto text-silver__color">
+                        Important 9 Benefits of Agroecology
                       </td>
                     </tr>
                   </tbody>

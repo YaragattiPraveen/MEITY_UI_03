@@ -4,12 +4,12 @@ import Loan_History from "../Tables/Loan_History";
 import Ongoing_Loans from "../Tables/Ongoing_Loans";
 import Pending_Loans from "../Tables/Pending_Loans";
 
-const FPO_Loan_Requests = ({ setLoanInfo }) => {
+const FPO_Loan_Requests = ({ setLoanInfo,heading }) => {
   const [active, setActive] = useState("tab1");
 
   let tab__UI;
   if (active === "tab1") {
-    tab__UI = <Profile />;
+    tab__UI = <Profile heading={heading} />;
   } else if (active === "tab2") {
     tab__UI = <Loan_History />;
   } else if (active === "tab3") {

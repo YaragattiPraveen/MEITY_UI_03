@@ -31,7 +31,7 @@ const Crop_Advisory = () => {
                       17-02-22
                     </td>
                     <td className="whitespace-nowrap px-4 py-4 text-left font-medium font-Roboto text-silver__color">
-                      September week update
+                      Soil Fertility
                     </td>
                   </tr>
                   <tr className="border-b transition duration-300 ease-in-out hover:bg-green-2">
@@ -39,7 +39,7 @@ const Crop_Advisory = () => {
                       17-02-22
                     </td>
                     <td className="whitespace-nowrap px-4 py-4 text-left font-medium font-Roboto text-silver__color">
-                      September week update
+                      Plant Nutrition
                     </td>
                   </tr>
                   <tr className="border-b transition duration-300 ease-in-out hover:bg-green-2">
@@ -47,7 +47,7 @@ const Crop_Advisory = () => {
                       17-02-22
                     </td>
                     <td className="whitespace-nowrap px-4 py-4 text-left font-medium font-Roboto text-silver__color">
-                      September week update
+                      Soil and Water Management
                     </td>
                   </tr>
                   <tr className="border-b transition duration-300 ease-in-out hover:bg-green-2">
@@ -55,7 +55,7 @@ const Crop_Advisory = () => {
                       17-02-22
                     </td>
                     <td className="whitespace-nowrap px-4 py-4 text-left font-medium font-Roboto text-silver__color">
-                      September week update
+                      Technology applications for crop advising
                     </td>
                   </tr>
                 </tbody>
