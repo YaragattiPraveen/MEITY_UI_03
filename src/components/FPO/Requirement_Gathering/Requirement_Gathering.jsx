@@ -4,7 +4,7 @@ const Requirement_Gathering = () => {
     <div className="container w-full mx-auto">
       <Navbar />
       <h2 className="text-hover__color text-2xl font-Roboto font-extrabold py-4 ">
-        Input Requirements Gathering
+        Input Requirements Gathering from Farmer
       </h2>
       <div className="bg-box__bg__color shadow-lg rounded-lg border my-2 border-gray-200">
         <div className="overflow-x-auto mx-2 md:mx-4 md:overflow-auto lg:overflow-auto">

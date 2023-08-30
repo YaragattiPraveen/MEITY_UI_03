@@ -62,7 +62,7 @@ const Requested_Quotes = () => {
                       <button
                         onClick={() => updateModal("showBidInformation")}
                         className="bg-bg__color text-center block text-white px-4 py-1 rounded">
-                        Place Bid
+                        Add Quotation Price
                       </button>
                     </td>
                   </tr>
@@ -73,7 +73,7 @@ const Requested_Quotes = () => {
         </div>
       </div>
       {
-        modal.state === "showBidInformation" && <Place_Quotation_Price handleClose={closeModal} />
+        modal.state === "showBidInformation" && <Place_Quotation_Price title={"Quotation Details"} handleClose={closeModal} />
       }
     </>
   )

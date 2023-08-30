@@ -13,7 +13,7 @@ const Information = ({ handleClose }) => {
                         {/*header*/}
                         <div className="flex items-center text-bg__color justify-between px-5 py-2 border-b border-solid border-slate-200 rounded-t">
                             <h3 className="text-xl font-semibold font-Roboto py-3">
-                                Place a Bid
+                                Bid Details
                             </h3>
 
                             <button

@@ -6,6 +6,7 @@ import FPO from './Forms/FPO/FPO'
 import Samunnati from './Forms/Samunnati/Samunnati'
 import OutputSupplier from './Forms/OutputSupplier/OutputSupplier'
 import Farmer from './Forms/Farmer/Farmer'
+import Cluster from './Forms/Cluster/Cluster'
 
 const Register = () => {
     const [selectedValue, setSelectedValue] = useState("Farmer");
@@ -15,6 +16,7 @@ const Register = () => {
     };
 
     let formUI = <Farmer />
+
     switch (selectedValue) {
         case "Farmer":
             formUI = <Farmer />
@@ -31,9 +33,12 @@ const Register = () => {
         case "OutputSupplier":
             formUI = <OutputSupplier />
             break;
+        case "Cluster":
+            formUI = <Cluster />
         default:
             break
     }
+
     return (
         <div className="h-full  w-full lg:h-screen xl:h-screen" style={{ backgroundImage: `url(${bg})`, backgroundSize: 'cover', backgroundPosition: 'center', backgroundRepeat: 'no-repeat' }}>
             <div className="font-sans antialiased bg-grey-lightest">
@@ -59,6 +64,7 @@ const Register = () => {
                                         <option className=' text-silver__color font-Roboto' value="Samunnati">Samunnati</option>
                                         <option className=' text-silver__color font-Roboto' value="InputSupplier">Input Supplier</option>
                                         <option className=' text-silver__color font-Roboto' value="OutputSupplier">Output Supplier</option>
+                                        <option className=' text-silver__color font-Roboto' value="Cluster">Cluster</option>
                                     </select>
                                 </div>
                             </div>

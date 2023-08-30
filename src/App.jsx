@@ -57,14 +57,17 @@ import Requested_Quotes from "./components/InputSupplier/Requested_Bids/Requeste
 import AdminWrapper from "./pages/AdminWrapper";
 import Admin_Dashboard from "./components/Admin/Dashboard"
 import License_Key from "./components/Admin/License_Key";
+import ClusterWrapper from "./pages/ClusterWrapper";
+import FPO_Mdemberships from "./components/Cluster/FPO Membership/FPO_Mdemberships";
+
+import Cluster_Requirements_Gathering from "./components/Cluster/Requirement_Gathering/Requirements_Gathering";
+
 function App() {
   return (
     <>
       <NavbarContextProvider>
         <BrowserRouter>
           <Routes>
-
-
             {/* Login route */}
             <Route path="/" element={<Login1 />} />
             <Route path="register" element={<Register />} />
@@ -96,18 +99,17 @@ function App() {
 
             {/* FPO routes */}
             <Route path="fpo" element={<FpoWrapper />}>
-              <Route index element={<FPO_Dashboard />} />
-              <Route path="dashboard" element={<FPO_Dashboard />} />
+              <Route index element={<Farmer_Information />} />
               <Route path="farmer" element={<Farmer_Information />} />
               <Route path="fpo-store" element={<Fpo_Store />} />
               <Route path="lac-procurement" element={<Lac_Procurement />} />
               <Route path="farmer-loan" element={<Farmer_Loan />} />
               <Route path="fpo-loan" element={<FOP_Loan_Information />} />
-              <Route path="Invite-bids" element={<Invite_Bids />} />
               <Route path="support" element={<Lac_Support />} />
               <Route path="settings" element={<Lac_Settings />} />
               <Route path="profile" element={<Profile />} />
-              <Route path="request-quote" element={<Request_Quote/>} />
+              <Route path="Invite-bids" element={<Invite_Bids />} />
+              <Route path="request-quote" element={<Request_Quote />} />
               <Route path="corporate-customer" element={<Corporate_Customer />} />
               <Route
                 path="announcement-for-farmer"
@@ -143,11 +145,23 @@ function App() {
               <Route path="settings" element={<CorporateClient_Settings />} />
             </Route>
 
+            {/* Cluster Routes */}
+
+            <Route path="cluster" element={<ClusterWrapper />}>
+              <Route index element={<FPO_Mdemberships />} />
+              <Route path="requirement-gathering" element={<Cluster_Requirements_Gathering />} />
+              <Route path="invite-bids" element={<Invite_Bids />} />
+              <Route path="request-quote" element={<Request_Quote />} />
+              <Route path="cluster" element={<FPO_Mdemberships />} />
+              <Route path="support" element={<Input_Supplier_Support />} />
+              <Route path="settings" element={<Input_Supplier_Settings />} />
+            </Route>
+
             {/* Admin */}
-            <Route path="admin" element={<AdminWrapper/>}>
-              <Route index element={<Admin_Dashboard/>}/>
-              <Route path="admin" element={<Admin_Dashboard/>}/>
-              <Route path="license-key" element={<License_Key/>}/>
+            <Route path="admin" element={<AdminWrapper />}>
+              <Route index element={<Admin_Dashboard />} />
+              <Route path="admin" element={<Admin_Dashboard />} />
+              <Route path="license-key" element={<License_Key />} />
             </Route>
 
             {/* Input Supplier */}

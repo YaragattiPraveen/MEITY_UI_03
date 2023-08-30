@@ -21,11 +21,11 @@ import { AppContext } from "../Context/context";
 
 const FpoWrapper = () => {
   const list = [
-    {
-      title: "Dashboard",
-      icon: <HomeRoundedIcon style={{ color: "white", fontSize: "28px" }} />,
-      to: "dashboard",
-    },
+    // {
+    //   title: "Dashboard",
+    //   icon: <HomeRoundedIcon style={{ color: "white", fontSize: "28px" }} />,
+    //   to: "dashboard",
+    // },
     {
       title: "Farmer Applications",
       icon: <AgricultureIcon style={{ color: "white", fontSize: "28px" }} />,

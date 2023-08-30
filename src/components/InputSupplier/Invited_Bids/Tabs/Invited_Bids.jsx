@@ -62,7 +62,7 @@ const Invited_Bids = () => {
                                             <button
                                                 onClick={() => updateModal("showBidInformation")}
                                                 className="bg-bg__color text-center block text-white px-4 py-1 rounded">
-                                                Place a Bid Price
+                                            Add Bid Price
                                             </button>
                                         </td>
                                     </tr>
@@ -73,7 +73,7 @@ const Invited_Bids = () => {
                 </div>
             </div>
             {
-                modal.state === "showBidInformation" && <Place_Bid handleClose={closeModal} />
+                modal.state === "showBidInformation" && <Place_Bid title={"Bid Details"} handleClose={closeModal} />
             }
         </>
     )

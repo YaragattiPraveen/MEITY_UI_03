@@ -1,7 +1,7 @@
 import useModal from "../../../hooks/useModal"
 import Custom_Confirmation_Box from "../../../Utils/Custom_Confirmation_Box"
 // eslint-disable-next-line react/prop-types
-const Place_Quotation_Price = ({ handleClose }) => {
+const Place_Quotation_Price = ({ handleClose, title }) => {
     const { modal, closeModal, updateModal } = useModal()
     return (
         <>
@@ -12,7 +12,7 @@ const Place_Quotation_Price = ({ handleClose }) => {
                         {/*header*/}
                         <div className="flex items-center text-bg__color justify-between px-5 py-2 border-b border-solid border-slate-200 rounded-t">
                             <h3 className="text-xl font-semibold font-Roboto py-3">
-                                Place a Quote
+                                {title}
                             </h3>
 
                             <button
