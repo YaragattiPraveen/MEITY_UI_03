@@ -1,22 +1,24 @@
-import Navbar from "../../Farmer/Navbar";
 import { useState } from "react";
-import Input_Requirements_With_Federation from "./Tabs/Input_Requirements_With_Federation";
-import Purchase_History from "./Tabs/Purchase_History";
+import Navbar from "../../Farmer/Navbar";
+import Farmer_Profile from "./Tabs/Farmer_Profile";
+import FPO_Profile from "./Tabs/FPO_Profile";
 
-const Input_Requirement_Acceptance = () => {
+const ViewProfiles = () => {
   const [active, setActive] = useState("tab1");
 
   let tab__UI;
   if (active === "tab1") {
-    tab__UI = <Input_Requirements_With_Federation />;
+    tab__UI = <Farmer_Profile/>;
   } else if (active === "tab2") {
-    tab__UI = <Purchase_History />;
+    tab__UI = <FPO_Profile/>;
   }
-
   return (
     <div className="container w-full mx-auto">
       <Navbar />
-      <div className="flex gap-3 md:gap-5 justify-end mt-5">
+      <h2 className="text-hover__color uppercase text-xl lg:text-2xl font-Roboto font-extrabold py-6 ">
+        View Profiles
+      </h2>
+      <div className="flex gap-3 md:gap-5 justify-end mb-5">
         <button
           onClick={() => setActive("tab1")}
           style={{
@@ -24,7 +26,7 @@ const Input_Requirement_Acceptance = () => {
           }}
           className="text-hover__color shadow-md rounded-lg z-0 focus:outline-none px-4 py-2 font-Roboto text-sm md:text-base font-bold cursor-pointer"
         >
-          Requirements
+          Farmer Profile
         </button>
         <button
           onClick={() => setActive("tab2")}
@@ -33,7 +35,7 @@ const Input_Requirement_Acceptance = () => {
           }}
           className="text-hover__color shadow-md rounded-lg z-0 focus:outline-none px-4 py-2 font-Roboto text-sm md:text-base font-bold cursor-pointer"
         >
-          Purchase History
+          FPO Profile
         </button>
       </div>
       {tab__UI}
@@ -41,4 +43,4 @@ const Input_Requirement_Acceptance = () => {
   );
 };
 
-export default Input_Requirement_Acceptance;
+export default ViewProfiles;

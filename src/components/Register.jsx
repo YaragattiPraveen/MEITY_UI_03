@@ -6,6 +6,7 @@ import FPO from './Forms/FPO/FPO'
 import Samunnati from './Forms/Samunnati/Samunnati'
 import OutputSupplier from './Forms/OutputSupplier/OutputSupplier'
 import Farmer from './Forms/Farmer/Farmer'
+import Federation from './Forms/Federation/Federation'
 import Cluster from './Forms/Cluster/Cluster'
 
 const Register = () => {
@@ -33,8 +34,12 @@ const Register = () => {
         case "OutputSupplier":
             formUI = <OutputSupplier />
             break;
+        case "Federation":
+            formUI = <Federation />
+            break; 
         case "Cluster":
             formUI = <Cluster />
+            break; 
         default:
             break
     }
@@ -64,6 +69,7 @@ const Register = () => {
                                         <option className=' text-silver__color font-Roboto' value="Samunnati">Samunnati</option>
                                         <option className=' text-silver__color font-Roboto' value="InputSupplier">Input Supplier</option>
                                         <option className=' text-silver__color font-Roboto' value="OutputSupplier">Output Supplier</option>
+                                        <option className=' text-silver__color font-Roboto' value="Federation">Federation</option>
                                         <option className=' text-silver__color font-Roboto' value="Cluster">Cluster</option>
                                     </select>
                                 </div>

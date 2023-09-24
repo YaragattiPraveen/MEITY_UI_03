@@ -13,7 +13,7 @@ import Settings from "./components/Farmer/Settings";
 import Loan from "./components/Farmer/Loan";
 import FpoWrapper from "./pages/FpoWrapper";
 
-import FPO_Dashboard from "./components/FPO/Dashboard/Dashboard";
+// import FPO_Dashboard from "./components/FPO/Dashboard/Dashboard";
 import Farmer_Information from "./components/FPO/Farmer/Farmer_Information";
 import Fpo_Store from "./components/FPO/FPO_Store/Fpo_Store";
 import Lac_Procurement from "./components/FPO/Lac Procurement/Lac_Procurement";
@@ -41,26 +41,30 @@ import { NavbarContextProvider } from "./Context/context";
 import Corporate_Customer from "./components/FPO/Corporate Customer/Corporate_Customer";
 import CorporateClientWrapper from "./pages/CorporateClientWrapper";
 
-
 import Lac_Bidding from "./components/CorporateClient/Lac_Bidding";
 import CorporateClient_Support from "./components/CorporateClient/Support";
 import CorporateClient_Settings from "./components/CorporateClient/Settings";
 import InputSupplierWrapper from "./pages/InuptSupplierWrapper";
 import Invite_Bids from "./components/FPO/Inivete_Bids/Invite_Bids";
 
-import Invited_Bids from "./components/InputSupplier/Invited_Bids"
-import Input_Supplier_Settings from "../src/components/InputSupplier/Profile"
-import Input_Supplier_Support from "../src/components/InputSupplier/Support"
+import Invited_Bids from "./components/InputSupplier/Invited_Bids";
+import Input_Supplier_Settings from "../src/components/InputSupplier/Profile";
+import Input_Supplier_Support from "../src/components/InputSupplier/Support";
 import Requested_Quotes from "./components/InputSupplier/Requested_Bids/Requested_Quotes";
 // import Request_Quotation from "./components/FPO/Request_Quote/Request_Quotation";
 
 import AdminWrapper from "./pages/AdminWrapper";
-import Admin_Dashboard from "./components/Admin/Dashboard"
+import Admin_Dashboard from "./components/Admin/Dashboard";
 import License_Key from "./components/Admin/License_Key";
-import ClusterWrapper from "./pages/ClusterWrapper";
-import FPO_Mdemberships from "./components/Cluster/FPO Membership/FPO_Mdemberships";
+import FederationWrapper from "./pages/FederationWrapper";
+import FPO_Mdemberships from "./components/Federation/FPO Membership/FPO_Mdemberships";
+import Federation_Requirements_Gathering from "../src/components/Federation/Requirement_Gathering/Requirements_Gathering";
 
-import Cluster_Requirements_Gathering from "./components/Cluster/Requirement_Gathering/Requirements_Gathering";
+import ClusterWrapper from "./pages/ClusterWrapper";
+import ViewProfiles from "./components/Cluster/ViewProfile/ViewProfiles";
+import ClusterSupport from "./components/Cluster/Support/Support";
+import ClusterSettings from "./components/Cluster/Settings/Settings";
+import ChatWithFpo from "./components/Cluster/ChatWithFpo/ChatWithFpo";
 
 function App() {
   return (
@@ -71,7 +75,6 @@ function App() {
             {/* Login route */}
             <Route path="/" element={<Login1 />} />
             <Route path="register" element={<Register />} />
-
 
             {/* farmer route */}
             <Route path="farmer" element={<FarmerWrapper />}>
@@ -110,7 +113,11 @@ function App() {
               <Route path="profile" element={<Profile />} />
               <Route path="Invite-bids" element={<Invite_Bids />} />
               <Route path="request-quote" element={<Request_Quote />} />
-              <Route path="corporate-customer" element={<Corporate_Customer />} />
+              <Route path="chat-with-fpo" element={<ChatWithFpo />} />
+              <Route
+                path="corporate-customer"
+                element={<Corporate_Customer />}
+              />
               <Route
                 path="announcement-for-farmer"
                 element={<Announcement_For_Former />}
@@ -145,16 +152,32 @@ function App() {
               <Route path="settings" element={<CorporateClient_Settings />} />
             </Route>
 
-            {/* Cluster Routes */}
+            {/* Federation Routes */}
 
-            <Route path="cluster" element={<ClusterWrapper />}>
+            <Route path="Federation" element={<FederationWrapper />}>
               <Route index element={<FPO_Mdemberships />} />
-              <Route path="requirement-gathering" element={<Cluster_Requirements_Gathering />} />
+              <Route
+                path="requirement-gathering"
+                element={<Federation_Requirements_Gathering />}
+              />
               <Route path="invite-bids" element={<Invite_Bids />} />
               <Route path="request-quote" element={<Request_Quote />} />
-              <Route path="cluster" element={<FPO_Mdemberships />} />
+              <Route path="Federation" element={<FPO_Mdemberships />} />
               <Route path="support" element={<Input_Supplier_Support />} />
               <Route path="settings" element={<Input_Supplier_Settings />} />
+            </Route>
+
+            {/* Cluster Routes */}
+            <Route path="Cluster" element={<ClusterWrapper />}>
+              <Route index element={<ViewProfiles />} />
+              <Route path="Profile" element={<ViewProfiles />} />
+              <Route
+                path="requirement-gathering"
+                element={<Requirement_Gathering />}
+              />
+              <Route path="support" element={<ClusterSupport />} />
+              <Route path="settings" element={<ClusterSettings />} />
+              <Route path="chat-with-fpo" element={<ChatWithFpo />} />
             </Route>
 
             {/* Admin */}

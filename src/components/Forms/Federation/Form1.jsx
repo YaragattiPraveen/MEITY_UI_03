@@ -9,7 +9,7 @@ const Form1 = () => {
                         className="block text-grey-darker font-Roboto text-black__color mb-2"
                         htmlFor="first_name"
                     >
-                        Cluster Name
+                        Federation Name
                     </label>
                     <input
                         className="appearance-none border rounded w-full py-2 px-3 text-grey-darker"

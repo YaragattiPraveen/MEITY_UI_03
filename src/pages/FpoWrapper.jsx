@@ -2,7 +2,7 @@ import { useContext } from "react";
 import Sidebar from "../components/Farmer/Sidebar";
 import { Outlet } from "react-router-dom";
 
-import HomeRoundedIcon from "@mui/icons-material/HomeRounded";
+import ChatIcon from "@mui/icons-material/Chat";
 import LocalGroceryStoreRoundedIcon from "@mui/icons-material/LocalGroceryStoreRounded";
 import MonetizationOnRoundedIcon from "@mui/icons-material/MonetizationOnRounded";
 import CreditScoreRoundedIcon from "@mui/icons-material/CreditScoreRounded";
@@ -13,10 +13,11 @@ import AgricultureIcon from "@mui/icons-material/Agriculture";
 import PublishedWithChangesIcon from "@mui/icons-material/PublishedWithChanges";
 import PlaylistAddCheckCircleIcon from "@mui/icons-material/PlaylistAddCheckCircle";
 import CampaignIcon from "@mui/icons-material/Campaign";
-import RequestQuoteIcon from '@mui/icons-material/RequestQuote';
+import RequestQuoteIcon from "@mui/icons-material/RequestQuote";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
-import CorporateFareIcon from '@mui/icons-material/CorporateFare';
-import CurrencyBitcoinIcon from '@mui/icons-material/CurrencyBitcoin';
+import CorporateFareIcon from "@mui/icons-material/CorporateFare";
+import CurrencyBitcoinIcon from "@mui/icons-material/CurrencyBitcoin";
+
 import { AppContext } from "../Context/context";
 
 const FpoWrapper = () => {
@@ -39,6 +40,11 @@ const FpoWrapper = () => {
         />
       ),
       to: "requirement-acceptance",
+    },
+    {
+      title: "Chat with Cluster",
+      icon: <ChatIcon style={{ color: "white", fontSize: "28px" }} />,
+      to: "chat-with-fpo",
     },
     {
       title: "Requirement Gathering",
@@ -89,11 +95,9 @@ const FpoWrapper = () => {
     {
       title: "Invite Bid",
       icon: (
-        <CurrencyBitcoinIcon
-          style={{ color: "white", fontSize: "28px" }}
-        />
+        <CurrencyBitcoinIcon style={{ color: "white", fontSize: "28px" }} />
       ),
-      to: "Invite-bids"
+      to: "Invite-bids",
     },
     {
       title: "FPO Loan",
@@ -104,10 +108,8 @@ const FpoWrapper = () => {
     },
     {
       title: "Output Customer",
-      icon: (
-        <CorporateFareIcon style={{ color: 'white', fontSize: "28px" }} />
-      ),
-      to: "corporate-customer"
+      icon: <CorporateFareIcon style={{ color: "white", fontSize: "28px" }} />,
+      to: "corporate-customer",
     },
     {
       title: "Support",
@@ -137,7 +139,11 @@ const FpoWrapper = () => {
   return (
     <>
       <div className="flex lg:px-0 px-2">
-        <div className={`w-auto h-full fixed transition-all duration-700 ease-in-out lg:ml-0 lg:z-10 ${toggleNav ? "z-30 -ml-3" : "-z-30 -ml-[300px]"}`}>
+        <div
+          className={`w-auto h-full fixed transition-all duration-700 ease-in-out lg:ml-0 lg:z-10 ${
+            toggleNav ? "z-30 -ml-3" : "-z-30 -ml-[300px]"
+          }`}
+        >
           <Sidebar list={list} />
         </div>
         <div className="w-full lg:w-full mx-auto ml-0 lg:ml-[260px]">
