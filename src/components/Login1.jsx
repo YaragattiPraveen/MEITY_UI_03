@@ -35,6 +35,16 @@ const Login1 = () => {
             setPassword("")
             console.log(userName, password);
             Navigate('/input-supplier')
+        }else if(userName === "federation" && password === "federation") {
+            setUserName("")
+            setPassword("")
+            console.log(userName, password);
+            Navigate('/federation')
+        }else if(userName === "cluster" && password === "cluster") {
+            setUserName("")
+            setPassword("")
+            console.log(userName, password);
+            Navigate('/cluster')
         }
     }
     return (
