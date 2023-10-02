@@ -17,6 +17,7 @@ import RequestQuoteIcon from "@mui/icons-material/RequestQuote";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import CorporateFareIcon from "@mui/icons-material/CorporateFare";
 import CurrencyBitcoinIcon from "@mui/icons-material/CurrencyBitcoin";
+import CleaningServicesIcon from "@mui/icons-material/CleaningServices";
 
 import { AppContext } from "../Context/context";
 
@@ -66,6 +67,13 @@ const FpoWrapper = () => {
       to: "request-quote",
     },
     {
+      title: "Custom Hiring Center",
+      icon: (
+        <CleaningServicesIcon style={{ color: "white", fontSize: "28px" }} />
+      ),
+      to: "custom-hiring-center",
+    },
+    {
       title: "FPO Store",
       icon: (
         <LocalGroceryStoreRoundedIcon
@@ -107,7 +115,7 @@ const FpoWrapper = () => {
       to: "fpo-loan",
     },
     {
-      title: "Output Customer",
+      title: "Corporate Customer",
       icon: <CorporateFareIcon style={{ color: "white", fontSize: "28px" }} />,
       to: "corporate-customer",
     },

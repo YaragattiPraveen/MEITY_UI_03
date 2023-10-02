@@ -7,6 +7,7 @@ import SettingsSuggestRoundedIcon from "@mui/icons-material/SettingsSuggestRound
 import AgricultureIcon from "@mui/icons-material/Agriculture";
 import PlaylistAddCheckCircleIcon from "@mui/icons-material/PlaylistAddCheckCircle";
 import ChatIcon from '@mui/icons-material/Chat';
+import PreviewIcon from '@mui/icons-material/Preview';
 import { AppContext } from "../Context/context";
 
 const ClusterWrapper = () => {
@@ -31,6 +32,11 @@ const ClusterWrapper = () => {
         <ChatIcon style={{color:"white", fontSize: "28px"}} />
       ),
       to: "chat-with-fpo"
+    },
+    {
+      title: "View Bookings",
+      icon: <PreviewIcon style={{color:"white", fontSize: "28px"}} />,
+      to: "view-bookings"
     },
     {
       title: "Support",

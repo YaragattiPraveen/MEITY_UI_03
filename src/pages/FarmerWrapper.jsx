@@ -15,6 +15,8 @@ import TerminalRoundedIcon from "@mui/icons-material/TerminalRounded";
 import DashboardCustomizeRoundedIcon from "@mui/icons-material/DashboardCustomizeRounded";
 import SupportAgentRoundedIcon from "@mui/icons-material/SupportAgentRounded";
 import SettingsSuggestRoundedIcon from "@mui/icons-material/SettingsSuggestRounded";
+import CleaningServicesIcon from "@mui/icons-material/CleaningServices";
+
 import { AppContext } from "../Context/context";
 
 const FarmerWrapper = () => {
@@ -32,6 +34,13 @@ const FarmerWrapper = () => {
         />
       ),
       to: "store",
+    },
+    {
+      title: "Custom Hiring Center",
+      icon: (
+        <CleaningServicesIcon style={{ color: "white", fontSize: "28px" }} />
+      ),
+      to: "custom-hiring-center",
     },
     {
       title: "Selling Price",
@@ -117,7 +126,11 @@ const FarmerWrapper = () => {
   return (
     <>
       <div className="flex lg:px-0 px-2">
-        <div className={`w-auto h-full fixed transition-all duration-700 ease-in-out lg:ml-0 lg:z-10 ${toggleNav ? "z-30 -ml-3" : "-z-30 -ml-[300px]"}`}>
+        <div
+          className={`w-auto h-full fixed transition-all duration-700 ease-in-out lg:ml-0 lg:z-10 ${
+            toggleNav ? "z-30 -ml-3" : "-z-30 -ml-[300px]"
+          }`}
+        >
           <Sidebar list={list} />
         </div>
         <div className="w-full lg:w-full mx-auto ml-0 lg:ml-[260px]">

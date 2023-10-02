@@ -5,9 +5,218 @@ const ChatWithFpo = () => {
   return (
     <div className="container w-full mx-auto">
       <Navbar />
-      <>
-        {/* component */}
-        <div className="flex-1 px-2 p:2 sm:p-6 justify-between flex flex-col h-screen bg-white__color shadow-2xl my-3 rounded-xl">
+      {/* component */}
+      <div className="flex-1 justify-between flex flex-row h-auto my-3 rounded-xl">
+        <div className="w-[200px]  flex flex-col h-screen bg-bg__color shadow-lg rounded-tl-lg rounded-bl-lg overflow-y-auto scrollbar-thumb-blue scrollbar-thumb-rounded scrollbar-track-blue-lighter scrollbar-w-2 scrolling-touch">
+            <h2 className="text-xl px-2 text-white__color font-Roboto font-semibold py-4">
+              Clusters List
+            </h2>
+          <div className="flex items-center px-2 py-3 bg-hover__color">
+            <div>
+              <img
+                src="https://images.unsplash.com/photo-1590031905470-a1a1feacbb0b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=3&w=144&h=144"
+                alt="My profile"
+                className="w-6 h-6 rounded-full order-2"
+              />
+            </div>
+            <div>
+              <h5 className="text-white__color px-2">Sahadev</h5>
+            </div>
+          </div>
+          <div className="flex item-center py-3 px-2">
+            <div>
+              <img
+                src="https://images.unsplash.com/photo-1590031905470-a1a1feacbb0b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=3&w=144&h=144"
+                alt="My profile"
+                className="w-6 h-6 rounded-full order-2"
+              />
+            </div>
+            <div>
+              <h3 className="text-white__color px-2">Nakul</h3>
+            </div>
+          </div>
+          <div className="flex items-center py-3 px-2">
+            <div>
+              <img
+                src="https://images.unsplash.com/photo-1590031905470-a1a1feacbb0b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=3&w=144&h=144"
+                alt="My profile"
+                className="w-6 h-6 rounded-full order-2"
+              />
+            </div>
+            <div>
+              <h3 className="text-white__color px-2">Bheem</h3>
+            </div>
+          </div>
+          <div className="flex items-center py-3 px-2">
+            <div>
+              <img
+                src="https://images.unsplash.com/photo-1590031905470-a1a1feacbb0b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=3&w=144&h=144"
+                alt="My profile"
+                className="w-6 h-6 rounded-full order-2"
+              />
+            </div>
+            <div>
+              <h3 className="text-white__color px-2">Arjun</h3>
+            </div>
+          </div>
+          <div className="flex items-center py-3 px-2">
+            <div>
+              <img
+                src="https://images.unsplash.com/photo-1590031905470-a1a1feacbb0b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=3&w=144&h=144"
+                alt="My profile"
+                className="w-6 h-6 rounded-full order-2"
+              />
+            </div>
+            <div>
+              <h3 className="text-white__color px-2">Yudistira</h3>
+            </div>
+          </div>
+          <div className="flex item-center py-3 px-2">
+            <div>
+              <img
+                src="https://images.unsplash.com/photo-1590031905470-a1a1feacbb0b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=3&w=144&h=144"
+                alt="My profile"
+                className="w-6 h-6 rounded-full order-2"
+              />
+            </div>
+            <div>
+              <h3 className="text-white__color px-2">Nakul</h3>
+            </div>
+          </div>
+          <div className="flex items-center py-3 px-2">
+            <div>
+              <img
+                src="https://images.unsplash.com/photo-1590031905470-a1a1feacbb0b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=3&w=144&h=144"
+                alt="My profile"
+                className="w-6 h-6 rounded-full order-2"
+              />
+            </div>
+            <div>
+              <h3 className="text-white__color px-2">Bheem</h3>
+            </div>
+          </div>
+          <div className="flex items-center py-3 px-2">
+            <div>
+              <img
+                src="https://images.unsplash.com/photo-1590031905470-a1a1feacbb0b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=3&w=144&h=144"
+                alt="My profile"
+                className="w-6 h-6 rounded-full order-2"
+              />
+            </div>
+            <div>
+              <h3 className="text-white__color px-2">Arjun</h3>
+            </div>
+          </div>
+          <div className="flex items-center py-3 px-2">
+            <div>
+              <img
+                src="https://images.unsplash.com/photo-1590031905470-a1a1feacbb0b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=3&w=144&h=144"
+                alt="My profile"
+                className="w-6 h-6 rounded-full order-2"
+              />
+            </div>
+            <div>
+              <h3 className="text-white__color px-2">Yudistira</h3>
+            </div>
+          </div>
+          <div className="flex item-center py-3 px-2">
+            <div>
+              <img
+                src="https://images.unsplash.com/photo-1590031905470-a1a1feacbb0b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=3&w=144&h=144"
+                alt="My profile"
+                className="w-6 h-6 rounded-full order-2"
+              />
+            </div>
+            <div>
+              <h3 className="text-white__color px-2">Nakul</h3>
+            </div>
+          </div>
+          <div className="flex items-center py-3 px-2">
+            <div>
+              <img
+                src="https://images.unsplash.com/photo-1590031905470-a1a1feacbb0b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=3&w=144&h=144"
+                alt="My profile"
+                className="w-6 h-6 rounded-full order-2"
+              />
+            </div>
+            <div>
+              <h3 className="text-white__color px-2">Bheem</h3>
+            </div>
+          </div>
+          <div className="flex items-center py-3 px-2">
+            <div>
+              <img
+                src="https://images.unsplash.com/photo-1590031905470-a1a1feacbb0b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=3&w=144&h=144"
+                alt="My profile"
+                className="w-6 h-6 rounded-full order-2"
+              />
+            </div>
+            <div>
+              <h3 className="text-white__color px-2">Arjun</h3>
+            </div>
+          </div>
+          <div className="flex items-center py-3 px-2">
+            <div>
+              <img
+                src="https://images.unsplash.com/photo-1590031905470-a1a1feacbb0b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=3&w=144&h=144"
+                alt="My profile"
+                className="w-6 h-6 rounded-full order-2"
+              />
+            </div>
+            <div>
+              <h3 className="text-white__color px-2">Yudistira</h3>
+            </div>
+          </div>
+          <div className="flex item-center py-3 px-2">
+            <div>
+              <img
+                src="https://images.unsplash.com/photo-1590031905470-a1a1feacbb0b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=3&w=144&h=144"
+                alt="My profile"
+                className="w-6 h-6 rounded-full order-2"
+              />
+            </div>
+            <div>
+              <h3 className="text-white__color px-2">Nakul</h3>
+            </div>
+          </div>
+          <div className="flex items-center py-3 px-2">
+            <div>
+              <img
+                src="https://images.unsplash.com/photo-1590031905470-a1a1feacbb0b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=3&w=144&h=144"
+                alt="My profile"
+                className="w-6 h-6 rounded-full order-2"
+              />
+            </div>
+            <div>
+              <h3 className="text-white__color px-2">Bheem</h3>
+            </div>
+          </div>
+          <div className="flex items-center py-3 px-2">
+            <div>
+              <img
+                src="https://images.unsplash.com/photo-1590031905470-a1a1feacbb0b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=3&w=144&h=144"
+                alt="My profile"
+                className="w-6 h-6 rounded-full order-2"
+              />
+            </div>
+            <div>
+              <h3 className="text-white__color px-2">Arjun</h3>
+            </div>
+          </div>
+          <div className="flex items-center py-3 px-2">
+            <div>
+              <img
+                src="https://images.unsplash.com/photo-1590031905470-a1a1feacbb0b?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=3&w=144&h=144"
+                alt="My profile"
+                className="w-6 h-6 rounded-full order-2"
+              />
+            </div>
+            <div>
+              <h3 className="text-white__color px-2">Yudistira</h3>
+            </div>
+          </div>
+        </div>
+        <div className="flex-1 px-2 px:2 sm:px-6 justify-between flex flex-col h-screen bg-box__bg__color shadow-lg rounded-tr-lg rounded-br-lg">
           <div className="flex sm:items-center justify-between py-2 border-b-2 border-gray-200">
             <div className="relative flex items-center space-x-2">
               <div className="relative">
@@ -78,8 +287,10 @@ const ChatWithFpo = () => {
               <div className="flex items-end">
                 <div className="flex flex-col space-y-2 text-xs max-w-xs mx-2 order-2 items-start">
                   <div>
-                    <span className="px-4 py-2 rounded-lg inline-block rounded-bl-none 
-                    bg-hover__color text-white__color xl">
+                    <span
+                      className="px-4 py-2 rounded-lg inline-block rounded-bl-none 
+                    bg-hover__color text-white__color xl"
+                    >
                       Can be verified on any platform using docker
                     </span>
                   </div>
@@ -251,7 +462,7 @@ const ChatWithFpo = () => {
               </div>
             </div>
           </div>
-          <div className="border-t-2 border-gray-200 px-4 pt-4 mb-2 sm:mb-0">
+          <div className="border-t-2 border-gray-200 px-4 pt-4 mb-2 pb-3 sm:mb-0">
             <div className="relative flex">
               <span className="absolute inset-y-0 flex items-center">
                 <button
@@ -336,13 +547,7 @@ const ChatWithFpo = () => {
             </div>
           </div>
         </div>
-        <style
-          dangerouslySetInnerHTML={{
-            __html:
-              "\n.scrollbar-w-2::-webkit-scrollbar {\n  width: 0.25rem;\n  height: 0.25rem;\n}\n\n.scrollbar-track-blue-lighter::-webkit-scrollbar-track {\n  --bg-opacity: 1;\n  background-color: #f7fafc;\n  background-color: rgba(247, 250, 252, var(--bg-opacity));\n}\n\n.scrollbar-thumb-blue::-webkit-scrollbar-thumb {\n  --bg-opacity: 1;\n  background-color: #edf2f7;\n  background-color: rgba(237, 242, 247, var(--bg-opacity));\n}\n\n.scrollbar-thumb-rounded::-webkit-scrollbar-thumb {\n  border-radius: 0.25rem;\n}\n",
-          }}
-        />
-      </>
+      </div>
     </div>
   );
 };

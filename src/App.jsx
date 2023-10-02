@@ -41,7 +41,7 @@ import { NavbarContextProvider } from "./Context/context";
 import Corporate_Customer from "./components/FPO/Corporate Customer/Corporate_Customer";
 import CorporateClientWrapper from "./pages/CorporateClientWrapper";
 
-import Lac_Bidding from "./components/CorporateClient/Lac_Bidding";
+import Corporate_Client from "./components/CorporateClient/Corporate_Client";
 import CorporateClient_Support from "./components/CorporateClient/Support";
 import CorporateClient_Settings from "./components/CorporateClient/Settings";
 import InputSupplierWrapper from "./pages/InuptSupplierWrapper";
@@ -65,6 +65,9 @@ import ViewProfiles from "./components/Cluster/ViewProfile/ViewProfiles";
 import ClusterSupport from "./components/Cluster/Support/Support";
 import ClusterSettings from "./components/Cluster/Settings/Settings";
 import ChatWithFpo from "./components/Cluster/ChatWithFpo/ChatWithFpo";
+import CustomHiringCenter from "./components/FPO/CustomHiringCenter/CustomHiringCenter";
+import Equipment_List from "./components/Farmer/Equipment/Equipment_List";
+import ViewBookings from "./components/Cluster/ViewBookings/ViewBookings";
 
 function App() {
   return (
@@ -92,6 +95,7 @@ function App() {
               <Route path="support" element={<Support />} />
               <Route path="settings" element={<Settings />} />
               <Route path="input-requirement" element={<Input_Requirement />} />
+              <Route path="custom-hiring-center" element={<Equipment_List />} />
               <Route
                 path="purchase-authentication"
                 element={<Purchase_Authentication />}
@@ -114,6 +118,10 @@ function App() {
               <Route path="Invite-bids" element={<Invite_Bids />} />
               <Route path="request-quote" element={<Request_Quote />} />
               <Route path="chat-with-fpo" element={<ChatWithFpo />} />
+              <Route
+                path="custom-hiring-center"
+                element={<CustomHiringCenter />}
+              />
               <Route
                 path="corporate-customer"
                 element={<Corporate_Customer />}
@@ -146,8 +154,8 @@ function App() {
             {/* Corporate Client */}
 
             <Route path="corporate-client" element={<CorporateClientWrapper />}>
-              <Route index element={<Lac_Bidding />} />
-              <Route path="corporate-client" element={<Lac_Bidding />} />
+              <Route index element={<Corporate_Client />} />
+              <Route path="corporate-client" element={<Corporate_Client />} />
               <Route path="support" element={<CorporateClient_Support />} />
               <Route path="settings" element={<CorporateClient_Settings />} />
             </Route>
@@ -175,6 +183,7 @@ function App() {
                 path="requirement-gathering"
                 element={<Requirement_Gathering />}
               />
+              <Route path="view-bookings" element={<ViewBookings />} />
               <Route path="support" element={<ClusterSupport />} />
               <Route path="settings" element={<ClusterSettings />} />
               <Route path="chat-with-fpo" element={<ChatWithFpo />} />
