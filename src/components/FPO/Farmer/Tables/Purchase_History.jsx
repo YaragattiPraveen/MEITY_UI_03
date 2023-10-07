@@ -2,17 +2,19 @@ import React, { useState } from "react";
 import Item_Details from "../Modals/Item_Details_Modal";
 import Add_Details_Purchase_History from '../Modals/Add_Details_Purchase_History'
 
-const Purchase_History = () => {
-  const [openModel,setOpenModel] = useState(false)
-  const [addOpenModel,setAddOpenModel] = useState(false)
+const Purchase_History = ({ show }) => {
+  const [openModel, setOpenModel] = useState(false)
+  const [addOpenModel, setAddOpenModel] = useState(false)
 
   return (
     <>
-      <button onClick={() => setAddOpenModel(true)}
-        className="bg-bg__color shadow-md rounded-lg z-0 focus:outline-none text-center block text-white px-4 py-1"
-      >
-        Add Purchase
-      </button>
+      {
+        show && <button onClick={() => setAddOpenModel(true)}
+          className="bg-bg__color shadow-md rounded-lg z-0 focus:outline-none text-center block text-white px-4 py-1"
+        >
+          Add Purchase
+        </button>
+      }
       <div className="bg-box__bg__color shadow-lg rounded-lg border my-6 border-gray-200">
         <div className="flex flex-col px-3 py-2">
           <div className="overflow-x-auto sm:-mx-6 lg:-mx-8">
@@ -103,8 +105,8 @@ const Purchase_History = () => {
           </div>
         </div>
       </div>
-      {openModel && <Item_Details closemodel={setOpenModel}/>}
-      {addOpenModel && <Add_Details_Purchase_History closemodel={setAddOpenModel}/>}
+      {openModel && <Item_Details closemodel={setOpenModel} />}
+      {addOpenModel && <Add_Details_Purchase_History closemodel={setAddOpenModel} />}
     </>
   );
 };

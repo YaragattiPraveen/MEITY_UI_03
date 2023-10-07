@@ -44,13 +44,14 @@ const Form1 = () => {
                 </div>
                 <div className="lg:w-1/2 sm:w-full mr-1">
                     <label className="block text-grey-darker font-Roboto text-black__color mb-2">
-                        Address
+                       Confirm Password
                     </label>
                     <input
-                        type="text"
+                        type="password"
                         className="appearance-none border rounded w-full py-2 px-3 text-grey-darker"
                     />
                 </div>
+                
             </div>
 
             <div className="md:flex lg:flex-row mb:4 flex-col m-2">
@@ -64,7 +65,9 @@ const Form1 = () => {
                     />
                 </div>
                 <div className="lg:w-1/2 sm:w-full mr-1">
-                    <label className="block text-grey-darker font-Roboto text-black__color mb-2">City </label>
+                    <label className="block text-grey-darker font-Roboto text-black__color mb-2">
+                        Address
+                    </label>
                     <input
                         type="text"
                         className="appearance-none border rounded w-full py-2 px-3 text-grey-darker"

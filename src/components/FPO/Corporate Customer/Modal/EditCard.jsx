@@ -1,7 +1,7 @@
 import Custom_Confirmation_Box from "../../../Utils/Custom_Confirmation_Box";
 import useModal from "../../../hooks/useModal";
 
-const EditCard = ({ handleClose }) => {
+const EditCard = ({ handleClose,title }) => {
   const { modal, closeModal, updateModal } = useModal();
   return (
     <>
@@ -12,7 +12,7 @@ const EditCard = ({ handleClose }) => {
             {/*header*/}
             <div className="flex items-center text-bg__color justify-between px-5 py-2 border-b border-solid border-slate-200 rounded-t">
               <h3 className="text-xl font-semibold font-Roboto py-3">
-                Edit Item Details
+                {title} Item Details
               </h3>
 
               <button
@@ -102,6 +102,19 @@ const EditCard = ({ handleClose }) => {
                     <option>Available</option>
                     <option>Out of Stock</option>
                   </select>
+                </div>
+              </div>
+              <div className="md:flex lg:flex-row mb:4 flex-col">
+                <div className="lg:w-1/2 sm:w-full mr-1">
+                  <label className="block text-grey-darker font-Roboto text-silver__color  mb-2 mt-3">
+                    Upload Item Image
+                  </label>
+                </div>
+                <div className="lg:w-1/2 sm:w-full mr-1">
+                  <input
+                    type="file"
+                    className="appearance-none border rounded w-full py-2 px-3 text-grey-darker"
+                  />
                 </div>
               </div>
               <button

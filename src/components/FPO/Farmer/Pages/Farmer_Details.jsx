@@ -13,9 +13,9 @@ const Farmer_Details = ({ setFarmerInfo }) => {
   } else if (active === "tab2") {
     tab__UI = <Loan_Information />;
   } else if (active === "tab3") {
-    tab__UI = <Purchase_History />;
+    tab__UI = <Purchase_History show={true} />;
   } else if (active === "tab4") {
-    tab__UI = <Sale_History />;
+    tab__UI = <Sale_History show={true}/>;
   }
 
   return (

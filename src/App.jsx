@@ -6,14 +6,12 @@ import Store from "./components/Farmer/Store";
 import Dashboard from "./components/Farmer/Dashboard";
 import SellingPrice from "./components/Farmer/SellingPrice";
 import TransactionHistory from "./components/Farmer/TransactionHistory";
-import TrainingPrograms from "./components/Farmer/TrainingPrograms";
 import CropAdvisory from "./components/Farmer/CropAdvisory";
 import Support from "./components/Farmer/Support";
 import Settings from "./components/Farmer/Settings";
 import Loan from "./components/Farmer/Loan";
 import FpoWrapper from "./pages/FpoWrapper";
 
-// import FPO_Dashboard from "./components/FPO/Dashboard/Dashboard";
 import Farmer_Information from "./components/FPO/Farmer/Farmer_Information";
 import Fpo_Store from "./components/FPO/FPO_Store/Fpo_Store";
 import Lac_Procurement from "./components/FPO/Lac Procurement/Lac_Procurement";
@@ -47,11 +45,10 @@ import CorporateClient_Settings from "./components/CorporateClient/Settings";
 import InputSupplierWrapper from "./pages/InuptSupplierWrapper";
 import Invite_Bids from "./components/FPO/Inivete_Bids/Invite_Bids";
 
-import Invited_Bids from "./components/InputSupplier/Invited_Bids";
 import Input_Supplier_Settings from "../src/components/InputSupplier/Profile";
 import Input_Supplier_Support from "../src/components/InputSupplier/Support";
 import Requested_Quotes from "./components/InputSupplier/Requested_Bids/Requested_Quotes";
-// import Request_Quotation from "./components/FPO/Request_Quote/Request_Quotation";
+
 
 import AdminWrapper from "./pages/AdminWrapper";
 import Admin_Dashboard from "./components/Admin/Dashboard";
@@ -68,6 +65,9 @@ import ChatWithFpo from "./components/Cluster/ChatWithFpo/ChatWithFpo";
 import CustomHiringCenter from "./components/FPO/CustomHiringCenter/CustomHiringCenter";
 import Equipment_List from "./components/Farmer/Equipment/Equipment_List";
 import ViewBookings from "./components/Cluster/ViewBookings/ViewBookings";
+import InputSupplier from "./components/FPO/Input__Supplier/Tabs/InputSupplier";
+import FpoTransaction from "./components/InputSupplier/FpoTransaction";
+import FederationTransactions from "./components/InputSupplier/FederationTransactions";
 
 function App() {
   return (
@@ -90,7 +90,6 @@ function App() {
                 path="transaction-history"
                 element={<TransactionHistory />}
               />
-              <Route path="training" element={<TrainingPrograms />} />
               <Route path="crop-advisory" element={<CropAdvisory />} />
               <Route path="support" element={<Support />} />
               <Route path="settings" element={<Settings />} />
@@ -115,15 +114,14 @@ function App() {
               <Route path="support" element={<Lac_Support />} />
               <Route path="settings" element={<Lac_Settings />} />
               <Route path="profile" element={<Profile />} />
-              <Route path="Invite-bids" element={<Invite_Bids />} />
-              <Route path="request-quote" element={<Request_Quote />} />
+              <Route path="input-supplier" element={<InputSupplier />} />
               <Route path="chat-with-fpo" element={<ChatWithFpo />} />
               <Route
                 path="custom-hiring-center"
                 element={<CustomHiringCenter />}
               />
               <Route
-                path="corporate-customer"
+                path="output-customer"
                 element={<Corporate_Customer />}
               />
               <Route
@@ -168,8 +166,8 @@ function App() {
                 path="requirement-gathering"
                 element={<Federation_Requirements_Gathering />}
               />
-              <Route path="invite-bids" element={<Invite_Bids />} />
-              <Route path="request-quote" element={<Request_Quote />} />
+              <Route path="invite-bids" element={<Invite_Bids show={true} />} />
+              <Route path="request-quote" element={<Request_Quote show={true} />} />
               <Route path="Federation" element={<FPO_Mdemberships />} />
               <Route path="support" element={<Input_Supplier_Support />} />
               <Route path="settings" element={<Input_Supplier_Settings />} />
@@ -183,7 +181,7 @@ function App() {
                 path="requirement-gathering"
                 element={<Requirement_Gathering />}
               />
-              <Route path="view-bookings" element={<ViewBookings />} />
+              <Route path="custom-hiring-center" element={<ViewBookings />} />
               <Route path="support" element={<ClusterSupport />} />
               <Route path="settings" element={<ClusterSettings />} />
               <Route path="chat-with-fpo" element={<ChatWithFpo />} />
@@ -198,9 +196,9 @@ function App() {
 
             {/* Input Supplier */}
             <Route path="input-supplier" element={<InputSupplierWrapper />}>
-              <Route index element={<Invited_Bids />} />
-              <Route path="Invited-bids" element={<Invited_Bids />} />
-              <Route path="Requested-quote" element={<Requested_Quotes />} />
+              <Route index element={<FpoTransaction />} />
+              <Route path="transactions-with-fpo" element={<FpoTransaction />} />
+              <Route path="transactions-with-federation" element={<FederationTransactions/>} />
               <Route path="support" element={<Input_Supplier_Support />} />
               <Route path="settings" element={<Input_Supplier_Settings />} />
             </Route>

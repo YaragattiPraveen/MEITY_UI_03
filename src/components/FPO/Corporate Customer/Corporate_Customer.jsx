@@ -22,7 +22,7 @@ const Corpoate_Customer = () => {
         <div className="container w-full mx-auto">
             <Navbar />
             <h2 className="text-hover__color text-2xl font-Roboto font-extrabold py-4 ">
-                Corporate Customer
+                Output Customer
             </h2>
             <div className="flex gap-3 md:gap-5 justify-end">
                 <button

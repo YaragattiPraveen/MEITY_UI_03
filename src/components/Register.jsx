@@ -68,7 +68,7 @@ const Register = () => {
                                         <option className=' text-silver__color font-Roboto' value="FPO">FPO</option>
                                         <option className=' text-silver__color font-Roboto' value="Samunnati">Samunnati</option>
                                         <option className=' text-silver__color font-Roboto' value="InputSupplier">Input Supplier</option>
-                                        <option className=' text-silver__color font-Roboto' value="OutputSupplier">Output Supplier</option>
+                                        <option className=' text-silver__color font-Roboto' value="OutputSupplier">Output Customer</option>
                                         <option className=' text-silver__color font-Roboto' value="Federation">Federation</option>
                                         <option className=' text-silver__color font-Roboto' value="Cluster">Cluster</option>
                                     </select>

@@ -33,6 +33,12 @@ const Rejected_Memberships = () => {
                   >
                     Aadhaar Number
                   </th>
+                  <th
+                    scope="col"
+                    className="px-6 py-4 text-medium font-Roboto text-left"
+                  >
+                    Rejected Reason
+                  </th>
                 </tr>
               </thead>
               <tbody className="text-sm divide-y divide-gray-300">
@@ -49,19 +55,8 @@ const Rejected_Memberships = () => {
                   <td className="whitespace-nowrap px-6 py-4 text-left font-medium font-Roboto text-silver__color">
                     12345XXXXX
                   </td>
-                </tr>
-                <tr className="border-b transition duration-300 ease-in-out hover:bg-green-2">
                   <td className="whitespace-nowrap px-6 py-4 text-left font-medium font-Roboto text-silver__color">
-                    Farmer 1
-                  </td>
-                  <td className="whitespace-nowrap px-6 py-4 text-left font-medium font-Roboto text-silver__color">
-                    Hyderabad
-                  </td>
-                  <td className="whitespace-nowrap px-6 py-4 text-left font-medium font-Roboto text-silver__color">
-                    1234567890
-                  </td>
-                  <td className="whitespace-nowrap px-6 py-4 text-left font-medium font-Roboto text-silver__color">
-                    12345XXXXX
+                    Invalid Document
                   </td>
                 </tr>
                 <tr className="border-b transition duration-300 ease-in-out hover:bg-green-2">
@@ -76,6 +71,26 @@ const Rejected_Memberships = () => {
                   </td>
                   <td className="whitespace-nowrap px-6 py-4 text-left font-medium font-Roboto text-silver__color">
                     12345XXXXX
+                  </td>
+                  <td className="whitespace-nowrap px-6 py-4 text-left font-medium font-Roboto text-silver__color">
+                    Invalid Document
+                  </td>
+                </tr>
+                <tr className="border-b transition duration-300 ease-in-out hover:bg-green-2">
+                  <td className="whitespace-nowrap px-6 py-4 text-left font-medium font-Roboto text-silver__color">
+                    Farmer 1
+                  </td>
+                  <td className="whitespace-nowrap px-6 py-4 text-left font-medium font-Roboto text-silver__color">
+                    Hyderabad
+                  </td>
+                  <td className="whitespace-nowrap px-6 py-4 text-left font-medium font-Roboto text-silver__color">
+                    1234567890
+                  </td>
+                  <td className="whitespace-nowrap px-6 py-4 text-left font-medium font-Roboto text-silver__color">
+                    12345XXXXX
+                  </td>
+                  <td className="whitespace-nowrap px-6 py-4 text-left font-medium font-Roboto text-silver__color">
+                    Invalid Document
                   </td>
                 </tr>
               </tbody>

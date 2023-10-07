@@ -3,7 +3,8 @@ import Navbar from "../Navbar";
 import PermContactCalendarIcon from "@mui/icons-material/PermContactCalendar";
 import Personal__information from "../Settings/Personal__information";
 
-const Fpo_Details = () => {
+const Fpo_Details = ({ show }) => {
+  const visible = show || "Yes"
   const details = [
     { label: "FPO Name", value: "Sri Rama FPO" },
     { label: "Date of Incorporation", value: "18-04-1996" },
@@ -22,7 +23,9 @@ const Fpo_Details = () => {
   ];
   return (
     <div className="container w-full mx-auto">
-      <Navbar />
+      {
+        visible === "Yes" && <Navbar /> 
+      }
       <h2 className="text-hover__color uppercase text-xl lg:text-2xl font-Roboto font-extrabold py-6 ">
         FPO Details
       </h2>

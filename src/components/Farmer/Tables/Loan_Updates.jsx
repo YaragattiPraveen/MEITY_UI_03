@@ -4,7 +4,7 @@ const Loan_Updates = () => {
   return (
     <div className="bg-box__bg__color shadow-lg rounded-lg border border-gray-200">
       <h2 className="text-hover__color text-lg md:text-xl font-Roboto font-extrabold py-3 ">
-      Loan Updates
+        Loan Updates
       </h2>
       <div className="flex flex-col px-3">
         <div className="overflow-x-auto sm:-mx-6 lg:-mx-8">
@@ -42,6 +42,17 @@ const Loan_Updates = () => {
                       ₹ 372
                     </td>
                     <td className="whitespace-nowrap px-6 py-4 text-left font-medium font-Roboto text-silver__color">
+                      pending
+                    </td>
+                  </tr>
+                  <tr className="border-b transition duration-300 ease-in-out hover:bg-green-2">
+                    <td className="whitespace-nowrap px-6 py-3 text-left font-medium font-Roboto text-silver__color">
+                      334521
+                    </td>
+                    <td className="whitespace-nowrap px-6 py-3 text-left font-medium font-Roboto text-silver__color">
+                      ₹ 372
+                    </td>
+                    <td className="whitespace-nowrap px-6 py-3 text-left font-medium font-Roboto text-silver__color">
                       pending
                     </td>
                   </tr>

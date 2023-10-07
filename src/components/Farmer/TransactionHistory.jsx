@@ -1,8 +1,7 @@
 import React, { useState } from "react";
 import Navbar from "./Navbar";
-import PurchaseHistory from "./PurchaseHistory";
-import SalesHistory from "./SalesHistory";
-
+import Purchase_History from "../FPO/Farmer/Tables/Purchase_History";
+import Sale_History from "../FPO/Farmer/Tables/Sale_History"
 const TransactionHistory = () => {
   const [active, setActive] = useState("tab1");
 
@@ -32,7 +31,7 @@ const TransactionHistory = () => {
           Sale History
         </button>
       </div>
-      {active === "tab1" ? <PurchaseHistory /> : <SalesHistory />}
+      {active === "tab1" ? <Purchase_History show={false} /> : <Sale_History show={false} />}
     </div>
   );
 };

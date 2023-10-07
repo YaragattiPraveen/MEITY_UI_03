@@ -64,8 +64,22 @@ const Produce__Model = () => {
         </div>
         <div className="lg:w-1/2 sm:w-full mr-1">
           <input
-            type="text"
-            placeholder="Quantity"
+            type="number"
+            placeholder="20 Kg"
+            className="appearance-none border rounded w-full py-2 px-3 text-grey-darker"
+          />
+        </div>
+      </div>
+      <div className="md:flex lg:flex-row mb:4 flex-col m-2">
+        <div className="lg:w-1/2 sm:w-full mr-1">
+          <label className="block text-grey-darker font-Roboto text-silver__color mb-2">
+            Enter expected Price/Kg
+          </label>
+        </div>
+        <div className="lg:w-1/2 sm:w-full mr-1">
+          <input
+            type="number"
+            placeholder="200 Rs/Kg"
             className="appearance-none border rounded w-full py-2 px-3 text-grey-darker"
           />
         </div>

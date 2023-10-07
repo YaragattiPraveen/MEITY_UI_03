@@ -43,13 +43,7 @@ const Equipments = () => {
                       scope="col"
                       className="px-6 py-4 text-medium font-Roboto text-left"
                     >
-                      Available Date
-                    </th>
-                    <th
-                      scope="col"
-                      className="px-6 py-4 text-medium font-Roboto text-left"
-                    >
-                      Available Slots
+                      Available Status
                     </th>
                     <th
                       scope="col"
@@ -77,10 +71,7 @@ const Equipments = () => {
                       400rs
                     </td>
                     <td className="whitespace-nowrap px-6 py-4 text-left font-medium font-Roboto text-silver__color">
-                      27/09/2023
-                    </td>
-                    <td className="whitespace-nowrap px-6 py-4 text-left font-medium font-Roboto text-silver__color">
-                      1:30 PM to 4:45 PM
+                      Available
                     </td>
                     <td className="whitespace-nowrap px-6 py-4 text-left font-medium font-Roboto text-silver__color">
                       <button
@@ -92,7 +83,7 @@ const Equipments = () => {
                     </td>
                     <td className="whitespace-nowrap px-6 py-4 text-left font-medium font-Roboto text-silver__color">
                       <button
-                        onClick={() => updateModal("ShowAddEquipment")}
+                        onClick={() => updateModal("ShowEditEquipment")}
                         className="bg-bg__color text-center block text-white px-4 py-1 rounded"
                       >
                         Edit
@@ -106,8 +97,13 @@ const Equipments = () => {
         </div>
       </div>
       {modal.state === "ShowAddEquipment" && (
-        <AddEquipment handleClose={closeModal} />
+        <AddEquipment handleClose={closeModal} title={"Add"} />
       )}
+      {
+        modal.state === "ShowEditEquipment" && (
+          <AddEquipment handleClose={closeModal} title={"Edit"} />
+        )
+      }
       {modal.state === "ShowEquipmentImage" && (
         <Image_modal title={"Tracktor"} closemodel={closeModal} />
       )}

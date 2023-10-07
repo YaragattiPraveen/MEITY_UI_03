@@ -1,16 +1,16 @@
 import { useState } from "react";
 import Navbar from "../../Farmer/Navbar";
 import Farmer_Profile from "./Tabs/Farmer_Profile";
-import FPO_Profile from "./Tabs/FPO_Profile";
+import Fpo_Details from "../../Farmer/FPO_Details/Fpo_Details";
 
 const ViewProfiles = () => {
   const [active, setActive] = useState("tab1");
 
   let tab__UI;
   if (active === "tab1") {
-    tab__UI = <Farmer_Profile/>;
+    tab__UI = <Farmer_Profile />;
   } else if (active === "tab2") {
-    tab__UI = <FPO_Profile/>;
+    tab__UI = <Fpo_Details show={"No"} />;
   }
   return (
     <div className="container w-full mx-auto">
@@ -26,7 +26,7 @@ const ViewProfiles = () => {
           }}
           className="text-hover__color shadow-md rounded-lg z-0 focus:outline-none px-4 py-2 font-Roboto text-sm md:text-base font-bold cursor-pointer"
         >
-          Farmer Profile
+          Farmer Profiles
         </button>
         <button
           onClick={() => setActive("tab2")}

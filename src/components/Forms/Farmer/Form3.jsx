@@ -4,7 +4,7 @@ const Form3 = () => {
     <>
       <div className="md:flex lg:flex-row mb:4 flex-col m-2">
         <div className="lg:w-1/2 sm:w-full mr-1">
-          <label className="block text-grey-darker font-Roboto text-silver__color mb-2">
+          <label className="block text-grey-darker font-Roboto text-black__color mb-2">
             Occupation{" "}
           </label>
           <input
@@ -13,7 +13,7 @@ const Form3 = () => {
           />
         </div>
         <div className="lg:w-1/2 sm:w-full mr-1">
-          <label className="block text-grey-darker font-Roboto text-silver__color mb-2">
+          <label className="block text-grey-darker font-Roboto text-black__color mb-2">
             Education{" "}
           </label>
           <input
@@ -24,7 +24,7 @@ const Form3 = () => {
       </div>
       <div className="md:flex lg:flex-row mb:4 flex-col m-2">
         <div className="lg:w-1/2 sm:w-full mr-1">
-          <label className="block text-grey-darker font-Roboto text-silver__color mb-2">
+          <label className="block text-grey-darker font-Roboto text-black__color mb-2">
             Nature of Place
           </label>
           <input
@@ -33,7 +33,7 @@ const Form3 = () => {
           />
         </div>
         <div className="lg:w-1/2 sm:w-full mr-1">
-          <label className="block text-grey-darker font-Roboto text-silver__color mb-2">
+          <label className="block text-grey-darker font-Roboto text-black__color mb-2">
             Residence
           </label>
           <input
@@ -44,7 +44,7 @@ const Form3 = () => {
       </div>
       <div className="md:flex lg:flex-row mb:4 flex-col m-2">
         <div className="lg:w-1/2 sm:w-full mr-1">
-          <label className="block text-grey-darker font-Roboto text-silver__color mb-2">
+          <label className="block text-grey-darker font-Roboto text-black__color mb-2">
             Caste
           </label>
           <input
@@ -53,7 +53,7 @@ const Form3 = () => {
           />
         </div>
         <div className="lg:w-1/2 sm:w-full mr-1">
-          <label className="block text-grey-darker font-Roboto text-silver__color mb-2">
+          <label className="block text-grey-darker font-Roboto text-black__color mb-2">
             Religion
           </label>
           <input
@@ -64,7 +64,7 @@ const Form3 = () => {
       </div>
       <div className="md:flex lg:flex-row mb:4 flex-col m-2">
         <div className="lg:w-1/2 sm:w-full mr-1">
-          <label className="block text-grey-darker font-Roboto text-silver__color mb-2">
+          <label className="block text-grey-darker font-Roboto text-black__color mb-2">
             Bank Name
           </label>
           <input
@@ -73,7 +73,7 @@ const Form3 = () => {
           />
         </div>
         <div className="lg:w-1/2 sm:w-full mr-1">
-          <label className="block text-grey-darker font-Roboto text-silver__color mb-2">
+          <label className="block text-grey-darker font-Roboto text-black__color mb-2">
             Account Number
           </label>
           <input

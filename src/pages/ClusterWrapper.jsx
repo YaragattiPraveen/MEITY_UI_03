@@ -34,9 +34,9 @@ const ClusterWrapper = () => {
       to: "chat-with-fpo"
     },
     {
-      title: "View Bookings",
+      title: "Custom Hiring Center",
       icon: <PreviewIcon style={{color:"white", fontSize: "28px"}} />,
-      to: "view-bookings"
+      to: "custom-hiring-center"
     },
     {
       title: "Support",

@@ -1,5 +1,5 @@
 import React, { useContext } from "react";
-import logo from "../../assets/logo.png";
+import logo from "../../assets/logo1.png";
 import { Link, useLocation } from "react-router-dom";
 import { AppContext } from "../../Context/context";
 import CancelSharpIcon from "@mui/icons-material/CancelSharp";
@@ -10,17 +10,17 @@ const Sidebar = ({ list }) => {
 
   return (
     <div
-      className={`font-Roboto relative transition-all duration-700 ease-in-out shadow-md bg-bg__color w-[180px] lg:w-[240px] overflow-y-auto h-full`}
+      className={`font-Roboto relative transition-all duration-700 ease-in-out shadow-md bg-bg__color w-[200px] lg:w-[240px] overflow-y-auto h-full`}
     >
       <div className="flex flex-col items-center">
-        <img
+        {/* <img
           className="mx-auto pt-12 lg:pt-5"
-          height={50}
-          width={50}
+          height={150}
+          width={150}
           src={logo}
           alt="logo"
-        />
-        <h1 className="text-white__color text-2xl font-bold">MEITY</h1>
+        /> */}
+        <h1 className="text-white__color text-2xl py-4 font-bold">MeiTy</h1>
         {toggleNav && (
           <div
             className="absolute top-2 right-3"

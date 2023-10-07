@@ -1,127 +1,148 @@
-import React from "react";
+import React from 'react'
+import Purchase_History from '../../../FPO/Input_Requirements_Acceptance/Tabs/Purchase_History'
+import useModal from '../../../hooks/useModal'
+import AddSaleHistory from '../Modal/AddSaleHistory'
 
-const FpoList = ({ setFpoInfo }) => {
-  return (
-    <div className="bg-box__bg__color shadow-lg rounded-lg border my-6 border-gray-200">
-      <div className="py-2">
-        <div className="overflow-x-auto mx-2 md:mx-4 md:overflow-auto lg:overflow-auto">
-          <div className="relative inline-block min-w-full py-2 sm:px-2 lg:6">
+const FpoSaleHistory = () => {
+    const { modal, closeModal, updateModal } = useModal()
+    return (
+        <>
+            <h2 className="text-hover__color text-2xl font-Roboto font-extrabold py-4 ">
+                FPO Sale History
+            </h2>
+            <div className='flex items-center justify-end'>
+                <button
+                    onClick={() => updateModal('showAddSale')}
+                    className="bg-bg__color text-center shadow-md z-0 focus:outline-none block text-white px-4 py-1 rounded"
+                >
+                    Add Sale History
+                </button>
+            </div>
+            <div className="bg-box__bg__color shadow-lg rounded-lg border my-6 border-gray-200">
+      <div className="flex flex-col p-3">
+        <div className="overflow-x-auto sm:-mx-6 lg:-mx-8">
+          <div className="inline-block min-w-full py-2 sm:px-6 lg:px-8">
             <div className="overflow-hidden">
-              <table className="min-w-full text-left text-sm font-light table-auto">
+              <table className="min-w-full text-left text-sm font-light">
                 <thead className="text-xs text-medium bg-green-200 border-b uppercase text-gray-600">
                   <tr>
                     <th
                       scope="col"
                       className="px-6 py-4 text-medium font-Roboto text-left"
                     >
-                      Id
+                      Sale Id
                     </th>
                     <th
                       scope="col"
                       className="px-6 py-4 text-medium font-Roboto text-left"
                     >
-                      Name
+                      Date of Sale
                     </th>
                     <th
                       scope="col"
                       className="px-6 py-4 text-medium font-Roboto text-left"
                     >
-                      Village
+                      Item Name
                     </th>
                     <th
                       scope="col"
                       className="px-6 py-4 text-medium font-Roboto text-left"
                     >
-                      Phone Number
+                      Unit Price
                     </th>
                     <th
                       scope="col"
-                      className="px-6 py-4 text-medium font-Roboto text-left"
+                      className="px-6 py-4text-medium font-Roboto text-left"
                     >
-                      Aadhaar Number
+                      Quantity
                     </th>
                     <th
                       scope="col"
-                      className="px-4 py-4 text-medium font-Roboto text-left"
+                      className="px-6 py-4text-medium font-Roboto text-left"
                     >
-                      View Fpo Profile
+                      Total Amount
                     </th>
                   </tr>
                 </thead>
                 <tbody className="text-sm divide-y divide-gray-300">
                   <tr className="border-b transition duration-300 ease-in-out hover:bg-green-2">
                     <td className="whitespace-nowrap px-6 py-4 text-left font-medium font-Roboto text-silver__color">
-                      Fpo-0001
+                      SAM107254367
                     </td>
                     <td className="whitespace-nowrap px-6 py-4 text-left font-medium font-Roboto text-silver__color">
-                      Fpo - 1
+                      17-02-22
                     </td>
                     <td className="whitespace-nowrap px-6 py-4 text-left font-medium font-Roboto text-silver__color">
-                      Hyderabad
+                      Nylon Bag1
                     </td>
                     <td className="whitespace-nowrap px-6 py-4 text-left font-medium font-Roboto text-silver__color">
-                      1234567890
+                      10
                     </td>
                     <td className="whitespace-nowrap px-6 py-4 text-left font-medium font-Roboto text-silver__color">
-                      12345XXXXX
+                      2
                     </td>
                     <td className="whitespace-nowrap px-6 py-4 text-left font-medium font-Roboto text-silver__color">
-                      <button
-                        onClick={() => setFpoInfo(true)}
-                        className="bg-bg__color text-center block text-white px-4 py-1 rounded"
-                      >
-                        View
-                      </button>
+                      20
                     </td>
                   </tr>
                   <tr className="border-b transition duration-300 ease-in-out hover:bg-green-2">
                     <td className="whitespace-nowrap px-6 py-4 text-left font-medium font-Roboto text-silver__color">
-                      Fpo-0002
+                      SAM107254367
                     </td>
                     <td className="whitespace-nowrap px-6 py-4 text-left font-medium font-Roboto text-silver__color">
-                      Fpo - 2
+                      17-02-22
                     </td>
                     <td className="whitespace-nowrap px-6 py-4 text-left font-medium font-Roboto text-silver__color">
-                      Hyderabad
+                      Nylon Bag2
                     </td>
                     <td className="whitespace-nowrap px-6 py-4 text-left font-medium font-Roboto text-silver__color">
-                      1234567890
+                      10
                     </td>
                     <td className="whitespace-nowrap px-6 py-4 text-left font-medium font-Roboto text-silver__color">
-                      12345XXXXX
+                      2
                     </td>
                     <td className="whitespace-nowrap px-6 py-4 text-left font-medium font-Roboto text-silver__color">
-                      <button
-                        onClick={() => setFpoInfo(true)}
-                        className="bg-bg__color text-center block text-white px-4 py-1 rounded"
-                      >
-                        View
-                      </button>
+                      20
                     </td>
                   </tr>
                   <tr className="border-b transition duration-300 ease-in-out hover:bg-green-2">
                     <td className="whitespace-nowrap px-6 py-4 text-left font-medium font-Roboto text-silver__color">
-                      Fpo-0003
+                      SAM107254367
                     </td>
                     <td className="whitespace-nowrap px-6 py-4 text-left font-medium font-Roboto text-silver__color">
-                      Fpo - 3
+                      17-02-22
                     </td>
                     <td className="whitespace-nowrap px-6 py-4 text-left font-medium font-Roboto text-silver__color">
-                      Hyderabad
+                      Nylon Bag3
                     </td>
                     <td className="whitespace-nowrap px-6 py-4 text-left font-medium font-Roboto text-silver__color">
-                      1234567890
+                      10
                     </td>
                     <td className="whitespace-nowrap px-6 py-4 text-left font-medium font-Roboto text-silver__color">
-                      12345XXXXX
+                      2
                     </td>
                     <td className="whitespace-nowrap px-6 py-4 text-left font-medium font-Roboto text-silver__color">
-                      <button
-                        onClick={() => setFpoInfo(true)}
-                        className="bg-bg__color text-center block text-white px-4 py-1 rounded"
-                      >
-                        View
-                      </button>
+                      20
+                    </td>
+                  </tr>
+                  <tr className="border-b transition duration-300 ease-in-out hover:bg-green-2">
+                    <td className="whitespace-nowrap px-6 py-4 text-left font-medium font-Roboto text-silver__color">
+                      SAM107254367
+                    </td>
+                    <td className="whitespace-nowrap px-6 py-4 text-left font-medium font-Roboto text-silver__color">
+                      17-02-22
+                    </td>
+                    <td className="whitespace-nowrap px-6 py-4 text-left font-medium font-Roboto text-silver__color">
+                      Nylon Bag4
+                    </td>
+                    <td className="whitespace-nowrap px-6 py-4 text-left font-medium font-Roboto text-silver__color">
+                      10
+                    </td>
+                    <td className="whitespace-nowrap px-6 py-4 text-left font-medium font-Roboto text-silver__color">
+                      2
+                    </td>
+                    <td className="whitespace-nowrap px-6 py-4 text-left font-medium font-Roboto text-silver__color">
+                      20
                     </td>
                   </tr>
                 </tbody>
@@ -131,7 +152,11 @@ const FpoList = ({ setFpoInfo }) => {
         </div>
       </div>
     </div>
-  );
-};
+            {
+                modal.state === "showAddSale" && <AddSaleHistory closeModal={closeModal}/>
+            }
+        </>
+    )
+}
 
-export default FpoList;
+export default FpoSaleHistory

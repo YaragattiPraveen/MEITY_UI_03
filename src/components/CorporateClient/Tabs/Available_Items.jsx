@@ -111,7 +111,7 @@ const Available_Items = ({ btnTitle }) => {
         </div>
       </div>
       {modal.state === "ShowBookSlot" && <BuyItems handleClose={closeModal} />}
-      {modal.state === "ShowEditModal" && <EditCard handleClose={closeModal} />}
+      {modal.state === "ShowEditModal" && <EditCard title={"Edit"} handleClose={closeModal} />}
     </div>
   );
 };

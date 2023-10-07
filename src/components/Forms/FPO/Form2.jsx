@@ -73,6 +73,15 @@ const Form2 = () => {
             className="appearance-none border rounded w-full py-2 px-3 text-grey-darker"
           />
         </div>
+        <div className="lg:w-1/2 sm:w-full mr-1">
+          <label className="block text-grey-darker font-Roboto text-black__color mb-2">
+            Pincode
+          </label>
+          <input
+            type="text"
+            className="appearance-none border rounded w-full py-2 px-3 text-grey-darker"
+          />
+        </div>
       </div>
     </>
   );

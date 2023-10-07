@@ -1,5 +1,4 @@
 import { useState } from "react"
-import Navbar from "../../Farmer/Navbar"
 import Request_Quote from "./Tabs/Requested_Quote"
 import Ongoing_Quotes from "./Tabs/Ongoing_Quotes"
 import Completed_Quotes from "./Tabs/Completed_Quotes"
@@ -18,7 +17,6 @@ const Requested_Quotes = () => {
 
     return (
         <div className="container w-full mx-auto">
-            <Navbar />
             <h2 className="text-hover__color text-2xl font-Roboto font-extrabold py-4 ">
                 Requested Quotes
             </h2>

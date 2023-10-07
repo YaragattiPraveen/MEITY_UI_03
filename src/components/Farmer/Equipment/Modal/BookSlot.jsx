@@ -1,6 +1,4 @@
-import React from "react";
-
-const BookSlot = ({handleClose}) => {
+const BookSlot = ({ handleClose }) => {
   return (
     <>
       <div className="overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none">
@@ -69,20 +67,63 @@ const BookSlot = ({handleClose}) => {
               <div className="md:flex lg:flex-row mb:4 flex-col m-2">
                 <div className="lg:w-1/2 sm:w-full mr-1">
                   <label className="block text-grey-darker font-Roboto text-silver__color mb-2">
-                    Select Time Slot
+                    Select Date
+                  </label>
+                </div>
+                <div className="lg:w-1/2 sm:w-full mr-1">
+                  <input
+                    type="date"
+                    className="appearance-none border rounded w-full py-2 px-3 text-grey-darker"
+                  />
+                </div>
+              </div>
+              <div className="md:flex lg:flex-row mb:4 flex-col m-2">
+                <div className="lg:w-1/2 sm:w-full mr-1">
+                  <label className="block text-grey-darker font-Roboto text-silver__color mb-2">
+                    Select Number of Hrs
                   </label>
                 </div>
                 <div className="lg:w-1/2 sm:w-full flex mr-1 border rounded w-full text-grey-darker">
                   <input
-                    type="time"
-                    placeholder="From"
+                    type="number"
+                    placeholder="1 Hrs"
                     className="appearance-none border-r w-full py-2 px-3 text-grey-darker"
                   />
-                  <input
-                    type="time"
-                    placeholder="To"
-                    className="appearance-none border-r w-full py-2 px-3 text-grey-darker"
-                  />
+                </div>
+              </div>
+              <div className="md:flex lg:flex-row mb:4 flex-col m-2">
+                <div className="lg:w-1/2 sm:w-full mr-1">
+                  <label className="block text-grey-darker font-Roboto text-silver__color mb-2">
+                    Available Slots
+                  </label>
+                </div>
+                <div className="lg:w-1/2 sm:w-full flex mr-1 border rounded w-full text-grey-darker">
+                  <select
+                    className="appearance-none border font-Roboto rounded w-full py-2 px-3 text-grey-darker"
+                    required=""
+                  >
+                    <option className='font-Roboto' value="murhu">
+                      10:00 AM - 11:00 AM
+                    </option>
+                    <option className='font-Roboto' value="churchu">
+                      11:00 AM - 12:00 PM
+                    </option>
+                    <option className='font-Roboto' value="churchu">
+                      12:00 PM - 01:00 PM
+                    </option>
+                    <option className='font-Roboto' value="churchu">
+                      02:00 PM - 03:00 PM
+                    </option>
+                    <option className='font-Roboto' value="churchu">
+                      03:00 PM - 04:00 PM
+                    </option>
+                    <option className='font-Roboto' value="churchu">
+                      04:00 PM - 05:00 PM
+                    </option>
+                    <option className='font-Roboto' value="churchu">
+                      05:00 PM - 06:00 PM
+                    </option>
+                  </select>
                 </div>
               </div>
               <div className="flex items-center justify-end px-6 py-3 border-solid border-slate-200 rounded-b">

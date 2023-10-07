@@ -11,7 +11,7 @@ const Produce = () => {
             onClick={() => updateModal("ShowAddProduce")}
             className="text-white text-sm uppercase shadow-md rounded z-0 focus:outline-none px-4 py-2 font-Roboto m-3 bg-hover__color"
           >
-            Add New
+            Enter Produce
           </button>
         </div>
         <div className="flex flex-col p-3">

@@ -1,5 +1,8 @@
+import Image_modal from "../../../Farmer/Modals/Image_modal";
+import useModal from "../../../hooks/useModal";
 
-const AddEquipment = ({ handleClose }) => {
+const AddEquipment = ({ handleClose, title }) => {
+  const { modal, updateModal, closeModal } = useModal()
   return (
     <>
       <div className="overflow-x-hidden overflow-y-auto fixed inset-0 z-50 outline-none focus:outline-none">
@@ -9,7 +12,7 @@ const AddEquipment = ({ handleClose }) => {
             {/*header*/}
             <div className="flex items-center text-bg__color justify-between px-5 py-2 border-b border-solid border-slate-200 rounded-t">
               <h3 className="text-xl font-semibold font-Roboto py-3">
-                Add Equipment
+                {title} Equipment
               </h3>
 
               <button
@@ -68,33 +71,14 @@ const AddEquipment = ({ handleClose }) => {
               <div className="md:flex lg:flex-row mb:4 flex-col m-2">
                 <div className="lg:w-1/2 sm:w-full mr-1">
                   <label className="block text-grey-darker font-Roboto text-silver__color mb-2">
-                    Available Date
+                    Availability Status
                   </label>
                 </div>
                 <div className="lg:w-1/2 sm:w-full mr-1">
-                  <input
-                    type="date"
-                    className="appearance-none border rounded w-full py-2 px-3 text-grey-darker"
-                  />
-                </div>
-              </div>
-              <div className="md:flex lg:flex-row mb:4 flex-col m-2">
-                <div className="lg:w-1/2 sm:w-full mr-1">
-                  <label className="block text-grey-darker font-Roboto text-silver__color mb-2">
-                    Available Slots
-                  </label>
-                </div>
-                <div className="lg:w-1/2 sm:w-full flex mr-1 border rounded w-full text-grey-darker">
-                  <input
-                    type="time"
-                    placeholder="From"
-                    className="appearance-none border-r w-full py-2 px-3 text-grey-darker"
-                  />
-                  <input
-                    type="time"
-                    placeholder="To"
-                    className="appearance-none border-r w-full py-2 px-3 text-grey-darker"
-                  />
+                  <select className="select p-2 select-bordered rounded-md border w-full max-w-full">
+                    <option>Available</option>
+                    <option>Not Available</option>
+                  </select>
                 </div>
               </div>
               <div className="md:flex lg:flex-row mb:4 flex-col m-2">
@@ -104,11 +88,19 @@ const AddEquipment = ({ handleClose }) => {
                   </label>
                 </div>
                 <div className="lg:w-1/2 sm:w-full mr-1">
-                  <input
-                    type="file"
-                    placeholder="Some remark"
-                    className="appearance-none border rounded w-full py-2 px-3 text-grey-darker"
-                  />
+                  {
+                    title === "Add" ? <input
+                      type="file"
+                      placeholder="Some remark"
+                      className="appearance-none border rounded w-full py-2 px-3 text-grey-darker"
+                    /> : <button
+                      onClick={() => updateModal('showEquipmentImage')}
+                      className="bg-bg__color text-white active:bg-emerald-600 font-bold uppercase text-sm px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+                      type="button"
+                    >
+                      View
+                    </button>
+                  }
                 </div>
               </div>
               <div className="flex items-center justify-end px-6 py-3 border-solid border-slate-200 rounded-b">
@@ -123,6 +115,9 @@ const AddEquipment = ({ handleClose }) => {
           </div>
         </div>
       </div>
+      {
+        modal.state === "showEquipmentImage" && <Image_modal title={'Tractor'} closemodel={closeModal} />
+      }
       <div className="opacity-25 fixed inset-0 z-40 bg-black"></div>
     </>
   );

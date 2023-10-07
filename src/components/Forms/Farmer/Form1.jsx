@@ -6,7 +6,7 @@ const Form1 = () => {
       <div className="md:flex lg:flex-row mb:4 m-2 flex-col">
         <div className="lg:w-1/2 sm:w-full mr-1">
           <label
-            className="block text-grey-darker font-Roboto text-silver__color mb-2"
+            className="block text-grey-darker font-Roboto text-black__color mb-2"
             htmlFor="first_name"
           >
             First Name
@@ -19,7 +19,7 @@ const Form1 = () => {
         </div>
         <div className="lg:w-1/2 sm:w-full ml-1">
           <label
-            className="block text-grey-darker font-Roboto text-silver__color mb-2"
+            className="block text-grey-darker font-Roboto text-black__color mb-2"
             htmlFor="last_name"
           >
             Last Name
@@ -34,7 +34,7 @@ const Form1 = () => {
       <div className="md:flex lg:flex-row mb:4 flex-col m-2">
         <div className="lg:w-1/2 sm:w-full mr-1">
           <label
-            className="block text-grey-darker font-Roboto text-silver__color mb-2"
+            className="block text-grey-darker font-Roboto text-black__color mb-2"
             htmlFor="password"
           >
             Password
@@ -47,7 +47,7 @@ const Form1 = () => {
         </div>
         <div className="lg:w-1/2 sm:w-full ml-1">
           <label
-            className="block text-grey-darker font-Roboto text-silver__color mb-2"
+            className="block text-grey-darker font-Roboto text-black__color mb-2"
             htmlFor="Confirm Password"
           >
             Confirm Password
@@ -59,9 +59,37 @@ const Form1 = () => {
           />
         </div>
       </div>
+      <div className="md:flex lg:flex-row mb:4 m-2 flex-col">
+        <div className="lg:w-1/2 sm:w-full mr-1">
+          <label
+            className="block text-grey-darker font-Roboto text-black__color mb-2"
+            htmlFor="first_name"
+          >
+            Username
+          </label>
+          <input
+            className="appearance-none border rounded w-full py-2 px-3 text-grey-darker"
+            id="first_name"
+            type="text"
+          />
+        </div>
+        <div className="lg:w-1/2 sm:w-full ml-1">
+          <label
+            className="block text-grey-darker font-Roboto text-black__color mb-2"
+            htmlFor="father_name"
+          >
+            Father Name
+          </label>
+          <input
+            className="appearance-none border rounded w-full py-2 px-3 text-grey-darker"
+            id="father_name"
+            type="text"
+          />
+        </div>
+      </div>
       <div className="md:flex lg:flex-row mb:4 flex-col m-2">
         <div className="lg:w-1/2 sm:w-full mr-1">
-          <label className="block text-grey-darker font-Roboto text-silver__color mb-2" htmlFor="date">
+          <label className="block text-grey-darker font-Roboto text-black__color mb-2" htmlFor="date">
             Date of Birth
           </label>
           <input
@@ -71,7 +99,7 @@ const Form1 = () => {
           />
         </div>
         <div className="lg:w-1/2 sm:w-full ml-1">
-          <label className="block text-grey-darker font-Roboto text-silver__color mb-2" htmlFor="age">
+          <label className="block text-grey-darker font-Roboto text-black__color mb-2" htmlFor="age">
             Age
           </label>
           <input
@@ -86,21 +114,21 @@ const Form1 = () => {
         <div className="lg:w-1/2 sm:w-full mr-1">
           <div>
             <label
-              className="block text-grey-darker font-Roboto text-silver__color mb-2"
+              className="block text-grey-darker font-Roboto text-black__color mb-2"
               htmlFor="Gender"
             >
               Gender
             </label>
 
             <div className="flex justify-between">
-            <div>
+              <div>
                 <input
                   className="form-check-input"
                   type="radio"
                   name="flexRadioDefault"
                   id="flexRadioDefault2"
                 />
-                <label className=" text-grey-darker font-Roboto text-silver__color mb-2 form-check-label">Male</label>
+                <label className=" text-grey-darker font-Roboto text-black__color mb-2 form-check-label">Male</label>
               </div>
               <div>
                 <input
@@ -109,29 +137,17 @@ const Form1 = () => {
                   name="flexRadioDefault"
                   id="flexRadioDefault2"
                 />
-                <label className=" text-grey-darker font-Roboto text-silver__color mb-2 form-check-label">Female</label>
+                <label className=" text-grey-darker font-Roboto text-black__color mb-2 form-check-label">Female</label>
               </div>
             </div>
           </div>
         </div>
-        <div className="lg:w-1/2 sm:w-full ml-1">
-          <label
-            className="block text-grey-darker font-Roboto text-silver__color mb-2"
-            htmlFor="father_name"
-          >
-            Father Name
-          </label>
-          <input
-            className="appearance-none border rounded w-full py-2 px-3 text-grey-darker"
-            id="father_name"
-            type="text"
-          />
-        </div>
+
       </div>
       <p className="text-center my-4">
         <span
           href="#"
-          className="text-silver__color no-underline text-[15px] font-Roboto hover:text-grey-darker"
+          className="text-black__color no-underline text-[15px] font-Roboto hover:text-grey-darker"
         >
           I already have an account?{" "}
           <Link

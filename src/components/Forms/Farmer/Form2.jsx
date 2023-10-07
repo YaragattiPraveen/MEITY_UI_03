@@ -4,7 +4,7 @@ const Form2 = () => {
         <div className="md:flex lg:flex-row mb:4 flex-col m-2">
         <div className="lg:w-1/2 sm:w-full mr-1">
           <label
-            className="block text-grey-darker font-Roboto text-silver__color mb-2"
+            className="block text-grey-darker font-Roboto text-black__color mb-2"
             htmlFor="Mother Name"
           >
             Mother Name
@@ -17,7 +17,7 @@ const Form2 = () => {
         </div>
         <div className="lg:w-1/2 sm:w-full ml-1">
           <label
-            className="block text-grey-darker font-Roboto text-silver__color mb-2"
+            className="block text-grey-darker font-Roboto text-black__color mb-2"
             htmlFor="Door Number"
           >
             Door Number
@@ -31,7 +31,7 @@ const Form2 = () => {
       </div>
       <div className="md:flex lg:flex-row mb:4 flex-col m-2">
         <div className="lg:w-1/2 sm:w-full mr-1">
-          <label className="block text-grey-darker font-Roboto text-silver__color mb-2">
+          <label className="block text-grey-darker font-Roboto text-black__color mb-2">
             Street Name
           </label>
           <input
@@ -40,7 +40,7 @@ const Form2 = () => {
           />
         </div>
         <div className="lg:w-1/2 sm:w-full mr-1">
-          <label className="block text-grey-darker font-Roboto text-silver__color mb-2">
+          <label className="block text-grey-darker font-Roboto text-black__color mb-2">
             Village
           </label>
           <input
@@ -51,14 +51,14 @@ const Form2 = () => {
       </div>
       <div className="md:flex lg:flex-row mb:4 flex-col m-2">
         <div className="lg:w-1/2 sm:w-full mr-1">
-          <label className="block text-grey-darker font-Roboto text-silver__color mb-2">Taluk </label>
+          <label className="block text-grey-darker font-Roboto text-black__color mb-2">Taluk </label>
           <input
             type="text"
             className="appearance-none border rounded w-full py-2 px-3 text-grey-darker"
           />
         </div>
         <div className="lg:w-1/2 sm:w-full mr-1">
-          <label className="block text-grey-darker font-Roboto text-silver__color mb-2">
+          <label className="block text-grey-darker font-Roboto text-black__color mb-2">
             District
           </label>
           <input
@@ -69,14 +69,14 @@ const Form2 = () => {
       </div>
       <div className="md:flex lg:flex-row mb:4 flex-col m-2">
         <div className="lg:w-1/2 sm:w-full mr-1">
-          <label className="block text-grey-darker font-Roboto text-silver__color mb-2">State </label>
+          <label className="block text-grey-darker font-Roboto text-black__color mb-2">State </label>
           <input
             type="text"
             className="appearance-none border rounded w-full py-2 px-3 text-grey-darker"
           />
         </div>
         <div className="lg:w-1/2 sm:w-full mr-1">
-          <label className="block text-grey-darker font-Roboto text-silver__color mb-2">
+          <label className="block text-grey-darker font-Roboto text-black__color mb-2">
             Pincode
           </label>
           <input

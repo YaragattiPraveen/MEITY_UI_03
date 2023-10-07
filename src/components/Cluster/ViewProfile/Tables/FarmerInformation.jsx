@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import Profile_Information from "../../../FPO/Farmer/Tables/Profile_Information";
-import Purchase_History_Table from "../../../FPO/Farmer/Tables/Purchase_History_Table";
-import Sale_History_Table from "../../../FPO/Farmer/Tables/Sale_History_Table";
+import Profile_Information from "../../../FPO/Farmer/Tables/Profile_Information";4
+import Purchase_History from "../../../FPO/Farmer/Tables/Purchase_History";
+import Sale_History from "../../../FPO/Farmer/Tables/Sale_History";
 
 const FarmerInformation = ({ setFarmerInfo }) => {
   const [active, setActive] = useState("tab1");
@@ -10,9 +10,9 @@ const FarmerInformation = ({ setFarmerInfo }) => {
   if (active === "tab1") {
     tab__UI = <Profile_Information />;
   } else if (active === "tab2") {
-    tab__UI = <Purchase_History_Table/>;
+    tab__UI = <Purchase_History/>;
   } else if (active === "tab3") {
-    tab__UI = <Sale_History_Table />;
+    tab__UI = <Sale_History />;
   }
 
   return (

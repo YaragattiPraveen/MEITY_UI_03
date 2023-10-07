@@ -11,20 +11,20 @@ const InputSupplierWrapper = () => {
   const list = [
 
     {
-      title: "Invited Bid",
+      title: "Transactions with FPO",
       icon: (
         <CurrencyBitcoinIcon
           style={{ color: "white", fontSize: "28px" }}
         />
       ),
-      to: "Invited-bids"
+      to: "transactions-with-fpo"
     },
     {
-      title: "Requested Quote",
+      title: "Transaction With Federation",
       icon: (
         <RequestQuoteIcon style={{color: "White", fontSize: "28px"}}/>
       ),
-      to: "Requested-quote"
+      to: "transactions-with-federation"
     },
     {
       title: "Support",

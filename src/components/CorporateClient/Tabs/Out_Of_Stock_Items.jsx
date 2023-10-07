@@ -57,7 +57,7 @@ const Out_Of_Stock_Items = ({ btnTitle }) => {
           </div>
         </div>
       </div>
-      {modal.state === "ShowEditModal" && <EditCard handleClose={closeModal} />}
+      {modal.state === "ShowEditModal" && <EditCard title={"Edit"} handleClose={closeModal} />}
     </div>
   );
 };

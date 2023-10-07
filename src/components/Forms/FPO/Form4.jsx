@@ -4,7 +4,7 @@ const Form4 = () => {
   return (
     <>
       <h2 className="m-2 text-xl font-Roboto font-semibold">
-        Director Details
+        CEO Details
       </h2>
       <div className="md:flex lg:flex-row mb:4 flex-col m-2">
         <div className="lg:w-1/2 sm:w-full mr-1">
@@ -116,20 +116,20 @@ const Form4 = () => {
         </div>
         <div className="lg:w-1/2 sm:w-full mr-1">
           <label className="block text-grey-darker font-Roboto text-black__color mb-2">
-            Cluster
+          Federation
           </label>
           <select
             className="appearance-none border font-Roboto rounded w-full py-2 px-3 text-grey-darker"
             required={true}
           >
             <option className="font-Roboto" value="murhu">
-              Select your cluster
+              Select your Federation
             </option>
             <option className="font-Roboto" value="murhu">
-              Cluster - 1
+              Federation - 1
             </option>
             <option className="font-Roboto" value="churchu">
-              Cluster - 1
+              Federation - 1
             </option>
           </select>
         </div>

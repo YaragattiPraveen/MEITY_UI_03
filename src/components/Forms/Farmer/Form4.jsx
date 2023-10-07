@@ -3,7 +3,7 @@ const Form4 = () => {
     <>
         <div className="md:flex lg:flex-row mb:4 flex-col m-2">
         <div className="lg:w-1/2 sm:w-full mr-1">
-          <label className="block text-grey-darker font-Roboto text-silver__color mb-2">
+          <label className="block text-grey-darker font-Roboto text-black__color mb-2">
             IFSC Code
           </label>
           <input
@@ -12,7 +12,7 @@ const Form4 = () => {
           />
         </div>
         <div className="lg:w-1/2 sm:w-full mr-1">
-          <label className="block text-grey-darker font-Roboto text-silver__color mb-2">
+          <label className="block text-grey-darker font-Roboto text-black__color mb-2">
             Branch Name
           </label>
           <input
@@ -23,7 +23,7 @@ const Form4 = () => {
       </div>
       <div className="md:flex lg:flex-row mb:4 flex-col m-2">
         <div className="lg:w-1/2 sm:w-full mr-1">
-          <label className="block text-grey-darker font-Roboto text-silver__color mb-2">
+          <label className="block text-grey-darker font-Roboto text-black__color mb-2">
             PAN Card Number
           </label>
           <input
@@ -32,7 +32,7 @@ const Form4 = () => {
           />
         </div>
         <div className="lg:w-1/2 sm:w-full mr-1">
-          <label className="block text-grey-darker font-Roboto text-silver__color mb-2">
+          <label className="block text-grey-darker font-Roboto text-black__color mb-2">
             Upload PAN Card
           </label>
           <input
@@ -43,7 +43,7 @@ const Form4 = () => {
       </div>
       <div className="md:flex lg:flex-row mb:4 flex-col m-2">
         <div className="lg:w-1/2 sm:w-full mr-1">
-          <label className="block text-grey-darker font-Roboto text-silver__color mb-2">
+          <label className="block text-grey-darker font-Roboto text-black__color mb-2">
             Aadhaar Number
           </label>
           <input
@@ -52,7 +52,7 @@ const Form4 = () => {
           />
         </div>
         <div className="lg:w-1/2 sm:w-full mr-1">
-          <label className="block text-grey-darker font-Roboto text-silver__color mb-2">
+          <label className="block text-grey-darker font-Roboto text-black__color mb-2">
             Upload Aadhar Card
           </label>
           <input
@@ -63,7 +63,7 @@ const Form4 = () => {
       </div>
       <div className="md:flex lg:flex-row mb:4 flex-col m-2">
         <div className="lg:w-1/2 sm:w-full mr-1">
-          <label className="block text-grey-darker font-Roboto text-silver__color mb-2">
+          <label className="block text-grey-darker font-Roboto text-black__color mb-2">
             FPO Name
           </label>
           <select

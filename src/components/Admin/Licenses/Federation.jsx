@@ -1,11 +1,15 @@
-import useModal from "../../../hooks/useModal"
-import Show_Quote_Status from "../Modals/Show_Quote_Status"
+import React from 'react'
 
-const Requested_Quotes = () => {
-    const { modal, closeModal, updateModal } = useModal()
-    return (
-        <>
-            <div className="bg-box__bg__color shadow-lg rounded-lg border border-gray-200 my-5">
+const Federation = () => {
+  return (
+    <div className="py-6">
+            <div>
+                <div>
+                    <input className="px-2 py-1 font-Roboto border text-lg border-bg__color" type="text" placeholder="Enter the user name" />
+                    <button className="bg-bg__color border-none font-Roboto text-white text-lg px-6 py-1.5 rounded-tr-md outline-none rounded-br-md">Generate License Key</button>
+                </div>
+            </div>
+            <div className="bg-box__bg__color shadow-lg rounded-lg border my-6 border-gray-200">
                 <div className="overflow-x-auto mx-2 md:mx-4 md:overflow-auto lg:overflow-auto">
                     <div className="relative inline-block min-w-full py-2 sm:px-2 lg:6">
                         <div className="overflow-hidden">
@@ -16,31 +20,19 @@ const Requested_Quotes = () => {
                                             scope="col"
                                             className="px-4 py-4 text-medium font-Roboto text-left"
                                         >
-                                            Quotation Id
+                                            S.NO
                                         </th>
                                         <th
                                             scope="col"
                                             className="px-4 py-4 text-medium font-Roboto text-left"
                                         >
-                                            Supplier Name
+                                            Name
                                         </th>
                                         <th
                                             scope="col"
                                             className="px-4 py-4 text-medium font-Roboto text-left"
                                         >
-                                            Start Date
-                                        </th>
-                                        <th
-                                            scope="col"
-                                            className="px-4 py-4 text-medium font-Roboto text-left"
-                                        >
-                                            End Date
-                                        </th>
-                                        <th
-                                            scope="col"
-                                            className="px-4 py-4 text-medium font-Roboto text-left"
-                                        >
-                                            Date of Supply
+                                            License Key
                                         </th>
                                         <th
                                             scope="col"
@@ -48,30 +40,40 @@ const Requested_Quotes = () => {
                                         >
                                             Status
                                         </th>
+                                        <th
+                                            scope="col"
+                                            className="px-4 py-4 text-medium font-Roboto text-left"
+                                        >
+                                            Created Date
+                                        </th>
+                                        <th
+                                            scope="col"
+                                            className="px-4 py-4 text-medium font-Roboto text-left"
+                                        >
+                                            Delete
+                                        </th>
                                     </tr>
                                 </thead>
                                 <tbody className="text-silver__color">
                                     <tr className="border-b transition duration-300 ease-in-out hover:bg-green-2">
                                         <td className="whitespace-nowrap px-4 py-4 text-left font-medium font-Roboto text-silver__color">
-                                            xhdoLftes5
+                                            1
                                         </td>
                                         <td className="whitespace-nowrap px-4 py-4 text-left font-medium font-Roboto text-silver__color">
-                                            Input Supplier - 1
+                                            fpox
                                         </td>
                                         <td className="whitespace-nowrap px-4 py-4 text-left font-medium font-Roboto text-silver__color">
-                                            2023-07-23
+                                            53e09456-74f7-4b7c-a13c-b5c64d8ed201
                                         </td>
                                         <td className="whitespace-nowrap px-4 py-4 text-left font-medium font-Roboto text-silver__color">
-                                            2023-07-25
+                                            active
                                         </td>
                                         <td className="whitespace-nowrap px-4 py-4 text-left font-medium font-Roboto text-silver__color">
-                                            13-07-2023
+                                            28/7/2023, 2:50:50 pm
                                         </td>
                                         <td className="whitespace-nowrap px-4 py-4 text-left font-medium font-Roboto text-silver__color">
-                                            <button
-                                                onClick={() => updateModal("QuoteStatus")}
-                                                className="bg-bg__color text-center block text-white px-4 py-1 rounded">
-                                                View
+                                            <button className="bg-bg__color text-center block text-white px-4 py-1 rounded">
+                                                Delete
                                             </button>
                                         </td>
                                     </tr>
@@ -81,11 +83,8 @@ const Requested_Quotes = () => {
                     </div>
                 </div>
             </div>
-            {
-                modal.state === "QuoteStatus" && <Show_Quote_Status handleClose={closeModal} />
-            }
-        </>
-    )
+        </div>
+  )
 }
 
-export default Requested_Quotes
+export default Federation

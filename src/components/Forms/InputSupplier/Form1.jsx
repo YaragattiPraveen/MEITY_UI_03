@@ -9,7 +9,7 @@ const Form1 = () => {
             className="block text-grey-darker font-Roboto text-black__color mb-2"
             htmlFor="first_name"
           >
-            Client Name
+            Name
           </label>
           <input
             className="appearance-none border rounded w-full py-2 px-3 text-grey-darker"
@@ -44,10 +44,10 @@ const Form1 = () => {
         </div>
         <div className="lg:w-1/2 sm:w-full mr-1">
           <label className="block text-grey-darker font-Roboto text-black__color mb-2">
-            Address
+            Confirm Password
           </label>
           <input
-            type="text"
+            type="password"
             className="appearance-none border rounded w-full py-2 px-3 text-grey-darker"
           />
         </div>
@@ -64,7 +64,9 @@ const Form1 = () => {
           />
         </div>
         <div className="lg:w-1/2 sm:w-full mr-1">
-          <label className="block text-grey-darker font-Roboto text-black__color mb-2">City </label>
+          <label className="block text-grey-darker font-Roboto text-black__color mb-2">
+            Address
+          </label>
           <input
             type="text"
             className="appearance-none border rounded w-full py-2 px-3 text-grey-darker"

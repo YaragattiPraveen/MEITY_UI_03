@@ -3,65 +3,73 @@ import { Link } from "react-router-dom";
 const Form1 = () => {
   return (
     <>
-      <div className="md:flex lg:flex-row mb:4 flex-col m-2">
+      <div className="md:flex lg:flex-row mb:4 m-2 flex-col">
         <div className="lg:w-1/2 sm:w-full mr-1">
-          <label className="block text-grey-darker font-Roboto text-silver__color mb-2">
+          <label
+            className="block text-grey-darker font-Roboto text-black__color mb-2"
+            htmlFor="first_name"
+          >
+            Name
+          </label>
+          <input
+            className="appearance-none border rounded w-full py-2 px-3 text-grey-darker"
+            id="first_name"
+            type="text"
+          />
+        </div>
+        <div className="lg:w-1/2 sm:w-full ml-1">
+          <label
+            className="block text-grey-darker font-Roboto text-black__color mb-2"
+            htmlFor="Username"
+          >
             Username
           </label>
           <input
+            className="appearance-none border rounded w-full py-2 px-3 text-grey-darker"
+            id="last_name"
             type="text"
-            className="appearance-none border rounded w-full py-2 px-3 text-grey-darker outline-none hover:border-hover__color"
           />
         </div>
+      </div>
+
+      <div className="md:flex lg:flex-row mb:4 flex-col m-2">
         <div className="lg:w-1/2 sm:w-full mr-1">
-          <label className="block text-grey-darker font-Roboto text-silver__color mb-2">
+          <label className="block text-grey-darker font-Roboto text-black__color mb-2">
             Password
           </label>
           <input
             type="password"
-            className="appearance-none border rounded w-full py-2 px-3 text-grey-darker outline-none hover:border-hover__color"
+            className="appearance-none border rounded w-full py-2 px-3 text-grey-darker"
+          />
+        </div>
+        <div className="lg:w-1/2 sm:w-full mr-1">
+          <label className="block text-grey-darker font-Roboto text-black__color mb-2">
+            Confirm Password
+          </label>
+          <input
+            type="password"
+            className="appearance-none border rounded w-full py-2 px-3 text-grey-darker"
           />
         </div>
       </div>
 
       <div className="md:flex lg:flex-row mb:4 flex-col m-2">
         <div className="lg:w-1/2 sm:w-full mr-1">
-          <label className="block text-grey-darker  font-Roboto text-silver__color mb-2">
+          <label className="block text-grey-darker font-Roboto text-black__color mb-2">
             Contact Number
           </label>
           <input
             type="text"
-            className="appearance-none border rounded w-full py-2 px-3 text-grey-darker outline-none hover:border-hover__color"
+            className="appearance-none border rounded w-full py-2 px-3 text-grey-darker"
           />
         </div>
         <div className="lg:w-1/2 sm:w-full mr-1">
-          <label className="block text-grey-darker  font-Roboto text-silver__color mb-2">
-            Email
-          </label>
-          <input
-            type="text"
-            className="appearance-none border rounded w-full py-2 px-3 text-grey-darker outline-none hover:border-hover__color"
-          />
-        </div>
-      </div>
-
-      <div className="md:flex lg:flex-row mb:4 flex-col m-2">
-        <div className="lg:w-1/2 sm:w-full mr-1">
-          <label className="block text-grey-darker font-Roboto text-silver__color mb-2">
+          <label className="block text-grey-darker font-Roboto text-black__color mb-2">
             Address
           </label>
           <input
             type="text"
-            className="appearance-none border rounded w-full py-2 px-3 text-grey-darker outline-none hover:border-hover__color"
-          />
-        </div>
-        <div className="lg:w-1/2 sm:w-full mr-1">
-          <label className="block text-grey-darker font-Roboto text-silver__color mb-2">
-            City
-          </label>
-          <input
-            type="text"
-            className="appearance-none border rounded w-full py-2 px-3 text-grey-darker outline-none hover:border-hover__color"
+            className="appearance-none border rounded w-full py-2 px-3 text-grey-darker"
           />
         </div>
       </div>

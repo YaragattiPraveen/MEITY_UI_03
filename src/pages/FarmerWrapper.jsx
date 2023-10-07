@@ -11,7 +11,6 @@ import LocalGroceryStoreRoundedIcon from "@mui/icons-material/LocalGroceryStoreR
 import MonetizationOnRoundedIcon from "@mui/icons-material/MonetizationOnRounded";
 import CreditScoreRoundedIcon from "@mui/icons-material/CreditScoreRounded";
 import AccountBalanceWalletRoundedIcon from "@mui/icons-material/AccountBalanceWalletRounded";
-import TerminalRoundedIcon from "@mui/icons-material/TerminalRounded";
 import DashboardCustomizeRoundedIcon from "@mui/icons-material/DashboardCustomizeRounded";
 import SupportAgentRoundedIcon from "@mui/icons-material/SupportAgentRounded";
 import SettingsSuggestRoundedIcon from "@mui/icons-material/SettingsSuggestRounded";
@@ -76,13 +75,6 @@ const FarmerWrapper = () => {
         />
       ),
       to: "transaction-history",
-    },
-    {
-      title: "Training Programs",
-      icon: (
-        <TerminalRoundedIcon style={{ color: "white", fontSize: "28px" }} />
-      ),
-      to: "training",
     },
     {
       title: "Crop Advisory",

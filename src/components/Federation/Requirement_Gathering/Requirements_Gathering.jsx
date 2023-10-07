@@ -24,13 +24,13 @@ const Requirements_Gathering = () => {
                                             scope="col"
                                             className="px-4 py-4 text-medium font-Roboto text-left"
                                         >
-                                            Farmer ID
+                                            Fpo ID
                                         </th>
                                         <th
                                             scope="col"
                                             className="px-4 py-4 text-medium font-Roboto text-left"
                                         >
-                                            Farmer Name
+                                            Fpo Name
                                         </th>
                                         <th
                                             scope="col"

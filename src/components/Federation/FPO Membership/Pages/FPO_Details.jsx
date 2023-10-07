@@ -1,6 +1,16 @@
-import React from 'react'
+import { useState } from "react";
+import Fpo_Details from "../../../Farmer/FPO_Details/Fpo_Details";
+import FpoSaleHistory from "./FpoSaleHistory";
 
 const FPO_Details = ({ setFPOinfo }) => {
+    const [active, setActive] = useState("tab1");
+
+    let tab__UI;
+    if(active === "tab1"){
+        tab__UI = <Fpo_Details show={true} />
+    }else if(active === "tab2"){
+        tab__UI = <FpoSaleHistory/>
+    }
     return (
         <>
             <button
@@ -9,54 +19,28 @@ const FPO_Details = ({ setFPOinfo }) => {
             >
                 Back to Farmer Page
             </button>
-
-            <div className="bg-box__bg__color py-10 px-10 rounded-lg my-6">
-                <h2 className="text-center uppercase text-xl font-Roboto font-semibold text-hover__color">
+            <div className="flex gap-2 md:gap-5 justify-center md:justify-end flex-wrap">
+                <button
+                    onClick={() => setActive("tab1")}
+                    style={{
+                        borderBottom: active === "tab1" && "2px solid green",
+                    }}
+                    className="text-hover__color shadow-md rounded-lg z-0 focus:outline-none px-2 md:px-4 py-2 font-Roboto text-sm md:text-base font-bold cursor-pointer"
+                >
                     FPO Information
-                </h2>
-                <div className="max-w-[520px] mx-auto my-10">
-                    <div className="flex items-center justify-between my-5 text-silver__color font-Roboto">
-                        <label className="text-lg">Name</label>
-                        <p>Vivek</p>
-                    </div>
-                    <div className="flex items-center justify-between my-5 text-silver__color font-Roboto">
-                        <label className="text-lg">Mobile Number</label>
-                        <p>9XXXXXXXXX</p>
-                    </div>
-                    <div className="flex items-center justify-between my-5 text-silver__color font-Roboto">
-                        <label className="text-lg">Date of Birth</label>
-                        <p>18-06-1994</p>
-                    </div>
-                    <div className="flex items-center justify-between my-5 text-silver__color font-Roboto">
-                        <label className="text-lg">Gender</label>
-                        <p>Male</p>
-                    </div>
-                    <div className="flex items-center justify-between my-5 text-silver__color font-Roboto">
-                        <label className="text-lg">Address</label>
-                        <p>9-31/3,blah,blah,blah</p>
-                    </div>
-                    <div className="flex items-center justify-between my-5 text-silver__color font-Roboto">
-                        <label className="text-lg">Aadhaar Number</label>
-                        <p>XXXX-XXXX-XXXX</p>
-                    </div>
-                    <div className="flex items-center justify-between my-5 text-silver__color font-Roboto">
-                        <label className="text-lg">PAN Number</label>
-                        <p>XXXXXXXXXX</p>
-                    </div>
-                    <div className="flex items-center justify-between my-5 text-silver__color font-Roboto">
-                        <label className="text-lg">Bank Name</label>
-                        <p>SBI</p>
-                    </div>
-                    <div className="flex items-center justify-between my-5 text-silver__color font-Roboto">
-                        <label className="text-lg">Bank Account Number</label>
-                        <p>XXXXXXXXXX</p>
-                    </div>
-                    <div className="flex items-center justify-between my-5 text-silver__color font-Roboto">
-                        <label className="text-lg">IFSC Code</label>
-                        <p>XXXXXXXXXX</p>
-                    </div>
-                </div>
+                </button>
+                <button
+                    onClick={() => setActive("tab2")}
+                    style={{
+                        borderBottom: active === "tab2" && "2px solid green",
+                    }}
+                    className="text-hover__color shadow-md rounded-lg z-0 focus:outline-none px-2 md:px-4 py-2 font-Roboto text-sm md:text-base font-bold cursor-pointer"
+                >
+                    FPO Sale History
+                </button>
             </div>
+
+            {tab__UI}
         </>
     )
 }

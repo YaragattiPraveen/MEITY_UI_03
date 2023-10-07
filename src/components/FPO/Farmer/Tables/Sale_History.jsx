@@ -2,15 +2,17 @@ import React, { useState } from "react";
 import Sale_Details_Modal from "../Modals/Sale_Details_Modal";
 import Add_Sale_History from '../Modals/Add_Sale_History'
 
-const Sale_History = () => {
+const Sale_History = ({ show }) => {
   const [openModel, setOpenModel] = useState(false);
-  const [addOpenModel,setAddOpenModel] = useState(false)
+  const [addOpenModel, setAddOpenModel] = useState(false)
 
   return (
     <>
-      <button onClick={()=> setAddOpenModel(true)} className="bg-bg__color shadow-md rounded-lg z-0 focus:outline-none px-4 py-1 text-center block text-white">
-        Add Sale
-      </button>
+      {
+        show && <button onClick={() => setAddOpenModel(true)} className="bg-bg__color shadow-md rounded-lg z-0 focus:outline-none px-4 py-1 text-center block text-white">
+          Add Sale
+        </button>
+      }
       <div className="bg-box__bg__color shadow-lg rounded-lg border my-6 border-gray-200">
         <div className="flex flex-col px-3 py-2">
           <div className="overflow-x-auto sm:-mx-6 lg:-mx-8">
@@ -111,7 +113,7 @@ const Sale_History = () => {
         </div>
       </div>
       {openModel && <Sale_Details_Modal closemodel={setOpenModel} />}
-      {addOpenModel && <Add_Sale_History closemodel={setAddOpenModel}/>}
+      {addOpenModel && <Add_Sale_History closemodel={setAddOpenModel} />}
     </>
   );
 };

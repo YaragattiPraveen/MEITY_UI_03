@@ -40,6 +40,12 @@ const Active_Bids = () => {
                       scope="col"
                       className="px-4 py-4 text-medium font-Roboto text-left"
                     >
+                      Date of Supply
+                    </th>
+                    <th
+                      scope="col"
+                      className="px-4 py-4 text-medium font-Roboto text-left"
+                    >
                       Status
                     </th>
                   </tr>
@@ -57,6 +63,9 @@ const Active_Bids = () => {
                     </td>
                     <td className="whitespace-nowrap px-4 py-4 text-left font-medium font-Roboto text-silver__color">
                       2023-07-25
+                    </td>
+                    <td className="whitespace-nowrap px-4 py-4 text-left font-medium font-Roboto text-silver__color">
+                      13-07-2023
                     </td>
                     <td className="whitespace-nowrap px-4 py-4 text-left font-medium font-Roboto text-silver__color">
                       <button

@@ -1,8 +1,8 @@
 import { useState } from "react"
-import Navbar from "../Farmer/Navbar"
-import Invited_Bids from "./Invited_Bids/Tabs/Invited_Bids"
-import Ongoing_Bids from "./Invited_Bids/Tabs/Ongoing_Bids"
-import Completed_Transaction from "./Invited_Bids/Tabs/Completed_Transaction"
+import Invited_Bids from "./Tabs/Invited_Bids"
+import Ongoing_Bids from "./Tabs/Ongoing_Bids"
+import Completed_Transaction from "./Tabs/Completed_Transaction"
+import Navbar from "../../Farmer/Navbar"
 
 const Dashboard = () => {
     const [active, setActive] = useState('tab1')
@@ -19,7 +19,6 @@ const Dashboard = () => {
 
     return (
         <div className="container w-full mx-auto">
-            <Navbar />
             <h2 className="text-hover__color text-2xl font-Roboto font-extrabold py-4 ">
                 Invited Bids
             </h2>

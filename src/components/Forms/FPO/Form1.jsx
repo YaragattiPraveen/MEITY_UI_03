@@ -9,7 +9,7 @@ const Form1 = () => {
             className="block text-grey-darker font-Roboto text-black__color mb-2"
             htmlFor="first_name"
           >
-            Name of FPO
+            Name
           </label>
           <input
             className="appearance-none border rounded w-full py-2 px-3 text-grey-darker"
@@ -50,27 +50,27 @@ const Form1 = () => {
             className="block text-grey-darker font-Roboto text-black__color mb-2"
             htmlFor="Confirm Password"
           >
-            Address
+            Confirm Password
           </label>
           <input
             className="appearance-none border rounded w-full py-2 px-3 text-grey-darker"
             id="Confirm Password"
-            type="text"
+            type="password"
           />
         </div>
       </div>
       <div className="md:flex lg:flex-row mb:4 flex-col m-2">
-        <div className="lg:w-1/2 sm:w-full mr-1">
-          <label className="block text-grey-darker font-Roboto text-black__color mb-2">State </label>
+      <div className="lg:w-1/2 sm:w-full mr-1">
+          <label className="block text-grey-darker font-Roboto text-black__color mb-2">
+            Address
+          </label>
           <input
             type="text"
             className="appearance-none border rounded w-full py-2 px-3 text-grey-darker"
           />
         </div>
         <div className="lg:w-1/2 sm:w-full mr-1">
-          <label className="block text-grey-darker font-Roboto text-black__color mb-2">
-            Pincode
-          </label>
+          <label className="block text-grey-darker font-Roboto text-black__color mb-2">State </label>
           <input
             type="text"
             className="appearance-none border rounded w-full py-2 px-3 text-grey-darker"

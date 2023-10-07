@@ -34,7 +34,7 @@ const FpoWrapper = () => {
       to: "farmer",
     },
     {
-      title: "Place a Requirement",
+      title: "Transact With Federation",
       icon: (
         <PublishedWithChangesIcon
           style={{ color: "white", fontSize: "28px" }}
@@ -60,11 +60,6 @@ const FpoWrapper = () => {
       title: "Announcement for Farmer",
       icon: <CampaignIcon style={{ color: "white", fontSize: "28px" }} />,
       to: "announcement-for-farmer",
-    },
-    {
-      title: "Request Quote",
-      icon: <RequestQuoteIcon style={{ color: "white", fontSize: "28px" }} />,
-      to: "request-quote",
     },
     {
       title: "Custom Hiring Center",
@@ -101,11 +96,11 @@ const FpoWrapper = () => {
       to: "farmer-loan",
     },
     {
-      title: "Invite Bid",
+      title: "Input Supplier",
       icon: (
         <CurrencyBitcoinIcon style={{ color: "white", fontSize: "28px" }} />
       ),
-      to: "Invite-bids",
+      to: "input-supplier",
     },
     {
       title: "FPO Loan",
@@ -115,9 +110,9 @@ const FpoWrapper = () => {
       to: "fpo-loan",
     },
     {
-      title: "Corporate Customer",
+      title: "Output Customer",
       icon: <CorporateFareIcon style={{ color: "white", fontSize: "28px" }} />,
-      to: "corporate-customer",
+      to: "output-customer",
     },
     {
       title: "Support",
