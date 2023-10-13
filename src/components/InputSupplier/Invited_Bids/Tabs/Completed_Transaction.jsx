@@ -1,7 +1,7 @@
 import useModal from "../../../hooks/useModal"
 import Show_Input_Supplier_Bids_Status from "../Modals/Show_Input_Supplier_Bids_Status"
 
-const Completed_Transaction = () => {
+const Completed_Transaction = ({name}) => {
   const { modal, updateModal, closeModal } = useModal()
   return (
     <div className="bg-box__bg__color shadow-lg rounded-lg border border-gray-200 my-5">
@@ -21,7 +21,7 @@ const Completed_Transaction = () => {
                     scope="col"
                     className="px-4 py-4 text-medium font-Roboto text-left"
                   >
-                    Name of FPO
+                    Name 
                   </th>
                   <th
                     scope="col"
@@ -55,7 +55,7 @@ const Completed_Transaction = () => {
                     xhdoLftes6
                   </td>
                   <td className="whitespace-nowrap px-4 py-4 text-left font-medium font-Roboto text-silver__color">
-                    FPO - 1
+                   {name}
                   </td>
                   <td className="whitespace-nowrap px-4 py-4 text-left font-medium font-Roboto text-silver__color">
                     2023-06-08

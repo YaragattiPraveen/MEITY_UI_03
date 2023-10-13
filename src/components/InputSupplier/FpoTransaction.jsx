@@ -5,12 +5,13 @@ import Navbar from "../Farmer/Navbar";
 
 const FpoTransaction = () => {
     const [active, setActive] = useState("tab1");
+    let name = "FPO-1"
 
     let tab__UI;
     if (active === "tab1") {
-        tab__UI = <Invited_Bids />;
+        tab__UI = <Invited_Bids name={name} />;
     } else if (active === "tab2") {
-        tab__UI = <Requested_Quotes show={"No"} />;
+        tab__UI = <Requested_Quotes name={name} show={"No"} />;
     }
     return (
         <div className="container w-full mx-auto">

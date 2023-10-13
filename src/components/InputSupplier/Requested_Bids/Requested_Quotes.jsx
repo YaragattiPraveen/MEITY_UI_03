@@ -3,16 +3,16 @@ import Request_Quote from "./Tabs/Requested_Quote"
 import Ongoing_Quotes from "./Tabs/Ongoing_Quotes"
 import Completed_Quotes from "./Tabs/Completed_Quotes"
 
-const Requested_Quotes = () => {
-    const [active,setActive] = useState("tab1")
+const Requested_Quotes = ({ name }) => {
+    const [active, setActive] = useState("tab1")
 
-    let display_UI 
-    if(active === "tab1"){
-        display_UI = <Request_Quote/>
-    }else if(active === "tab2"){
-        display_UI = <Ongoing_Quotes/>
-    }else if(active === "tab3"){
-        display_UI = <Completed_Quotes/>
+    let display_UI
+    if (active === "tab1") {
+        display_UI = <Request_Quote name={name} />
+    } else if (active === "tab2") {
+        display_UI = <Ongoing_Quotes name={name} />
+    } else if (active === "tab3") {
+        display_UI = <Completed_Quotes name={name} />
     }
 
     return (

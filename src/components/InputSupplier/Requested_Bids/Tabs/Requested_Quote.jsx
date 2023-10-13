@@ -1,7 +1,7 @@
 import useModal from "../../../hooks/useModal"
 import Place_Quotation_Price from "../Modals/Place_Quotation_Price"
 
-const Requested_Quotes = () => {
+const Requested_Quotes = ({name}) => {
   const { modal, closeModal, updateModal } = useModal()
   return (
     <>
@@ -22,7 +22,7 @@ const Requested_Quotes = () => {
                       scope="col"
                       className="px-4 py-4 text-medium font-Roboto text-left"
                     >
-                      Name of FPO
+                      Name 
                     </th>
                     <th
                       scope="col"
@@ -50,7 +50,7 @@ const Requested_Quotes = () => {
                       xhdoLftes6
                     </td>
                     <td className="whitespace-nowrap px-4 py-4 text-left font-medium font-Roboto text-silver__color">
-                      FPO - 1
+                      {name}
                     </td>
                     <td className="whitespace-nowrap px-4 py-4 text-left font-medium font-Roboto text-silver__color">
                       13-07-2023

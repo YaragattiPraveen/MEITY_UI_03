@@ -92,7 +92,7 @@ const AvailableBookingSlots = () => {
                   <td className="whitespace-nowrap px-6 py-4 text-left font-medium font-Roboto text-silver__color">
                     3
                   </td>
-                  <td className="px-6 py-4">
+                  <td className="whitespace-nowrap px-6 py-4 text-left font-medium font-Roboto text-silver__color">
                     11:00 AM to 2:00 PM
                   </td>
                 </tr>

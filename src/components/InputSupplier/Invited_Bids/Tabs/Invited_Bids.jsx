@@ -1,7 +1,7 @@
 import Place_Bid from "../Modals/Place_Bid"
 import useModal from "../../../hooks/useModal"
 
-const Invited_Bids = () => {
+const Invited_Bids = ({name}) => {
     const { modal, closeModal, updateModal } = useModal()
     return (
         <>
@@ -22,7 +22,7 @@ const Invited_Bids = () => {
                                             scope="col"
                                             className="px-4 py-4 text-medium font-Roboto text-left"
                                         >
-                                            Name of FPO
+                                            Name 
                                         </th>
                                         <th
                                             scope="col"
@@ -50,7 +50,7 @@ const Invited_Bids = () => {
                                             xhdoLftes6
                                         </td>
                                         <td className="whitespace-nowrap px-4 py-4 text-left font-medium font-Roboto text-silver__color">
-                                            FPO - 1
+                                            {name}
                                         </td>
                                         <td className="whitespace-nowrap px-4 py-4 text-left font-medium font-Roboto text-silver__color">
                                             13-07-2023

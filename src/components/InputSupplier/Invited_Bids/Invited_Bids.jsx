@@ -2,19 +2,18 @@ import { useState } from "react"
 import Invited_Bids from "./Tabs/Invited_Bids"
 import Ongoing_Bids from "./Tabs/Ongoing_Bids"
 import Completed_Transaction from "./Tabs/Completed_Transaction"
-import Navbar from "../../Farmer/Navbar"
 
-const Dashboard = () => {
+const Dashboard = ({name}) => {
     const [active, setActive] = useState('tab1')
 
     let display_UI
 
     if (active === "tab1") {
-        display_UI = <Invited_Bids />
+        display_UI = <Invited_Bids name={name} />
     } else if (active === "tab2") {
-        display_UI = <Ongoing_Bids />
+        display_UI = <Ongoing_Bids name={name} />
     } else if (active === "tab3") {
-        display_UI = <Completed_Transaction />
+        display_UI = <Completed_Transaction name={name} />
     }
 
     return (

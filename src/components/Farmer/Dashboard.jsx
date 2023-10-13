@@ -3,6 +3,8 @@ import Slider from "./Slider";
 import Crop_Advisory from "./Tables/Crop_Advisory";
 import Loan_Updates from "./Tables/Loan_Updates";
 import Current_Weather from "./Tables/Current_Weather";
+
+
 const Dashboard = () => {
   return (
     <>
