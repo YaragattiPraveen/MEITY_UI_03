@@ -53,6 +53,11 @@ const Login1 = () => {
             setPassword("")
             console.log(userName, password);
             Navigate('/cluster')
+        } else if (userName === "admin" && password === "admin") {
+            setUserName("")
+            setPassword("")
+            console.log(userName, password);
+            Navigate('/admin')
         }
     }
     return (

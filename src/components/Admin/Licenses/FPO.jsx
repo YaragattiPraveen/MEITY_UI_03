@@ -58,7 +58,7 @@ const FPO = () => {
                                             1
                                         </td>
                                         <td className="whitespace-nowrap px-4 py-4 text-left font-medium font-Roboto text-silver__color">
-                                            fpox
+                                            fpo-1
                                         </td>
                                         <td className="whitespace-nowrap px-4 py-4 text-left font-medium font-Roboto text-silver__color">
                                             53e09456-74f7-4b7c-a13c-b5c64d8ed201
